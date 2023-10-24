@@ -41,23 +41,28 @@ namespace Clave2_Grupo
                         try
                         {
                             int CantTarjetas= Convert.ToInt32(txtNumTarjetasComprar.Text);
-                            int TotalPagarTarjetas = CantTarjetas * PrecioPlus;
-                            ValidCliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
-                            ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente", "Identificación de usuario");
-                            if (ValidCliente == "Carlos Amaya" && ValidDUI == "123456789")
+                            if (CantTarjetas>0)
                             {
-                                MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: Plus\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
+                                int TotalPagarTarjetas = CantTarjetas * PrecioPlus;
+                                ValidCliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
+                                ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente", "Identificación de usuario");
+                                if (ValidCliente == "Carlos Amaya" && ValidDUI == "123456789")
+                                {
+                                    MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: Plus\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se encuentran registros del cliente");
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("No se encuentran registros del cliente");
+                                errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese números positivos");
                             }
-                            
                         }
                         catch (Exception)
                         {
                             errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números enteros");
-                            return;
                         }
                     }
                     break;
@@ -74,21 +79,26 @@ namespace Clave2_Grupo
                         try
                         {
                             int CantTarjetas = Convert.ToInt32(txtNumTarjetasComprar.Text);
-                            int TotalPagarTarjetas = CantTarjetas * PrecioSilver; 
-                            if (ValidCliente == "Carlos Amaya" && ValidDUI == "123456789")
+                            if (CantTarjetas>0)
                             {
-                                MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: Silver\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
+                                int TotalPagarTarjetas = CantTarjetas * PrecioSilver;
+                                if (ValidCliente == "Carlos Amaya" && ValidDUI == "123456789")
+                                {
+                                    MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: Silver\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se encuentran registros del cliente");
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("No se encuentran registros del cliente");
+                                errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números positivos");
                             }
-                            
                         }
                         catch (Exception)
                         {
                             errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números enteros");
-                            return;
                         }
                     }
                     break;
@@ -105,22 +115,28 @@ namespace Clave2_Grupo
                         try
                         {
                             int CantTarjetas = Convert.ToInt32(txtNumTarjetasComprar.Text);
-                            int TotalPagarTarjetas = CantTarjetas * PrecioGold;
-                            ValidCliente=Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
-                            ValidDUI=Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente", "Identificación de usuario");
-                            if (ValidCliente=="Carlos Amaya"&&ValidDUI=="123456789")
+                            if (CantTarjetas>0)
                             {
-                                MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: Gold\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
+                                int TotalPagarTarjetas = CantTarjetas * PrecioGold;
+                                ValidCliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
+                                ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente", "Identificación de usuario");
+                                if (ValidCliente == "Carlos Amaya" && ValidDUI == "123456789")
+                                {
+                                    MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: Gold\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No se encuentran registros del cliente");
+                                }
                             }
                             else
                             {
-                                MessageBox.Show("No se encuentran registros del cliente");
+                                errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números positivos");
                             }
                         }
                         catch (Exception)
                         {
                             errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números enteros");
-                            return;
                         }
                     }
                     break;
