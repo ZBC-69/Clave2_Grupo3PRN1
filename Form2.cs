@@ -12,6 +12,9 @@ namespace Clave2_Grupo
 {
     public partial class fmrNuevoCliente : Form
     {
+        //objeto para validar informaciones
+        Metodos validDat = new Metodos();
+
         public fmrNuevoCliente()
         {
             //Inicialización del datagridview de prueba para verificar el registro
@@ -19,7 +22,13 @@ namespace Clave2_Grupo
             dgvAddClientePrueba.Columns.Add("Documento Unico de Identidad", "DUI");
             dgvAddClientePrueba.Columns.Add("Nombre completo del cliente", "Nombre Completo");
         }
-        
+
+
+        private void txtNomCompleto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validDat.ValidarTextBoxSoloLetrasKeyPress(sender,e);
+        } 
+
         private void btnSalir2_Click(object sender, EventArgs e)
         {
             Close();
@@ -38,6 +47,7 @@ namespace Clave2_Grupo
         //Evento cuando se añade un nuevo cliente
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
             //Validación para campos vacios o incompletos
             if (txtNomCompleto.Text==string.Empty)
             {
@@ -72,8 +82,8 @@ namespace Clave2_Grupo
             }
  
         }
+
         
-        
-	}
+    }
     
 }

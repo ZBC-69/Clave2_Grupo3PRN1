@@ -80,6 +80,7 @@ namespace Clave2_Grupo
             this.txtNomCompleto.Name = "txtNomCompleto";
             this.txtNomCompleto.Size = new System.Drawing.Size(100, 20);
             this.txtNomCompleto.TabIndex = 4;
+            this.txtNomCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomCompleto_KeyPress);
             // 
             // msktxtDUI
             // 
