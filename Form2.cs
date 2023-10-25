@@ -77,7 +77,7 @@ namespace Clave2_Grupo
                 Cliente cliente = new Cliente();
                 //PROVICIONAL; solo para comprobar la validación del registro
                 dgvAddClientePrueba.Rows.Clear();
-                dgvAddClientePrueba.Rows.Add(txtNomCompleto.Text, msktxtDUI.Text);
+                dgvAddClientePrueba.Rows.Add(msktxtDUI.Text, txtNomCompleto.Text);
                 MessageBox.Show("El usuario ha sido registrado");
             }
  
