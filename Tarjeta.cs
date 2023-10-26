@@ -17,93 +17,59 @@ namespace Clave2_Grupo
         private bool estaVigente;
         private int cantComprasAcumuladas;
 
+        public Tarjeta()
+        {
+
+        }
         //metodos Setters y Getters para la propiedad tipoTarjeta
-        public string GetTipoTarjeta()
+        public string TipoTarjeta
         {
-            return this.tipoTarjeta;
+            get { return tipoTarjeta; }
+            set { tipoTarjeta = value; }
         }
 
-        public void SetTipoTarjeta(string tipoTarjetaLeida)
+        public double LimiteCredito
         {
-            this.tipoTarjeta = tipoTarjetaLeida;
+            get { return limiteCredito; }
+            set { limiteCredito = value; }
         }
 
-        //metodos Setters y Getters para la propiedad limiteCredito
-        public double GetLimiteCredito()
+        public double SaldoActual
         {
-            return this.limiteCredito;
+            get { return saldoActual; }
+            set { saldoActual = value; }
         }
 
-        public void SetLimiteCredito(double limiteCreditoLeido)
+        public int PuntosAcum
         {
-            this.limiteCredito = limiteCreditoLeido;
+            get { return puntosAcum; }
+            set { puntosAcum = value; }
         }
 
-        //metodos Setters y Getters para la propiedad saldoActual
-        public double GetSaldoActual()
+        public DateTime FechaApertura
         {
-            return this.saldoActual;
+            get { return fechaApertura; }
+            set { fechaApertura = value; }
         }
 
-        public void SetSaldoActual(double saldoActualLeido)
+        public DateTime FechaVencimiento
         {
-            this.saldoActual = saldoActualLeido;
+            get { return fechaVencimiento; }
+            set { fechaVencimiento = value; }
         }
 
-        //metodos Setters y Getters para la propiedad puntosAcum
-        public int GetPuntosAcum()
+        public bool EstaVigente
         {
-            return this.puntosAcum;
+            get { return estaVigente; }
+            set { estaVigente = value; }
         }
 
-        public void SetPuntosAcum(int puntosAcumLeidos)
+        public int CantComprasAcumuladas
         {
-            this.puntosAcum = puntosAcumLeidos;
+            get { return cantComprasAcumuladas; }
+            set { cantComprasAcumuladas = value; }
         }
 
-        //metodos Setters y Getters para la propiedad fechaApertura
-        public DateTime GetFechaApertura()
-        {
-            return this.fechaApertura;
-        }
-
-        public void SetFechaApertura(DateTime fechaAperturaLeida)
-        {
-            this.fechaApertura = fechaAperturaLeida;
-        }
-
-        //metodos Setters y Getters para la propiedad fechaVencimiento
-        public DateTime GetFechaVencimiento()
-        {
-            return this.fechaVencimiento;
-        }
-
-        public void SetFechaVencimiento(DateTime fechaVencimientoLeida)
-        {
-            this.fechaVencimiento = fechaVencimientoLeida;
-        }
-
-        //metodos Setters y Getters para la propiedad estaVigente
-        public bool GetEstaVigente()
-        {
-            return this.estaVigente;
-        }
-
-        public void SetEstaVigente(bool estaVigenteLeido)
-        {
-            this.estaVigente = estaVigenteLeido;
-        }
-
-        //metodos Setters y Getters para la propiedad cantComprasAcumuladas
-        public int GetCantComprasAcumuladas()
-        {
-            return this.cantComprasAcumuladas;
-        }
-
-        public void SetCantComprasAcumuladas(int cantComprasAcumuladasLeidas)
-        {
-            this.cantComprasAcumuladas = cantComprasAcumuladasLeidas;
-        }
 
 
 
