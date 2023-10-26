@@ -73,19 +73,21 @@ namespace Clave2_Grupo
             // Acciones a realizar si todas las validaciones han sido superadas exitosamente
             if (validDUI==true&&validNOM==true)
             {
-                // Insertar un guion antes del último dígito del DUI
-                string dui = msktxtDUI.Text;
-                if (dui.Length > 1)
+                //Instanciación de la clase Cliente para guardar la información en sus propiedad nombre y DUI
+                Cliente cliente = new Cliente();                              
+                cliente.Nombre = txtNomCompleto.Text;
+                cliente.NumDui = msktxtDUI.Text;
+                if (cliente.NumDui.Length > 1)
                 {
-                    dui = dui.Insert(dui.Length - 1, "-");
+                    // Insertar un guion antes del último dígito del DUI 
+                    cliente.NumDui = cliente.NumDui.Insert(cliente.NumDui.Length - 1, "-");
                 }
-                //Instantación de la clase Cliente para guardar la información en sus atributos
-                Cliente cliente = new Cliente();
+                
                 //PROVICIONAL; solo para comprobar la validación del registro
                 dgvAddClientePrueba.Rows.Clear();
-                dgvAddClientePrueba.Rows.Add(dui, txtNomCompleto.Text);
+                dgvAddClientePrueba.Rows.Add(cliente.NumDui, cliente.Nombre);
                 MessageBox.Show("El usuario ha sido registrado");
-                cliente.Nombre = txtNomCompleto.Text;
+                
                 txtNomCompleto.Clear();
                 msktxtDUI.Text = "";
             }
