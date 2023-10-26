@@ -85,6 +85,9 @@ namespace Clave2_Grupo
                 dgvAddClientePrueba.Rows.Clear();
                 dgvAddClientePrueba.Rows.Add(dui, txtNomCompleto.Text);
                 MessageBox.Show("El usuario ha sido registrado");
+                cliente.Nombre = txtNomCompleto.Text;
+                txtNomCompleto.Clear();
+                msktxtDUI.Text = "";
             }
  
         }

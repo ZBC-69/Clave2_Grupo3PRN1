@@ -19,114 +19,65 @@ namespace Clave2_Grupo
         private string productRegaloCanjeado;
         private string tipoJuego;
 
-        //metodos Setters y Getters para la propiedad nombre
-        public string GetNombre()
+        //metodos Setters y Getters para la propiedades
+        public string Nombre
         {
-            return this.nombre;
+            get { return nombre; }
+            set { nombre = value; }
         }
 
-        public void SetNombre(string nombreLeido)
+        public string NumDui
         {
-            this.nombre = nombreLeido;
+            get { return numDui; }
+            set { numDui = value; }
         }
 
-        //metodos Setters y Getters para la propiedad numDui
-        public string GetNumDui()
+        public int CanTarjetas
         {
-            return this.numDui;
+            get { return canTarjetas; }
+            set { canTarjetas = value; }
         }
 
-        public void SetNumDui(string numDuiLeido)
+        public string TipoTarjeta
         {
-            this.numDui = numDuiLeido;
+            get { return tipoTarjeta; }
+            set { tipoTarjeta = value; }
         }
 
-        //metodos Setters y Getters para la propiedad canTarjetas
-        public int GetCanTarjetas()
+        public bool TienePuntosAcum
         {
-            return this.canTarjetas;
+            get { return tienePuntosAcum; }
+            set { tienePuntosAcum = value; }
         }
 
-        public void SetCanTarjetas(int canTarjetasLeidas)
+        public int CantPuntoAcum
         {
-            this.canTarjetas = canTarjetasLeidas;
+            get { return cantPuntoAcum; }
+            set { cantPuntoAcum = value; }
         }
 
-        //metodos Setters y Getters para la propiedad tipoTarjeta
-        public string GetTipoTarjeta()
+        public string VigenciaTarjeta
         {
-            return this.tipoTarjeta;
+            get { return vigenciaTarjeta; }
+            set { vigenciaTarjeta = value; }
         }
 
-        public void SetTipoTarjeta(string tipoTarjetaLeida)
+        public bool TieneProductRegalo
         {
-            this.tipoTarjeta = tipoTarjetaLeida;
+            get { return tieneProductRegalo; }
+            set { tieneProductRegalo = value; }
         }
 
-        //metodos Setters y Getters para la propiedad tienePuntosAcum
-        public bool GetTienePuntosAcum()
+        public string ProductRegaloCanjeado
         {
-            return this.tienePuntosAcum;
+            get { return productRegaloCanjeado; }
+            set { productRegaloCanjeado = value; }
         }
 
-        public void SetTienePuntosAcum(bool tienePuntosAcumLeido)
+        public string TipoJuego
         {
-            this.tienePuntosAcum = tienePuntosAcumLeido;
-        }
-
-        //metodos Setters y Getters para la propiedad cantPuntoAcum
-        public int GetCantPuntoAcum()
-        {
-            return this.cantPuntoAcum;
-        }
-
-        public void SetCantPuntoAcum(int cantPuntoAcumLeidos)
-        {
-            this.cantPuntoAcum = cantPuntoAcumLeidos;
-        }
-
-        //metodos Setters y Getters para la propiedad vigenciaTarjeta
-        public string GetVigenciaTarjeta()
-        {
-            return this.vigenciaTarjeta;
-        }
-
-        public void SetVigenciaTarjeta(string vigenciaTarjetaLeida)
-        {
-            this.vigenciaTarjeta = vigenciaTarjetaLeida;
-        }
-
-        //metodos Setters y Getters para la propiedad tieneProductRegalo
-        public bool GetTieneProductRegalo()
-        {
-            return this.tieneProductRegalo;
-        }
-
-        public void SetTieneProductRegalo(bool tieneProductRegaloLeido)
-        {
-            this.tieneProductRegalo = tieneProductRegaloLeido;
-        }
-
-        //metodos Setters y Getters para la propiedad productRegaloCanjeado
-        public string GetProductRegaloCanjeado()
-        {
-            return this.productRegaloCanjeado;
-        }
-
-        public void SetProductRegaloCanjeado(string productRegaloCanjeadoLeido)
-        {
-            this.productRegaloCanjeado = productRegaloCanjeadoLeido;
-        }
-
-        //metodos Setters y Getters para la propiedad tipoJuego
-        public string GetTipoJuego()
-        {
-            return this.tipoJuego;
-        }
-
-        public void SetTipoJuego(string tipoJuegoLeido)
-        {
-            this.tipoJuego = tipoJuegoLeido;
+            get { return tipoJuego; }
+            set { tipoJuego = value; }
         }
 
 
