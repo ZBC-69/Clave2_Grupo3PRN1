@@ -14,7 +14,7 @@ namespace Clave2_Grupo
     {
         //objeto para validar informaciones
         Metodos validDat = new Metodos();
-
+        private bool btnAddClicked = false;
         public fmrNuevoCliente()
         {
             //Inicialización del datagridview de prueba para verificar el registro
@@ -47,7 +47,7 @@ namespace Clave2_Grupo
         //Evento cuando se añade un nuevo cliente
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+           
             //Validación para campos vacios o incompletos
             if (txtNomCompleto.Text==string.Empty)
             {
@@ -87,14 +87,40 @@ namespace Clave2_Grupo
                 dgvAddClientePrueba.Rows.Clear();
                 dgvAddClientePrueba.Rows.Add(cliente.NumDui, cliente.Nombre);
                 MessageBox.Show("El usuario ha sido registrado");
-                
-                txtNomCompleto.Clear();
-                msktxtDUI.Text = "";
+                btnAddClicked = true;
+                //txtNomCompleto.Clear();
+                //msktxtDUI.Text = "";
             }
  
         }
 
-        
+        /// <summary>
+        /// Bóton que permite ir al formulario de compras de tarjetas una vez se han llenado los campos de dui y nommbre
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnIrACompras_Click(object sender, EventArgs e)
+        {
+            if (btnAddClicked)
+            {
+                if (!string.IsNullOrWhiteSpace(txtNomCompleto.Text) && !string.IsNullOrEmpty(txtNomCompleto.Text) && !string.IsNullOrWhiteSpace(msktxtDUI.Text) && msktxtDUI.MaskCompleted)
+                {
+                    // Abrir el formulario
+                    Form abrirFormVentaTarjets = new fmrVenderTarjetas();
+                    abrirFormVentaTarjets.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Error, uno o varios datos están vacíos o el DUI no está completo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe hacer clic en el botón 'Agregar' antes de abrir el formulario de ventas de tarjetas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+            
+
+        }
     }
     
 }
