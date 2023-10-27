@@ -30,8 +30,12 @@ namespace Clave2_Grupo
         private void InitializeComponent()
         {
             this.panelMenuMayorLateral = new System.Windows.Forms.Panel();
+            this.panelSubMenuVentas = new System.Windows.Forms.Panel();
+            this.btnVenderJuegos = new System.Windows.Forms.Button();
+            this.btnVenderTarjetas = new System.Windows.Forms.Button();
+            this.btnMenuVentasAbrir = new System.Windows.Forms.Button();
             this.panelSubMenuTarjetas = new System.Windows.Forms.Panel();
-            this.btnVerResumenDeTarjetasVendidas = new System.Windows.Forms.Button();
+            this.btnBuscarUnaTarjeta = new System.Windows.Forms.Button();
             this.btnMostrarTarjetasExpiradas = new System.Windows.Forms.Button();
             this.btnMostrarTarjetasVendidas = new System.Windows.Forms.Button();
             this.btnMenuTarjetasElectronicasAbrir = new System.Windows.Forms.Button();
@@ -45,15 +49,11 @@ namespace Clave2_Grupo
             this.panelAbajo = new System.Windows.Forms.Panel();
             this.btnSalir1 = new System.Windows.Forms.Button();
             this.panelContenedorDeFormularios = new System.Windows.Forms.Panel();
-            this.btnMenuVentasAbrir = new System.Windows.Forms.Button();
-            this.panelSubMenuVentas = new System.Windows.Forms.Panel();
-            this.btnVenderJuegos = new System.Windows.Forms.Button();
-            this.btnVenderTarjetas = new System.Windows.Forms.Button();
             this.panelMenuMayorLateral.SuspendLayout();
+            this.panelSubMenuVentas.SuspendLayout();
             this.panelSubMenuTarjetas.SuspendLayout();
             this.panelSubMenuClientes.SuspendLayout();
             this.panelAbajo.SuspendLayout();
-            this.panelSubMenuVentas.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelMenuMayorLateral
@@ -73,10 +73,66 @@ namespace Clave2_Grupo
             this.panelMenuMayorLateral.Size = new System.Drawing.Size(250, 518);
             this.panelMenuMayorLateral.TabIndex = 0;
             // 
+            // panelSubMenuVentas
+            // 
+            this.panelSubMenuVentas.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panelSubMenuVentas.Controls.Add(this.btnVenderJuegos);
+            this.panelSubMenuVentas.Controls.Add(this.btnVenderTarjetas);
+            this.panelSubMenuVentas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuVentas.Location = new System.Drawing.Point(0, 439);
+            this.panelSubMenuVentas.Name = "panelSubMenuVentas";
+            this.panelSubMenuVentas.Size = new System.Drawing.Size(233, 130);
+            this.panelSubMenuVentas.TabIndex = 6;
+            // 
+            // btnVenderJuegos
+            // 
+            this.btnVenderJuegos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVenderJuegos.FlatAppearance.BorderSize = 0;
+            this.btnVenderJuegos.Location = new System.Drawing.Point(0, 35);
+            this.btnVenderJuegos.Name = "btnVenderJuegos";
+            this.btnVenderJuegos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnVenderJuegos.Size = new System.Drawing.Size(233, 35);
+            this.btnVenderJuegos.TabIndex = 2;
+            this.btnVenderJuegos.Text = "VENTA DE JUEGOS";
+            this.btnVenderJuegos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVenderJuegos.UseVisualStyleBackColor = true;
+            this.btnVenderJuegos.Click += new System.EventHandler(this.btnVenderJuegos_Click);
+            // 
+            // btnVenderTarjetas
+            // 
+            this.btnVenderTarjetas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVenderTarjetas.FlatAppearance.BorderSize = 0;
+            this.btnVenderTarjetas.Location = new System.Drawing.Point(0, 0);
+            this.btnVenderTarjetas.Name = "btnVenderTarjetas";
+            this.btnVenderTarjetas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnVenderTarjetas.Size = new System.Drawing.Size(233, 35);
+            this.btnVenderTarjetas.TabIndex = 1;
+            this.btnVenderTarjetas.Text = "VENTA DE TARJETAS";
+            this.btnVenderTarjetas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVenderTarjetas.UseVisualStyleBackColor = true;
+            this.btnVenderTarjetas.Click += new System.EventHandler(this.btnVenderTarjetas_Click);
+            // 
+            // btnMenuVentasAbrir
+            // 
+            this.btnMenuVentasAbrir.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnMenuVentasAbrir.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuVentasAbrir.FlatAppearance.BorderSize = 0;
+            this.btnMenuVentasAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuVentasAbrir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMenuVentasAbrir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnMenuVentasAbrir.Location = new System.Drawing.Point(0, 394);
+            this.btnMenuVentasAbrir.Name = "btnMenuVentasAbrir";
+            this.btnMenuVentasAbrir.Size = new System.Drawing.Size(233, 45);
+            this.btnMenuVentasAbrir.TabIndex = 5;
+            this.btnMenuVentasAbrir.Text = "MENU VENDER (TARJETAS Y JUEGOS)";
+            this.btnMenuVentasAbrir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuVentasAbrir.UseVisualStyleBackColor = false;
+            this.btnMenuVentasAbrir.Click += new System.EventHandler(this.btnMenuVentasAbrir_Click);
+            // 
             // panelSubMenuTarjetas
             // 
             this.panelSubMenuTarjetas.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.panelSubMenuTarjetas.Controls.Add(this.btnVerResumenDeTarjetasVendidas);
+            this.panelSubMenuTarjetas.Controls.Add(this.btnBuscarUnaTarjeta);
             this.panelSubMenuTarjetas.Controls.Add(this.btnMostrarTarjetasExpiradas);
             this.panelSubMenuTarjetas.Controls.Add(this.btnMostrarTarjetasVendidas);
             this.panelSubMenuTarjetas.Dock = System.Windows.Forms.DockStyle.Top;
@@ -85,19 +141,19 @@ namespace Clave2_Grupo
             this.panelSubMenuTarjetas.Size = new System.Drawing.Size(233, 130);
             this.panelSubMenuTarjetas.TabIndex = 3;
             // 
-            // btnVerResumenDeTarjetasVendidas
+            // btnBuscarUnaTarjeta
             // 
-            this.btnVerResumenDeTarjetasVendidas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVerResumenDeTarjetasVendidas.FlatAppearance.BorderSize = 0;
-            this.btnVerResumenDeTarjetasVendidas.Location = new System.Drawing.Point(0, 70);
-            this.btnVerResumenDeTarjetasVendidas.Name = "btnVerResumenDeTarjetasVendidas";
-            this.btnVerResumenDeTarjetasVendidas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnVerResumenDeTarjetasVendidas.Size = new System.Drawing.Size(233, 35);
-            this.btnVerResumenDeTarjetasVendidas.TabIndex = 3;
-            this.btnVerResumenDeTarjetasVendidas.Text = "RESUMEN DE TARJETAS VENDIDAS";
-            this.btnVerResumenDeTarjetasVendidas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerResumenDeTarjetasVendidas.UseVisualStyleBackColor = true;
-            this.btnVerResumenDeTarjetasVendidas.Click += new System.EventHandler(this.btnVerResumenDeTarjetasVendidas_Click);
+            this.btnBuscarUnaTarjeta.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBuscarUnaTarjeta.FlatAppearance.BorderSize = 0;
+            this.btnBuscarUnaTarjeta.Location = new System.Drawing.Point(0, 70);
+            this.btnBuscarUnaTarjeta.Name = "btnBuscarUnaTarjeta";
+            this.btnBuscarUnaTarjeta.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnBuscarUnaTarjeta.Size = new System.Drawing.Size(233, 35);
+            this.btnBuscarUnaTarjeta.TabIndex = 3;
+            this.btnBuscarUnaTarjeta.Text = "BUSCAR TARJETA";
+            this.btnBuscarUnaTarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarUnaTarjeta.UseVisualStyleBackColor = true;
+            this.btnBuscarUnaTarjeta.Click += new System.EventHandler(this.btnBuscarUnaTarjeta_Click);
             // 
             // btnMostrarTarjetasExpiradas
             // 
@@ -265,62 +321,6 @@ namespace Clave2_Grupo
             this.panelContenedorDeFormularios.Size = new System.Drawing.Size(638, 418);
             this.panelContenedorDeFormularios.TabIndex = 2;
             // 
-            // btnMenuVentasAbrir
-            // 
-            this.btnMenuVentasAbrir.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnMenuVentasAbrir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMenuVentasAbrir.FlatAppearance.BorderSize = 0;
-            this.btnMenuVentasAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenuVentasAbrir.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMenuVentasAbrir.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnMenuVentasAbrir.Location = new System.Drawing.Point(0, 394);
-            this.btnMenuVentasAbrir.Name = "btnMenuVentasAbrir";
-            this.btnMenuVentasAbrir.Size = new System.Drawing.Size(233, 45);
-            this.btnMenuVentasAbrir.TabIndex = 5;
-            this.btnMenuVentasAbrir.Text = "MENU VENDER (TARJETAS Y JUEGOS)";
-            this.btnMenuVentasAbrir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenuVentasAbrir.UseVisualStyleBackColor = false;
-            this.btnMenuVentasAbrir.Click += new System.EventHandler(this.btnMenuVentasAbrir_Click);
-            // 
-            // panelSubMenuVentas
-            // 
-            this.panelSubMenuVentas.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panelSubMenuVentas.Controls.Add(this.btnVenderJuegos);
-            this.panelSubMenuVentas.Controls.Add(this.btnVenderTarjetas);
-            this.panelSubMenuVentas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuVentas.Location = new System.Drawing.Point(0, 439);
-            this.panelSubMenuVentas.Name = "panelSubMenuVentas";
-            this.panelSubMenuVentas.Size = new System.Drawing.Size(233, 130);
-            this.panelSubMenuVentas.TabIndex = 6;
-            // 
-            // btnVenderJuegos
-            // 
-            this.btnVenderJuegos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVenderJuegos.FlatAppearance.BorderSize = 0;
-            this.btnVenderJuegos.Location = new System.Drawing.Point(0, 35);
-            this.btnVenderJuegos.Name = "btnVenderJuegos";
-            this.btnVenderJuegos.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnVenderJuegos.Size = new System.Drawing.Size(233, 35);
-            this.btnVenderJuegos.TabIndex = 2;
-            this.btnVenderJuegos.Text = "VENTA DE JUEGOS";
-            this.btnVenderJuegos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVenderJuegos.UseVisualStyleBackColor = true;
-            this.btnVenderJuegos.Click += new System.EventHandler(this.btnVenderJuegos_Click);
-            // 
-            // btnVenderTarjetas
-            // 
-            this.btnVenderTarjetas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVenderTarjetas.FlatAppearance.BorderSize = 0;
-            this.btnVenderTarjetas.Location = new System.Drawing.Point(0, 0);
-            this.btnVenderTarjetas.Name = "btnVenderTarjetas";
-            this.btnVenderTarjetas.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnVenderTarjetas.Size = new System.Drawing.Size(233, 35);
-            this.btnVenderTarjetas.TabIndex = 1;
-            this.btnVenderTarjetas.Text = "VENTA DE TARJETAS";
-            this.btnVenderTarjetas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVenderTarjetas.UseVisualStyleBackColor = true;
-            this.btnVenderTarjetas.Click += new System.EventHandler(this.btnVenderTarjetas_Click);
-            // 
             // fmrPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -332,10 +332,10 @@ namespace Clave2_Grupo
             this.Name = "fmrPrincipal";
             this.Text = "FORMULARIO PRINCIPAL";
             this.panelMenuMayorLateral.ResumeLayout(false);
+            this.panelSubMenuVentas.ResumeLayout(false);
             this.panelSubMenuTarjetas.ResumeLayout(false);
             this.panelSubMenuClientes.ResumeLayout(false);
             this.panelAbajo.ResumeLayout(false);
-            this.panelSubMenuVentas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -351,7 +351,7 @@ namespace Clave2_Grupo
         private System.Windows.Forms.Button btnMenuClientesAbrir;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelSubMenuTarjetas;
-        private System.Windows.Forms.Button btnVerResumenDeTarjetasVendidas;
+        private System.Windows.Forms.Button btnBuscarUnaTarjeta;
         private System.Windows.Forms.Button btnMostrarTarjetasExpiradas;
         private System.Windows.Forms.Button btnMostrarTarjetasVendidas;
         private System.Windows.Forms.Button btnMenuTarjetasElectronicasAbrir;

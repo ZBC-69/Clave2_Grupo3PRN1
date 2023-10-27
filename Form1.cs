@@ -132,7 +132,7 @@ namespace Clave2_Grupo
             ocultarSubmenu();
         }
 
-        private void btnVerResumenDeTarjetasVendidas_Click(object sender, EventArgs e)
+        private void btnBuscarUnaTarjeta_Click(object sender, EventArgs e)
         {
             //...
             //Your Code
@@ -145,6 +145,10 @@ namespace Clave2_Grupo
 
 
         private Form fmrActivo = null;
+        /// <summary>
+        /// Método que permite abrir diversos formularios del formulario principal
+        /// </summary>
+        /// <param name="fmrCualquiera"></param>
         private void abrirDiferentesFormularios(Form fmrCualquiera)
         {
             if (fmrActivo != null)
