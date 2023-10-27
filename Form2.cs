@@ -15,6 +15,8 @@ namespace Clave2_Grupo
         //objeto para validar informaciones
         Metodos validDat = new Metodos();
         private bool btnAddClicked = false;
+        //Instanciación de la clase Cliente para guardar la información en sus propiedad nombre y DUI
+        Cliente cliente = new Cliente();
         public fmrNuevoCliente()
         {
             //Inicialización del datagridview de prueba para verificar el registro
@@ -73,8 +75,7 @@ namespace Clave2_Grupo
             // Acciones a realizar si todas las validaciones han sido superadas exitosamente
             if (validDUI==true&&validNOM==true)
             {
-                //Instanciación de la clase Cliente para guardar la información en sus propiedad nombre y DUI
-                Cliente cliente = new Cliente();                              
+                                             
                 cliente.Nombre = txtNomCompleto.Text;
                 cliente.NumDui = msktxtDUI.Text;
                 if (cliente.NumDui.Length > 1)
@@ -87,6 +88,7 @@ namespace Clave2_Grupo
                 dgvAddClientePrueba.Rows.Clear();
                 dgvAddClientePrueba.Rows.Add(cliente.NumDui, cliente.Nombre);
                 MessageBox.Show("El usuario ha sido registrado");
+                MessageBox.Show(cliente.NumDui);
                 btnAddClicked = true;
                 //txtNomCompleto.Clear();
                 //msktxtDUI.Text = "";
