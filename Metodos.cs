@@ -38,5 +38,30 @@ namespace Clave2_Grupo
 
             }
         }
+
+        // Declarar una variable estática para fmrActivo
+        private static Form fmrActivo = null;
+
+        /// <summary>
+        /// Método que permite abrir formularios dentro de otros formularios mayores o principales
+        /// </summary>
+        /// <param name="fmrCualquiera"></param>
+        public static void AbrirDiferentesFormularios(Form fmrCualquiera, Panel panelContenedor)
+        {
+            if (fmrActivo != null)
+            {
+                fmrActivo.Close();
+            }
+            fmrActivo = fmrCualquiera;
+            fmrCualquiera.TopLevel = false;
+            fmrCualquiera.FormBorderStyle = FormBorderStyle.None;
+            fmrCualquiera.Dock = DockStyle.Fill;
+            panelContenedor.Controls.Add(fmrCualquiera);
+            panelContenedor.Tag = fmrCualquiera;
+            fmrCualquiera.BringToFront();
+            fmrCualquiera.Show();
+        }
+
+        // Resto de los métodos de la clase Metodos
     }
 }

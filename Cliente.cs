@@ -8,9 +8,9 @@ namespace Clave2_Grupo
 {
     class Cliente
     {
-        private string nombre;
-        private string numDui;
-        private int canTarjetas;
+        private string nombre;  //
+        private string numDui;  //
+        private int canTarjetas;    //
         private string tipoTarjeta;
         private bool tienePuntosAcum;
         private int cantPuntoAcum;
