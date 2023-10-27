@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,20 @@ namespace Clave2_Grupo
 {
     class Conexion
     {
+        public static MySqlConnection getConexion()
+        {
+            string servidor = "localhost";
+            string puerto = "3306";
+            string usuario = "root";
+            string password = "root";
+            string bd = "Clave2_Grupo3;";
+
+            string cadenaConexion = "server=" + servidor + "; port=" + puerto + "; user id=" + usuario
+                                   + "; password=" + password + "; database=" + bd;
+
+            MySqlConnection conexion = new MySqlConnection(cadenaConexion);
+
+            return conexion;
+        }
     }
 }
