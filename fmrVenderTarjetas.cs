@@ -19,16 +19,17 @@ namespace Clave2_Grupo
         private Cliente cliente; // Propiedad para almacenar el objeto Cliente
 
         // Constructor que acepta un objeto Cliente como parámetro
-        
-        public fmrVenderTarjetas()
-        {
-            InitializeComponent();
-        }
+        // y con esto nos aseguramos de recoger los datos y que se hayan guardado en otros formularios y así continuarlos usando
         public fmrVenderTarjetas(Cliente cliente)
         {
             InitializeComponent();
             this.cliente = cliente; // Asigna el objeto Cliente recibido al campo de la clase
         }
+        public fmrVenderTarjetas()
+        {
+            InitializeComponent();
+        }
+        
         string ValidCliente;
         string ValidDUI;
         private void btnSalir2_Click(object sender, EventArgs e)
@@ -96,7 +97,7 @@ namespace Clave2_Grupo
                     if (tarjetaSeleccionadaV != "")
                     {
                         ValidCliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
-                        ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente", "Identificación de usuario");
+                        ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente\nEjemplo: 00110022-9", "Identificación de usuario");
 
                         if (ValidCliente == cliente.Nombre && ValidDUI == cliente.NumDui)
                         {
@@ -115,7 +116,7 @@ namespace Clave2_Grupo
                         }
                         else
                         {
-                            MessageBox.Show("No se encuentran registros del cliente");
+                            MessageBox.Show("No se encuentran registros del cliente\nTambién debe asegurarse de colocar el DUI con 9 caracteres y un guión\nEjemplo: 00220099-2");
                         }
                     }
                 }

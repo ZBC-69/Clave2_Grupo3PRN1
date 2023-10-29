@@ -107,9 +107,10 @@ namespace Clave2_Grupo
             {
                 if (!string.IsNullOrWhiteSpace(txtNomCompleto.Text) && !string.IsNullOrEmpty(txtNomCompleto.Text) && !string.IsNullOrWhiteSpace(msktxtDUI.Text) && msktxtDUI.MaskCompleted)
                 {
-                    // Abrir el formulario
-                    // Crear una instancia del formulario fmrVenderTarjetas y pasar el objeto Cliente
+                    
+                    // Crear una instancia del formulario fmrVenderTarjetas y pasar el objeto Cliente para que el otro formulario trabaje a partir del DUI Y nombre del cliente que aquí hemos registrado
                     fmrVenderTarjetas formVentaTarjetas = new fmrVenderTarjetas(cliente);
+                    // Abrir el formulario
                     formVentaTarjetas.Show();
                 }
                 else
