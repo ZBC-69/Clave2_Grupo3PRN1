@@ -8,14 +8,14 @@ namespace Clave2_Grupo
 {
     class Tarjeta
     {
-        private string tipoTarjeta;     //== STRING COMBOBOX
-        private double limiteCredito;   //==
-        private double saldoActual;      //==
-        private int puntosAcum;
-        private DateTime fechaApertura; //==
-        private DateTime fechaVencimiento;//==
-        private bool estaVigente;   //==
-        private int cantComprasAcumuladas;
+        private string tipoTarjeta;     //Gold ($300), Silver ($150), Plus ($50)
+        private double limiteCredito;   //300 ó 150 ó 50  representa la cifra de dólares
+        private double saldoActual;      // el saldo puede disminuir o mantenerse
+        private int puntosAcum;         //la tarjeta otorga puntos por cada compra y transaccion
+        private DateTime fechaApertura; //la tarjeta se abre y habilita cuando se compra
+        private DateTime fechaVencimiento;//se desactiva o vence y caduca 
+        private bool estaVigente;   //está o no vigente la tarjeta?
+        private int cantComprasAcumuladas; //cantidad de compras que se hayan hecho con la tarjeta (conteo o recuento)
 
         public Tarjeta()
         {
@@ -70,6 +70,9 @@ namespace Clave2_Grupo
             set { cantComprasAcumuladas = value; }
         }
 
+        /// <summary>
+        /// Método que establece los valores de algunas propiedades de una tarjeta partiendo del valor de la propiedad TipoTarjeta
+        /// </summary>
         public void EstablecerValoresPorTipoTarjeta()
         {
             if (tipoTarjeta == "Gold")
@@ -90,7 +93,9 @@ namespace Clave2_Grupo
 
             puntosAcum = 0;
             fechaApertura= DateTime.Now;
+            //se le dá un periodo de validez de la tarjeta (7 dias en este caso)
             fechaVencimiento = FechaApertura.AddDays(7);
+            //una vez se venda la tarjeta es vigente y disponible para su uso
             estaVigente = true;
         }
 
