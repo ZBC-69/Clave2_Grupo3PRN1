@@ -43,6 +43,7 @@ namespace Clave2_Grupo
         /// <param name="e"></param>
         private void btnContinuar_Click(object sender, EventArgs e)
         {
+            //verificar si ya se registró un cliente
             if (cliente != null && !string.IsNullOrEmpty(cliente.Nombre))
             {
                 MessageBox.Show(cliente.Nombre + " " + cliente.NumDui);
@@ -53,7 +54,7 @@ namespace Clave2_Grupo
                 return;
             }
 
-
+            //comprobar cual tarjeta fue seleccionada y la cantidad de tarjetas a comprar
             errorProvider1.SetError(cmbTarjetasComprar, "");
 
             if (txtNumTarjetasComprar.Text == string.Empty)
@@ -68,23 +69,23 @@ namespace Clave2_Grupo
                 {
                     int CantTarjetas = Convert.ToInt32(txtNumTarjetasComprar.Text);
                     int TotalPagarTarjetas = 0;
-                    string tarjetaSeleccionada = "";
+                    string tarjetaSeleccionadaV = "";
 
                     switch (cmbTarjetasComprar.Text)
                     {
                         case "Plus":
                             TotalPagarTarjetas = CantTarjetas * PrecioPlus;
-                            tarjetaSeleccionada = "Plus";
+                            tarjetaSeleccionadaV = "Plus";
                             break;
 
                         case "Silver":
                             TotalPagarTarjetas = CantTarjetas * PrecioSilver;
-                            tarjetaSeleccionada = "Silver";
+                            tarjetaSeleccionadaV = "Silver";
                             break;
 
                         case "Gold":
                             TotalPagarTarjetas = CantTarjetas * PrecioGold;
-                            tarjetaSeleccionada = "Gold";
+                            tarjetaSeleccionadaV = "Gold";
                             break;
 
                         default:
@@ -92,14 +93,19 @@ namespace Clave2_Grupo
                             break;
                     }
 
-                    if (tarjetaSeleccionada != "")
+                    if (tarjetaSeleccionadaV != "")
                     {
                         ValidCliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
                         ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente", "Identificación de usuario");
 
-                        if (ValidCliente == "Carlos Amaya" && ValidDUI == "123456789")
+                        if (ValidCliente == cliente.Nombre && ValidDUI == cliente.NumDui)
                         {
-                            MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: {tarjetaSeleccionada}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
+                            //crear una tajeta para el cliente
+                            Tarjeta tarjetaParaCliente = new Tarjeta();
+
+                            //pasarle al objeto cliente el valor de la propiedad Tipo de Tarjeta
+                            cliente.TipoTarjeta = tarjetaSeleccionadaV;
+                            MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: {cliente.TipoTarjeta}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
                         }
                         else
                         {

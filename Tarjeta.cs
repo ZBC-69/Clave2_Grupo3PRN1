@@ -8,13 +8,13 @@ namespace Clave2_Grupo
 {
     class Tarjeta
     {
-        private string tipoTarjeta;
-        private double limiteCredito;
+        private string tipoTarjeta;     //==
+        private double limiteCredito;   //==
         private double saldoActual;
         private int puntosAcum;
-        private DateTime fechaApertura;
-        private DateTime fechaVencimiento;
-        private bool estaVigente;
+        private DateTime fechaApertura; //==
+        private DateTime fechaVencimiento;//==
+        private bool estaVigente;   //==
         private int cantComprasAcumuladas;
 
         public Tarjeta()

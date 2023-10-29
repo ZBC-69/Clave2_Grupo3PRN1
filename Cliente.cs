@@ -10,7 +10,7 @@ namespace Clave2_Grupo
     {
         private string nombre;  //
         private string numDui;  //
-        private int canTarjetas;    //
+        private int canTarjetas;    
         private string tipoTarjeta;
         private bool tienePuntosAcum;
         private int cantPuntoAcum;
