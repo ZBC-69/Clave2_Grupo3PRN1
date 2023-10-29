@@ -8,9 +8,9 @@ namespace Clave2_Grupo
 {
     class Tarjeta
     {
-        private string tipoTarjeta;     //==
+        private string tipoTarjeta;     //== STRING COMBOBOX
         private double limiteCredito;   //==
-        private double saldoActual;
+        private double saldoActual;      //==
         private int puntosAcum;
         private DateTime fechaApertura; //==
         private DateTime fechaVencimiento;//==
@@ -19,7 +19,7 @@ namespace Clave2_Grupo
 
         public Tarjeta()
         {
-
+           
         }
         //metodos Setters y Getters para la propiedad tipoTarjeta
         public string TipoTarjeta
@@ -70,7 +70,29 @@ namespace Clave2_Grupo
             set { cantComprasAcumuladas = value; }
         }
 
+        public void EstablecerValoresPorTipoTarjeta()
+        {
+            if (tipoTarjeta == "Gold")
+            {
+                limiteCredito = 300;
+                saldoActual = 300;
+            }
+            else if (tipoTarjeta == "Silver")
+            {
+                limiteCredito = 150;
+                saldoActual = 150;
+            }
+            else if (tipoTarjeta == "Plus")
+            {
+                limiteCredito = 50;
+                saldoActual = 50;
+            }
 
+            puntosAcum = 0;
+            fechaApertura= DateTime.Now;
+            fechaVencimiento = FechaApertura.AddDays(7);
+            estaVigente = true;
+        }
 
 
     }

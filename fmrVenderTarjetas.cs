@@ -100,12 +100,18 @@ namespace Clave2_Grupo
 
                         if (ValidCliente == cliente.Nombre && ValidDUI == cliente.NumDui)
                         {
-                            //crear una tajeta para el cliente
-                            Tarjeta tarjetaParaCliente = new Tarjeta();
-
                             //pasarle al objeto cliente el valor de la propiedad Tipo de Tarjeta
                             cliente.TipoTarjeta = tarjetaSeleccionadaV;
-                            MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: {cliente.TipoTarjeta}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
+                            //crear una tajeta para el cliente
+                            Tarjeta tarjetaParaCliente = new Tarjeta();
+                            tarjetaParaCliente.TipoTarjeta = cliente.TipoTarjeta;
+
+                            //establecer el limite del saldo de la tarjeta, saldo actual, fecha de apertura, vencimiento,etc
+                            tarjetaParaCliente.EstablecerValoresPorTipoTarjeta();
+
+                            
+                            MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: {tarjetaParaCliente.TipoTarjeta}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}\nSaldo actual de tarjeta: {tarjetaParaCliente.SaldoActual} $USD\nFecha de apertura: {tarjetaParaCliente.FechaApertura}\nFecha de Vencimiento: {tarjetaParaCliente.FechaVencimiento}\nPuntos Acumulados: {tarjetaParaCliente.PuntosAcum}\nVigente: SI", "Factura");
+                            
                         }
                         else
                         {
