@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Clave2_Grupo
 {
-    class Cliente
+    public class Cliente
     {
         private string nombre;  //
         private string numDui;  //
@@ -80,7 +80,19 @@ namespace Clave2_Grupo
             set { tipoJuego = value; }
         }
 
-
+        public bool VerificarNombreVacio()
+        {
+            if (string.IsNullOrEmpty(nombre))
+            {
+                //esta vacio
+                return false;
+            }
+            else
+            {   
+                //tiene datos
+                return true;
+            }
+        }
 
 
 

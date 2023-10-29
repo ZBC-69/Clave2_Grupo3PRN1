@@ -15,9 +15,19 @@ namespace Clave2_Grupo
         const int PrecioPlus = 50;
         const int PrecioSilver = 150;
         const int PrecioGold = 300;
+
+        private Cliente cliente; // Propiedad para almacenar el objeto Cliente
+
+        // Constructor que acepta un objeto Cliente como parámetro
+        
         public fmrVenderTarjetas()
         {
             InitializeComponent();
+        }
+        public fmrVenderTarjetas(Cliente cliente)
+        {
+            InitializeComponent();
+            this.cliente = cliente; // Asigna el objeto Cliente recibido al campo de la clase
         }
         string ValidCliente;
         string ValidDUI;
@@ -25,124 +35,82 @@ namespace Clave2_Grupo
         {
             Close();
         }
+        /// <summary>
+        /// Botón que se encarga de procesar la compra de tarjetas eleectrónicas para un cliente.
+        /// Lo anterior una vez el cliente ya está registrado en la base de datos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            switch (cmbTarjetasComprar.Text)
+            if (cliente != null && !string.IsNullOrEmpty(cliente.Nombre))
             {
-                case "Plus":
-                    errorProvider1.SetError(cmbTarjetasComprar,"");
-                    if (txtNumTarjetasComprar.Text==string.Empty)
-                    {
-                        errorProvider1.SetError(txtNumTarjetasComprar,"Campo Obligatorio");
-                    }
-                    else
-                    {
-                        errorProvider1.SetError(txtNumTarjetasComprar, "");
-                        try
-                        {
-                            int CantTarjetas= Convert.ToInt32(txtNumTarjetasComprar.Text);
-                            if (CantTarjetas>0)
-                            {
-                                int TotalPagarTarjetas = CantTarjetas * PrecioPlus;
-                                ValidCliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
-                                ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente", "Identificación de usuario");
-                                if (ValidCliente == "Carlos Amaya" && ValidDUI == "123456789")
-                                {
-                                    MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: Plus\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
-                                }
-                                else
-                                {
-                                    MessageBox.Show("No se encuentran registros del cliente");
-                                }
-                            }
-                            else
-                            {
-                                errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese números positivos");
-                            }
-                        }
-                        catch (Exception)
-                        {
-                            errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números enteros");
-                        }
-                    }
-                    break;
+                MessageBox.Show(cliente.Nombre + " " + cliente.NumDui);
+            }
+            else
+            {
+                MessageBox.Show("Primero debe registrar un cliente en el formulario de registros", "No se encuentran registros del cliente",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                return;
+            }
 
-                case "Silver":
-                    errorProvider1.SetError(cmbTarjetasComprar, "");
-                    if (txtNumTarjetasComprar.Text == string.Empty)
-                    {
-                        errorProvider1.SetError(txtNumTarjetasComprar, "Campo Obligatorio");
-                    }
-                    else
-                    {
-                        errorProvider1.SetError(txtNumTarjetasComprar, "");
-                        try
-                        {
-                            int CantTarjetas = Convert.ToInt32(txtNumTarjetasComprar.Text);
-                            if (CantTarjetas>0)
-                            {
-                                int TotalPagarTarjetas = CantTarjetas * PrecioSilver;
-                                if (ValidCliente == "Carlos Amaya" && ValidDUI == "123456789")
-                                {
-                                    MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: Silver\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
-                                }
-                                else
-                                {
-                                    MessageBox.Show("No se encuentran registros del cliente");
-                                }
-                            }
-                            else
-                            {
-                                errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números positivos");
-                            }
-                        }
-                        catch (Exception)
-                        {
-                            errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números enteros");
-                        }
-                    }
-                    break;
 
-                case "Gold":
-                    errorProvider1.SetError(cmbTarjetasComprar, "");
-                    if (txtNumTarjetasComprar.Text == string.Empty)
+            errorProvider1.SetError(cmbTarjetasComprar, "");
+
+            if (txtNumTarjetasComprar.Text == string.Empty)
+            {
+                errorProvider1.SetError(txtNumTarjetasComprar, "Campo Obligatorio");
+            }
+            else
+            {
+                errorProvider1.SetError(txtNumTarjetasComprar, "");
+
+                try
+                {
+                    int CantTarjetas = Convert.ToInt32(txtNumTarjetasComprar.Text);
+                    int TotalPagarTarjetas = 0;
+                    string tarjetaSeleccionada = "";
+
+                    switch (cmbTarjetasComprar.Text)
                     {
-                        errorProvider1.SetError(txtNumTarjetasComprar, "Campo Obligatorio");
+                        case "Plus":
+                            TotalPagarTarjetas = CantTarjetas * PrecioPlus;
+                            tarjetaSeleccionada = "Plus";
+                            break;
+
+                        case "Silver":
+                            TotalPagarTarjetas = CantTarjetas * PrecioSilver;
+                            tarjetaSeleccionada = "Silver";
+                            break;
+
+                        case "Gold":
+                            TotalPagarTarjetas = CantTarjetas * PrecioGold;
+                            tarjetaSeleccionada = "Gold";
+                            break;
+
+                        default:
+                            errorProvider1.SetError(cmbTarjetasComprar, "Campo obligatorio");
+                            break;
                     }
-                    else
+
+                    if (tarjetaSeleccionada != "")
                     {
-                        errorProvider1.SetError(txtNumTarjetasComprar, "");
-                        try
+                        ValidCliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
+                        ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente", "Identificación de usuario");
+
+                        if (ValidCliente == "Carlos Amaya" && ValidDUI == "123456789")
                         {
-                            int CantTarjetas = Convert.ToInt32(txtNumTarjetasComprar.Text);
-                            if (CantTarjetas>0)
-                            {
-                                int TotalPagarTarjetas = CantTarjetas * PrecioGold;
-                                ValidCliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
-                                ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente", "Identificación de usuario");
-                                if (ValidCliente == "Carlos Amaya" && ValidDUI == "123456789")
-                                {
-                                    MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: Gold\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
-                                }
-                                else
-                                {
-                                    MessageBox.Show("No se encuentran registros del cliente");
-                                }
-                            }
-                            else
-                            {
-                                errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números positivos");
-                            }
+                            MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: {tarjetaSeleccionada}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}", "Factura");
                         }
-                        catch (Exception)
+                        else
                         {
-                            errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números enteros");
+                            MessageBox.Show("No se encuentran registros del cliente");
                         }
                     }
-                    break;
-                default:
-                    errorProvider1.SetError(cmbTarjetasComprar, "Campo obligatorio");
-                    break;
+                }
+                catch (Exception)
+                {
+                    errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números enteros");
+                }
             }
         }
     }
