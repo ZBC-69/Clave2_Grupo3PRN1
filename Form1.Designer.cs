@@ -299,7 +299,7 @@ namespace Clave2_Grupo
             this.panelAbajo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelAbajo.Location = new System.Drawing.Point(250, 418);
             this.panelAbajo.Name = "panelAbajo";
-            this.panelAbajo.Size = new System.Drawing.Size(638, 100);
+            this.panelAbajo.Size = new System.Drawing.Size(810, 100);
             this.panelAbajo.TabIndex = 1;
             // 
             // btnSalir1
@@ -318,14 +318,14 @@ namespace Clave2_Grupo
             this.panelContenedorDeFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorDeFormularios.Location = new System.Drawing.Point(250, 0);
             this.panelContenedorDeFormularios.Name = "panelContenedorDeFormularios";
-            this.panelContenedorDeFormularios.Size = new System.Drawing.Size(638, 418);
+            this.panelContenedorDeFormularios.Size = new System.Drawing.Size(810, 418);
             this.panelContenedorDeFormularios.TabIndex = 2;
             // 
             // fmrPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 518);
+            this.ClientSize = new System.Drawing.Size(1060, 518);
             this.Controls.Add(this.panelContenedorDeFormularios);
             this.Controls.Add(this.panelAbajo);
             this.Controls.Add(this.panelMenuMayorLateral);
