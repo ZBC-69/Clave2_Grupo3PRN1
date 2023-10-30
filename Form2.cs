@@ -14,7 +14,6 @@ namespace Clave2_Grupo
     public partial class fmrNuevoCliente : Form
     {
         
-        
         //codigo para establecer conexion con la B.D
          static string servidor = "localhost"; //Nombre o ip del servidor de MySQL
          static string puerto = "3306";//Nombre del puerto
