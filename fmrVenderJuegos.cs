@@ -15,11 +15,23 @@ namespace Clave2_Grupo
         public fmrVenderJuegos()
         {
             InitializeComponent();
+
+            
         }
 
         private void btnSalir2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dgvPreciosJuegos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnRegistrarCompraJuego_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("SE VENDIO UN PRODUCTO JUEGO");
         }
     }
 }

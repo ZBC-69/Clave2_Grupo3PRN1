@@ -125,6 +125,22 @@ namespace Clave2_Grupo
             
 
         }
+
+        private void btnLimpiarLosDatos_Click(object sender, EventArgs e)
+        {
+            LimpiarDatos();
+        }
+
+        private void LimpiarDatos()
+        {
+            dgvAddClientePrueba.Rows.Clear();
+            txtNomCompleto.Clear();
+            msktxtDUI.Clear();
+            errorProvider1.Clear();
+            validDUI = false;
+            validNOM = false;
+            btnAddClicked = false;
+        }
     }
     
 }
