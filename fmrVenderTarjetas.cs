@@ -45,15 +45,16 @@ namespace Clave2_Grupo
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             //verificar si ya se registró un cliente
-            if (cliente != null && !string.IsNullOrEmpty(cliente.Nombre))
-            {
-                MessageBox.Show(cliente.Nombre + " " + cliente.NumDui);
-            }
-            else
-            {
-                MessageBox.Show("Primero debe registrar un cliente en el formulario de registros", "No se encuentran registros del cliente",MessageBoxButtons.OK,MessageBoxIcon.Stop);
-                return;
-            }
+            //LAS LINEAS SIGUIENTES ESTARÁN COMENTADAS TEMPORALMENTE
+            //if (cliente != null && !string.IsNullOrEmpty(cliente.Nombre))
+            //{
+            //    MessageBox.Show(cliente.Nombre + " " + cliente.NumDui);
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Primero debe registrar un cliente en el formulario de registros", "No se encuentran registros del cliente",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+            //    return;
+            //}
 
             //comprobar cual tarjeta fue seleccionada y la cantidad de tarjetas a comprar
             errorProvider1.SetError(cmbTarjetasComprar, "");
