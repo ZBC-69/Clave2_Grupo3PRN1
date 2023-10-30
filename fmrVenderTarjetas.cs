@@ -12,6 +12,7 @@ namespace Clave2_Grupo
 {
     public partial class fmrVenderTarjetas : Form
     {
+        private bool btnContinuarClicked = false; //controlador del clic en el boton btnContinuar
         const int PrecioPlus = 50;
         const int PrecioSilver = 150;
         const int PrecioGold = 300;
@@ -46,15 +47,15 @@ namespace Clave2_Grupo
         {
             //verificar si ya se registró un cliente
             //LAS LINEAS SIGUIENTES ESTARÁN COMENTADAS TEMPORALMENTE
-            //if (cliente != null && !string.IsNullOrEmpty(cliente.Nombre))
-            //{
-            //    MessageBox.Show(cliente.Nombre + " " + cliente.NumDui);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Primero debe registrar un cliente en el formulario de registros", "No se encuentran registros del cliente",MessageBoxButtons.OK,MessageBoxIcon.Stop);
-            //    return;
-            //}
+            if (cliente != null && !string.IsNullOrEmpty(cliente.Nombre))
+            {
+                MessageBox.Show(cliente.Nombre + " " + cliente.NumDui);
+            }
+            else
+            {
+                MessageBox.Show("Primero debe registrar un cliente en el formulario de registros", "No se encuentran registros del cliente", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
 
             //comprobar cual tarjeta fue seleccionada y la cantidad de tarjetas a comprar
             errorProvider1.SetError(cmbTarjetasComprar, "");
@@ -113,6 +114,9 @@ namespace Clave2_Grupo
 
                             
                             MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: {tarjetaParaCliente.TipoTarjeta}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}\nSaldo actual de tarjeta: {tarjetaParaCliente.SaldoActual} $USD\nFecha de apertura: {tarjetaParaCliente.FechaApertura}\nFecha de Vencimiento: {tarjetaParaCliente.FechaVencimiento}\nPuntos Acumulados: {tarjetaParaCliente.PuntosAcum}\nVigente: SI", "Factura");
+                            //se confirma que los datos se procesaron correctamente y por ello establecemos en true a la variable controlador clic
+                            btnContinuarClicked = true;
+                            btnIrComprarJuegos.Enabled = true;
                             
                         }
                         else
@@ -126,6 +130,36 @@ namespace Clave2_Grupo
                     errorProvider1.SetError(txtNumTarjetasComprar, "Ingrese solo números enteros");
                 }
             }
+        }
+
+        
+        /// <summary>
+        /// Botón para ir al siguiente formulario para realizar la compra de un juego mecanico o electronico
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnIrComprarJuegos_Click(object sender, EventArgs e)
+        {
+            if (btnContinuarClicked)
+            {
+                // Crear una instancia del formulario fmrVenderJuegos y pasarle el objeto Cliente a la clase
+                // fmrVenderJuegos para que dicho formulario trabaje a partir del DUI, nombre del cliente y sus datos
+                // de tarjeta comprada que aquí hemos vendido
+                fmrVenderJuegos formVentaJuegos = new fmrVenderJuegos(cliente);
+                // Abrir el formulario
+                formVentaJuegos.Show();
+            }
+            else
+            {
+                //MessageBox.Show("Para avanzar a la compra de Juegos de clic en  'Continuar' antes de abrir el formulario de ventas juegos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
+
+        }
+
+        private void fmrVenderTarjetas_Load(object sender, EventArgs e)
+        {
+            //deshabilitar el boton que abre el formulario de compras de juegos (pero se activa una vez se hayan resgistrado datos en btnContinuar)
+            btnIrComprarJuegos.Enabled = false;
         }
     }
 }

@@ -45,6 +45,7 @@ namespace Clave2_Grupo
             this.txtNumTarjetasComprar = new System.Windows.Forms.TextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label9 = new System.Windows.Forms.Label();
+            this.btnIrComprarJuegos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -188,11 +189,22 @@ namespace Clave2_Grupo
             this.label9.TabIndex = 9;
             this.label9.Text = "Elija un tipo de tarjeta y la cantidad:";
             // 
+            // btnIrComprarJuegos
+            // 
+            this.btnIrComprarJuegos.Location = new System.Drawing.Point(551, 383);
+            this.btnIrComprarJuegos.Name = "btnIrComprarJuegos";
+            this.btnIrComprarJuegos.Size = new System.Drawing.Size(75, 23);
+            this.btnIrComprarJuegos.TabIndex = 10;
+            this.btnIrComprarJuegos.Text = "SIGUIENTE";
+            this.btnIrComprarJuegos.UseVisualStyleBackColor = true;
+            this.btnIrComprarJuegos.Click += new System.EventHandler(this.btnIrComprarJuegos_Click);
+            // 
             // fmrVenderTarjetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 418);
+            this.Controls.Add(this.btnIrComprarJuegos);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtNumTarjetasComprar);
             this.Controls.Add(this.cmbTarjetasComprar);
@@ -203,6 +215,7 @@ namespace Clave2_Grupo
             this.Controls.Add(this.btnSalir2);
             this.Name = "fmrVenderTarjetas";
             this.Text = "FORMULARIO VENTA DE TARJETAS";
+            this.Load += new System.EventHandler(this.fmrVenderTarjetas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -228,5 +241,6 @@ namespace Clave2_Grupo
         private System.Windows.Forms.TextBox txtNumTarjetasComprar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnIrComprarJuegos;
     }
 }

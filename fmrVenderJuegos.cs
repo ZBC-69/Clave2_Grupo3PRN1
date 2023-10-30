@@ -19,15 +19,20 @@ namespace Clave2_Grupo
             
         }
 
+        private Cliente cliente = new Cliente();
+        // Constructor que acepta un objeto Cliente como parámetro
+        // y con esto nos aseguramos de recoger los datos que se hayan guardado en otros formularios y así continuarlos usando
+        public fmrVenderJuegos(Cliente cliente)
+        {
+            InitializeComponent();
+            this.cliente = cliente; // Asigna el objeto Cliente recibido al campo de la clase
+        }
         private void btnSalir2_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void dgvPreciosJuegos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+        
 
         private void btnRegistrarCompraJuego_Click(object sender, EventArgs e)
         {
@@ -61,6 +66,8 @@ namespace Clave2_Grupo
             string diaSeman = fechaActual.ToString("dddd");
             MessageBox.Show(mensaje+""+"\nES DIA: "+diaSeman, "SE VENDIÓ UN PRODUCTO JUEGO");
             ResetearValores();
+
+            MessageBox.Show(cliente.NumDui);
         }
 
         private void ResetearValores()

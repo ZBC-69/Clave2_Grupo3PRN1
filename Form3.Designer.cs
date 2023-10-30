@@ -49,7 +49,7 @@ namespace Clave2_Grupo
             this.ClientSize = new System.Drawing.Size(638, 418);
             this.Controls.Add(this.btnSalir3);
             this.Name = "fmrVerInfoClientes";
-            this.Text = "VER INNFORMACION DE CLIENTES";
+            this.Text = "VER INFORMACION DE CLIENTES";
             this.ResumeLayout(false);
 
         }
