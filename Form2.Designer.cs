@@ -40,7 +40,7 @@ namespace Clave2_Grupo
             this.dgvAddClientePrueba = new System.Windows.Forms.DataGridView();
             this.btnIrACompras = new System.Windows.Forms.Button();
             this.btnLimpiarLosDatos = new System.Windows.Forms.Button();
-            this.btnConexion = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAddClientePrueba)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +48,7 @@ namespace Clave2_Grupo
             // btnSalir2
             // 
             this.btnSalir2.Location = new System.Drawing.Point(748, 471);
-            this.btnSalir2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir2.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir2.Name = "btnSalir2";
             this.btnSalir2.Size = new System.Drawing.Size(100, 28);
             this.btnSalir2.TabIndex = 1;
@@ -83,7 +83,7 @@ namespace Clave2_Grupo
             // txtNomCompleto
             // 
             this.txtNomCompleto.Location = new System.Drawing.Point(364, 82);
-            this.txtNomCompleto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNomCompleto.Margin = new System.Windows.Forms.Padding(4);
             this.txtNomCompleto.Name = "txtNomCompleto";
             this.txtNomCompleto.Size = new System.Drawing.Size(132, 22);
             this.txtNomCompleto.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace Clave2_Grupo
             // msktxtDUI
             // 
             this.msktxtDUI.Location = new System.Drawing.Point(364, 127);
-            this.msktxtDUI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.msktxtDUI.Margin = new System.Windows.Forms.Padding(4);
             this.msktxtDUI.Mask = "00000000-0";
             this.msktxtDUI.Name = "msktxtDUI";
             this.msktxtDUI.Size = new System.Drawing.Size(132, 22);
@@ -106,7 +106,7 @@ namespace Clave2_Grupo
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(380, 176);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 28);
             this.btnAdd.TabIndex = 6;
@@ -118,7 +118,7 @@ namespace Clave2_Grupo
             // 
             this.dgvAddClientePrueba.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAddClientePrueba.Location = new System.Drawing.Point(103, 226);
-            this.dgvAddClientePrueba.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvAddClientePrueba.Margin = new System.Windows.Forms.Padding(4);
             this.dgvAddClientePrueba.Name = "dgvAddClientePrueba";
             this.dgvAddClientePrueba.RowHeadersWidth = 51;
             this.dgvAddClientePrueba.Size = new System.Drawing.Size(689, 185);
@@ -127,7 +127,7 @@ namespace Clave2_Grupo
             // btnIrACompras
             // 
             this.btnIrACompras.Location = new System.Drawing.Point(380, 471);
-            this.btnIrACompras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIrACompras.Margin = new System.Windows.Forms.Padding(4);
             this.btnIrACompras.Name = "btnIrACompras";
             this.btnIrACompras.Size = new System.Drawing.Size(273, 28);
             this.btnIrACompras.TabIndex = 8;
@@ -138,7 +138,7 @@ namespace Clave2_Grupo
             // btnLimpiarLosDatos
             // 
             this.btnLimpiarLosDatos.Location = new System.Drawing.Point(121, 471);
-            this.btnLimpiarLosDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLimpiarLosDatos.Margin = new System.Windows.Forms.Padding(4);
             this.btnLimpiarLosDatos.Name = "btnLimpiarLosDatos";
             this.btnLimpiarLosDatos.Size = new System.Drawing.Size(159, 28);
             this.btnLimpiarLosDatos.TabIndex = 9;
@@ -146,22 +146,22 @@ namespace Clave2_Grupo
             this.btnLimpiarLosDatos.UseVisualStyleBackColor = true;
             this.btnLimpiarLosDatos.Click += new System.EventHandler(this.btnLimpiarLosDatos_Click);
             // 
-            // btnConexion
+            // button1
             // 
-            this.btnConexion.Location = new System.Drawing.Point(625, 121);
-            this.btnConexion.Name = "btnConexion";
-            this.btnConexion.Size = new System.Drawing.Size(167, 23);
-            this.btnConexion.TabIndex = 10;
-            this.btnConexion.Text = "Comprobar conexion";
-            this.btnConexion.UseVisualStyleBackColor = true;
-            
+            this.button1.Location = new System.Drawing.Point(622, 121);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fmrNuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 514);
-            this.Controls.Add(this.btnConexion);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLimpiarLosDatos);
             this.Controls.Add(this.btnIrACompras);
             this.Controls.Add(this.dgvAddClientePrueba);
@@ -171,7 +171,7 @@ namespace Clave2_Grupo
             this.Controls.Add(this.lblDUI);
             this.Controls.Add(this.lblClienteNombre);
             this.Controls.Add(this.btnSalir2);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmrNuevoCliente";
             this.Text = "FORMULARIO DE NUEVO CLIENTE";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
@@ -193,6 +193,6 @@ namespace Clave2_Grupo
         private System.Windows.Forms.DataGridView dgvAddClientePrueba;
         private System.Windows.Forms.Button btnIrACompras;
         private System.Windows.Forms.Button btnLimpiarLosDatos;
-        private System.Windows.Forms.Button btnConexion;
+        private System.Windows.Forms.Button button1;
     }
 }

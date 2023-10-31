@@ -1,19 +1,11 @@
-﻿using MySql.Data.MySqlClient;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
 
 namespace Clave2_Grupo
 {
     public partial class fmrNuevoCliente : Form
     {
-        
+
         /*codigo para establecer conexion con la B.D
          static string servidor = "localhost"; //Nombre o ip del servidor de MySQL
          static string puerto = "3306";//Nombre del puerto
@@ -26,8 +18,8 @@ namespace Clave2_Grupo
 
         //Instancia para conexión a MySQL, recibe la cadena de conexión
         static MySqlConnection Conexion = new MySqlConnection(cadenaConexion);*/
-            
-        
+
+
         //objeto para validar informaciones
         Metodos validDat = new Metodos();
         private bool btnAddClicked = false;
@@ -44,8 +36,8 @@ namespace Clave2_Grupo
 
         private void txtNomCompleto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validDat.ValidarTextBoxSoloLetrasKeyPress(sender,e);
-        } 
+            validDat.ValidarTextBoxSoloLetrasKeyPress(sender, e);
+        }
 
         private void btnSalir2_Click(object sender, EventArgs e)
         {
@@ -65,9 +57,9 @@ namespace Clave2_Grupo
         //Evento cuando se añade un nuevo cliente
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           
+
             //Validación para campos vacios o incompletos
-            if (txtNomCompleto.Text==string.Empty)
+            if (txtNomCompleto.Text == string.Empty)
             {
                 errorProvider1.SetError(txtNomCompleto, "Campo obligatorio");
                 validNOM = false;
@@ -78,7 +70,7 @@ namespace Clave2_Grupo
                 validNOM = true;
             }
             msktxtDUI.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            if (msktxtDUI.Text ==string.Empty||msktxtDUI.MaskCompleted==false)
+            if (msktxtDUI.Text == string.Empty || msktxtDUI.MaskCompleted == false)
             {
                 errorProvider1.SetError(msktxtDUI, "Campo obligatorio, Ingrese DUI completo");
                 validDUI = false;
@@ -89,9 +81,9 @@ namespace Clave2_Grupo
                 validDUI = true;
             }
             // Acciones a realizar si todas las validaciones han sido superadas exitosamente
-            if (validDUI==true&&validNOM==true)
+            if (validDUI == true && validNOM == true)
             {
-                                             
+
                 cliente.Nombre = txtNomCompleto.Text;
                 cliente.NumDui = msktxtDUI.Text;
                 if (cliente.NumDui.Length > 1)
@@ -99,7 +91,7 @@ namespace Clave2_Grupo
                     // Insertar un guion antes del último dígito del DUI 
                     cliente.NumDui = cliente.NumDui.Insert(cliente.NumDui.Length - 1, "-");
                 }
-                
+
                 //PROVICIONAL; solo para comprobar la validación del registro
                 dgvAddClientePrueba.Rows.Clear();
                 dgvAddClientePrueba.Rows.Add(cliente.NumDui, cliente.Nombre);
@@ -109,7 +101,7 @@ namespace Clave2_Grupo
                 //txtNomCompleto.Clear();
                 //msktxtDUI.Text = "";
             }
- 
+
         }
 
         /// <summary>
@@ -123,7 +115,7 @@ namespace Clave2_Grupo
             {
                 if (!string.IsNullOrWhiteSpace(txtNomCompleto.Text) && !string.IsNullOrEmpty(txtNomCompleto.Text) && !string.IsNullOrWhiteSpace(msktxtDUI.Text) && msktxtDUI.MaskCompleted)
                 {
-                    
+
                     // Crear una instancia del formulario fmrVenderTarjetas y pasar el objeto Cliente para que el otro formulario trabaje a partir del DUI Y nombre del cliente que aquí hemos registrado
                     fmrVenderTarjetas formVentaTarjetas = new fmrVenderTarjetas(cliente);
                     // Abrir el formulario
@@ -138,7 +130,7 @@ namespace Clave2_Grupo
             {
                 MessageBox.Show("Debe hacer clic en el botón 'Agregar' antes de abrir el formulario de ventas de tarjetas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
-            
+
 
         }
 
@@ -158,23 +150,28 @@ namespace Clave2_Grupo
             btnAddClicked = false;
         }
 
-       /* private void btnConexion_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Conexion.Open(); //se abre la conexion de la variable global declara enla parte superior del formulario
-             MessageBox.Show("Conexión Exitosa!"); //se manda un mensaje de estado deconexion
+            Conexion.ProbarConexion();
+        }
+
+        /* private void btnConexion_Click(object sender, EventArgs e)
+         {
+             try
+             {
+                 Conexion.Open(); //se abre la conexion de la variable global declara enla parte superior del formulario
+              MessageBox.Show("Conexión Exitosa!"); //se manda un mensaje de estado deconexion
+              }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("Error: " + ex);
              }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex);
-            }
-            finally
-            {
-                Conexion.Close(); //se cierra la conexion
-            }
-        }*/
+             finally
+             {
+                 Conexion.Close(); //se cierra la conexion
+             }
+         }*/
     }
-    
-    
+
+
 }
