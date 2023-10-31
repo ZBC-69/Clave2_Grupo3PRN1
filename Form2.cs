@@ -6,20 +6,6 @@ namespace Clave2_Grupo
     public partial class fmrNuevoCliente : Form
     {
 
-        /*codigo para establecer conexion con la B.D
-         static string servidor = "localhost"; //Nombre o ip del servidor de MySQL
-         static string puerto = "3306";//Nombre del puerto
-         static string bd = "Clave2_Grupo3"; //Nombre de la base de datos
-         static string usuario = "root"; //Usuario de acceso a MySQL
-         static string password = "root"; //Contraseña de usuario de acceso a MySQL
-
-        //Crearemos la cadena de conexión concatenando las variables
-        static string cadenaConexion = "server=" + servidor + "; port=" + puerto + "; user id=" + usuario + "; password=" + password + "; database=" + bd;
-
-        //Instancia para conexión a MySQL, recibe la cadena de conexión
-        static MySqlConnection Conexion = new MySqlConnection(cadenaConexion);*/
-
-
         //objeto para validar informaciones
         Metodos validDat = new Metodos();
         private bool btnAddClicked = false;
