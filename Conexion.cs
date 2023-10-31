@@ -1,24 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-/*using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-using System.Data;
-
+using MySql.Data.MySqlClient;
 namespace Clave2_Grupo
 {
-    class Conexion
+     class Conexion
     {
-       public static MySqlConnection conexion = new MySqlConnection("host=localhost;port=3306;user=root;pwd=1234;database=Clave2_Grupo3;");
+       public static MySqlConnection conexion = new MySqlConnection("server=127.0.0.1;port=3306;user=root;pwd=1234;database=Clave2_Grupo3;");
     
         public static void ProbarConexion()
         {
             try
             {
                 conexion.Open();
-                _ = MessageBox.Show("Conexion Exitosa");
+                 MessageBox.Show("Conexion Exitosa");
                 conexion.Close();
             }
             catch (Exception e)
@@ -29,4 +23,3 @@ namespace Clave2_Grupo
         }
     }
 }
-*/

@@ -152,26 +152,9 @@ namespace Clave2_Grupo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Conexion.ProbarConexion();
+            Conexion.ProbarConexion();
         }
 
-        /* private void btnConexion_Click(object sender, EventArgs e)
-         {
-             try
-             {
-                 Conexion.Open(); //se abre la conexion de la variable global declara enla parte superior del formulario
-              MessageBox.Show("Conexión Exitosa!"); //se manda un mensaje de estado deconexion
-              }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("Error: " + ex);
-             }
-             finally
-             {
-                 Conexion.Close(); //se cierra la conexion
-             }
-         }*/
+        
+        }
     }
-
-
-}
