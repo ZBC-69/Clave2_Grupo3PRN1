@@ -14,7 +14,7 @@ namespace Clave2_Grupo
     public partial class fmrNuevoCliente : Form
     {
         
-        //codigo para establecer conexion con la B.D
+        /*codigo para establecer conexion con la B.D
          static string servidor = "localhost"; //Nombre o ip del servidor de MySQL
          static string puerto = "3306";//Nombre del puerto
          static string bd = "Clave2_Grupo3"; //Nombre de la base de datos
@@ -25,7 +25,7 @@ namespace Clave2_Grupo
         static string cadenaConexion = "server=" + servidor + "; port=" + puerto + "; user id=" + usuario + "; password=" + password + "; database=" + bd;
 
         //Instancia para conexión a MySQL, recibe la cadena de conexión
-        static MySqlConnection Conexion = new MySqlConnection(cadenaConexion);
+        static MySqlConnection Conexion = new MySqlConnection(cadenaConexion);*/
             
         
         //objeto para validar informaciones
@@ -158,7 +158,7 @@ namespace Clave2_Grupo
             btnAddClicked = false;
         }
 
-        private void btnConexion_Click(object sender, EventArgs e)
+       /* private void btnConexion_Click(object sender, EventArgs e)
         {
             try
             {
@@ -173,7 +173,7 @@ namespace Clave2_Grupo
             {
                 Conexion.Close(); //se cierra la conexion
             }
-        }
+        }*/
     }
     
     
