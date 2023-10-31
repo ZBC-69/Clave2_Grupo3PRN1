@@ -11,7 +11,7 @@ namespace Clave2_Grupo
 {
     class Conexion
     {
-       public static MySqlConnection conexion = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=1234;database=Clave2_Grupo3;Sslmode = none;");
+       public static MySqlConnection conexion = new MySqlConnection("host=localhost;port=3306;user=root;pwd=1234;database=Clave2_Grupo3;");
     
         public static void ProbarConexion()
         {
