@@ -39,8 +39,6 @@ namespace Clave2_Grupo
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.cDui = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cCantCompras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPuntosAcum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodTarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cTipoTarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cCreditDiponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +51,7 @@ namespace Clave2_Grupo
             // btnSalir3
             // 
             this.btnSalir3.Location = new System.Drawing.Point(959, 471);
-            this.btnSalir3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir3.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir3.Name = "btnSalir3";
             this.btnSalir3.Size = new System.Drawing.Size(100, 28);
             this.btnSalir3.TabIndex = 0;
@@ -71,8 +69,6 @@ namespace Clave2_Grupo
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cDui,
             this.cNombre,
-            this.cCantCompras,
-            this.cPuntosAcum,
             this.CodTarjeta,
             this.cTipoTarjeta,
             this.cCreditDiponible,
@@ -80,17 +76,17 @@ namespace Clave2_Grupo
             this.cFApertura,
             this.cVigenciaTarjet});
             this.dataGridView1.Location = new System.Drawing.Point(16, 78);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(1080, 308);
+            this.dataGridView1.Size = new System.Drawing.Size(970, 308);
             this.dataGridView1.TabIndex = 1;
             // 
             // btnModificarCliente
             // 
-            this.btnModificarCliente.Location = new System.Drawing.Point(151, 442);
-            this.btnModificarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarCliente.Location = new System.Drawing.Point(40, 437);
+            this.btnModificarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(212, 28);
             this.btnModificarCliente.TabIndex = 2;
@@ -99,8 +95,8 @@ namespace Clave2_Grupo
             // 
             // btnEliminarCliente
             // 
-            this.btnEliminarCliente.Location = new System.Drawing.Point(433, 442);
-            this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCliente.Location = new System.Drawing.Point(281, 437);
+            this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(180, 28);
             this.btnEliminarCliente.TabIndex = 3;
@@ -121,7 +117,7 @@ namespace Clave2_Grupo
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(693, 411);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 5;
@@ -129,7 +125,7 @@ namespace Clave2_Grupo
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(693, 443);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker2.TabIndex = 6;
@@ -137,7 +133,7 @@ namespace Clave2_Grupo
             // btnFiltrar
             // 
             this.btnFiltrar.Location = new System.Drawing.Point(767, 471);
-            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(151, 28);
             this.btnFiltrar.TabIndex = 7;
@@ -159,22 +155,6 @@ namespace Clave2_Grupo
             this.cNombre.Name = "cNombre";
             this.cNombre.ReadOnly = true;
             this.cNombre.Width = 125;
-            // 
-            // cCantCompras
-            // 
-            this.cCantCompras.HeaderText = "Cant. Compras";
-            this.cCantCompras.MinimumWidth = 6;
-            this.cCantCompras.Name = "cCantCompras";
-            this.cCantCompras.ReadOnly = true;
-            this.cCantCompras.Width = 70;
-            // 
-            // cPuntosAcum
-            // 
-            this.cPuntosAcum.HeaderText = "Puntos Acum.";
-            this.cPuntosAcum.MinimumWidth = 6;
-            this.cPuntosAcum.Name = "cPuntosAcum";
-            this.cPuntosAcum.ReadOnly = true;
-            this.cPuntosAcum.Width = 70;
             // 
             // CodTarjeta
             // 
@@ -230,7 +210,7 @@ namespace Clave2_Grupo
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1109, 514);
+            this.ClientSize = new System.Drawing.Size(1081, 514);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -239,7 +219,7 @@ namespace Clave2_Grupo
             this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSalir3);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmrVerInfoClientes";
             this.Text = "VER INFORMACION DE CLIENTES";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -260,8 +240,6 @@ namespace Clave2_Grupo
         private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.DataGridViewTextBoxColumn cDui;
         private System.Windows.Forms.DataGridViewTextBoxColumn cNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cCantCompras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cPuntosAcum;
         private System.Windows.Forms.DataGridViewTextBoxColumn CodTarjeta;
         private System.Windows.Forms.DataGridViewTextBoxColumn cTipoTarjeta;
         private System.Windows.Forms.DataGridViewTextBoxColumn cCreditDiponible;
