@@ -37,12 +37,12 @@ namespace Clave2_Grupo
             this.msktxtDUI = new System.Windows.Forms.MaskedTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dgvAddClientePrueba = new System.Windows.Forms.DataGridView();
+            this.dgvRegistroClientes = new System.Windows.Forms.DataGridView();
             this.btnIrACompras = new System.Windows.Forms.Button();
             this.btnLimpiarLosDatos = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAddClientePrueba)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalir2
@@ -114,15 +114,15 @@ namespace Clave2_Grupo
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dgvAddClientePrueba
+            // dgvRegistroClientes
             // 
-            this.dgvAddClientePrueba.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAddClientePrueba.Location = new System.Drawing.Point(103, 226);
-            this.dgvAddClientePrueba.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvAddClientePrueba.Name = "dgvAddClientePrueba";
-            this.dgvAddClientePrueba.RowHeadersWidth = 51;
-            this.dgvAddClientePrueba.Size = new System.Drawing.Size(689, 185);
-            this.dgvAddClientePrueba.TabIndex = 7;
+            this.dgvRegistroClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRegistroClientes.Location = new System.Drawing.Point(103, 226);
+            this.dgvRegistroClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvRegistroClientes.Name = "dgvRegistroClientes";
+            this.dgvRegistroClientes.RowHeadersWidth = 51;
+            this.dgvRegistroClientes.Size = new System.Drawing.Size(689, 185);
+            this.dgvRegistroClientes.TabIndex = 7;
             // 
             // btnIrACompras
             // 
@@ -164,7 +164,7 @@ namespace Clave2_Grupo
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLimpiarLosDatos);
             this.Controls.Add(this.btnIrACompras);
-            this.Controls.Add(this.dgvAddClientePrueba);
+            this.Controls.Add(this.dgvRegistroClientes);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.msktxtDUI);
             this.Controls.Add(this.txtNomCompleto);
@@ -175,7 +175,7 @@ namespace Clave2_Grupo
             this.Name = "fmrNuevoCliente";
             this.Text = "FORMULARIO DE NUEVO CLIENTE";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAddClientePrueba)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,7 +190,7 @@ namespace Clave2_Grupo
         private System.Windows.Forms.MaskedTextBox msktxtDUI;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.DataGridView dgvAddClientePrueba;
+        private System.Windows.Forms.DataGridView dgvRegistroClientes;
         private System.Windows.Forms.Button btnIrACompras;
         private System.Windows.Forms.Button btnLimpiarLosDatos;
         private System.Windows.Forms.Button button1;

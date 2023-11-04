@@ -15,8 +15,8 @@ namespace Clave2_Grupo
         {
             //Inicialización del datagridview de prueba para verificar el registro
             InitializeComponent();
-            dgvAddClientePrueba.Columns.Add("Documento Unico de Identidad", "DUI");
-            dgvAddClientePrueba.Columns.Add("Nombre completo del cliente", "Nombre Completo");
+            dgvRegistroClientes.Columns.Add("Documento Unico de Identidad", "DUI");
+            dgvRegistroClientes.Columns.Add("Nombre completo del cliente", "Nombre Completo");
         }
 
 
@@ -79,8 +79,8 @@ namespace Clave2_Grupo
                 }
 
                 //PROVICIONAL; solo para comprobar la validación del registro
-                dgvAddClientePrueba.Rows.Clear();
-                dgvAddClientePrueba.Rows.Add(cliente.NumDui, cliente.Nombre);
+                dgvRegistroClientes.Rows.Clear();
+                dgvRegistroClientes.Rows.Add(cliente.NumDui, cliente.Nombre);
                 MessageBox.Show("El usuario ha sido registrado");
                 MessageBox.Show(cliente.NumDui);
                 btnAddClicked = true;
@@ -127,7 +127,7 @@ namespace Clave2_Grupo
 
         private void LimpiarDatos()
         {
-            dgvAddClientePrueba.Rows.Clear();
+            dgvRegistroClientes.Rows.Clear();
             txtNomCompleto.Clear();
             msktxtDUI.Clear();
             errorProvider1.Clear();
