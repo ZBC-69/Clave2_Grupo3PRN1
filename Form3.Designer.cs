@@ -166,7 +166,7 @@ namespace Clave2_Grupo
             // 
             // cTipoTarjeta
             // 
-            this.cTipoTarjeta.HeaderText = "Tarjeta";
+            this.cTipoTarjeta.HeaderText = "Tipo de Tarjeta";
             this.cTipoTarjeta.MinimumWidth = 6;
             this.cTipoTarjeta.Name = "cTipoTarjeta";
             this.cTipoTarjeta.ReadOnly = true;
@@ -199,7 +199,7 @@ namespace Clave2_Grupo
             // 
             // cVigenciaTarjet
             // 
-            this.cVigenciaTarjet.HeaderText = "Estado Tarjeta";
+            this.cVigenciaTarjet.HeaderText = "Vigente";
             this.cVigenciaTarjet.MinimumWidth = 6;
             this.cVigenciaTarjet.Name = "cVigenciaTarjet";
             this.cVigenciaTarjet.ReadOnly = true;
