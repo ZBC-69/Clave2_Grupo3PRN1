@@ -43,6 +43,7 @@ namespace Clave2_Grupo
             this.panelAbajo = new System.Windows.Forms.Panel();
             this.btnSalir1 = new System.Windows.Forms.Button();
             this.panelContenedorDeFormularios = new System.Windows.Forms.Panel();
+            this.btnConexion = new System.Windows.Forms.Button();
             this.panelMenuMayorLateral.SuspendLayout();
             this.panelSubMenuVentas.SuspendLayout();
             this.panelSubMenuClientes.SuspendLayout();
@@ -53,6 +54,7 @@ namespace Clave2_Grupo
             // 
             this.panelMenuMayorLateral.AutoScroll = true;
             this.panelMenuMayorLateral.BackColor = System.Drawing.Color.Teal;
+            this.panelMenuMayorLateral.Controls.Add(this.btnConexion);
             this.panelMenuMayorLateral.Controls.Add(this.panelSubMenuVentas);
             this.panelMenuMayorLateral.Controls.Add(this.btnMenuVentasAbrir);
             this.panelMenuMayorLateral.Controls.Add(this.panelSubMenuTarjetas);
@@ -236,6 +238,15 @@ namespace Clave2_Grupo
             this.panelContenedorDeFormularios.Size = new System.Drawing.Size(1080, 515);
             this.panelContenedorDeFormularios.TabIndex = 2;
             // 
+            // btnConexion
+            // 
+            this.btnConexion.Location = new System.Drawing.Point(71, 570);
+            this.btnConexion.Name = "btnConexion";
+            this.btnConexion.Size = new System.Drawing.Size(175, 23);
+            this.btnConexion.TabIndex = 7;
+            this.btnConexion.Text = "Comprobar Conexion";
+            this.btnConexion.UseVisualStyleBackColor = true;
+            // 
             // fmrPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -271,6 +282,7 @@ namespace Clave2_Grupo
         private System.Windows.Forms.Panel panelSubMenuVentas;
         private System.Windows.Forms.Button btnVenderJuegos;
         private System.Windows.Forms.Button btnVenderTarjetas;
+        private System.Windows.Forms.Button btnConexion;
     }
 }
 
