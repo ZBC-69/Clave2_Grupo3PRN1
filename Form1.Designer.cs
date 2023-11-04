@@ -246,6 +246,7 @@ namespace Clave2_Grupo
             this.btnConexion.TabIndex = 7;
             this.btnConexion.Text = "Comprobar Conexion";
             this.btnConexion.UseVisualStyleBackColor = true;
+            this.btnConexion.Click += new System.EventHandler(this.btnConexion_Click);
             // 
             // fmrPrincipal
             // 

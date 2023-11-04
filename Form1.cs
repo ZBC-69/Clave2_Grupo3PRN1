@@ -193,5 +193,13 @@ namespace Clave2_Grupo
             //...
             ocultarSubmenu();
         }
+
+        //Codificacion del btn para probar conexion
+        private void btnConexion_Click(object sender, EventArgs e)
+        {
+            //creacion de objeto
+            Clases.Conexion objetoConexion = new Clases.Conexion();
+            objetoConexion.establecerConexion();
+        }
     }
 }
