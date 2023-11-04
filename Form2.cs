@@ -138,7 +138,7 @@ namespace Clave2_Grupo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Conexion.ProbarConexion();
+            
         }
 
         
