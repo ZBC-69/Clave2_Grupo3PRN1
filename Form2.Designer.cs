@@ -40,7 +40,6 @@ namespace Clave2_Grupo
             this.dgvRegistroClientes = new System.Windows.Forms.DataGridView();
             this.btnIrACompras = new System.Windows.Forms.Button();
             this.btnLimpiarLosDatos = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroClientes)).BeginInit();
             this.SuspendLayout();
@@ -146,22 +145,11 @@ namespace Clave2_Grupo
             this.btnLimpiarLosDatos.UseVisualStyleBackColor = true;
             this.btnLimpiarLosDatos.Click += new System.EventHandler(this.btnLimpiarLosDatos_Click);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(566, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(226, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Conectar a la Base de Datos";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // fmrNuevoCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 514);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLimpiarLosDatos);
             this.Controls.Add(this.btnIrACompras);
             this.Controls.Add(this.dgvRegistroClientes);
@@ -193,6 +181,5 @@ namespace Clave2_Grupo
         private System.Windows.Forms.DataGridView dgvRegistroClientes;
         private System.Windows.Forms.Button btnIrACompras;
         private System.Windows.Forms.Button btnLimpiarLosDatos;
-        private System.Windows.Forms.Button button1;
     }
 }
