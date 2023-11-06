@@ -32,7 +32,7 @@ namespace Clave2_Grupo.Clases
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Conexion Incorrecta, error: " + ex.ToString());
+                MessageBox.Show("No se pudo completar la conexion, error: " + ex.ToString());
             }
             return conexion;
         }
