@@ -162,6 +162,7 @@ namespace Clave2_Grupo
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmrNuevoCliente";
             this.Text = "FORMULARIO DE NUEVO CLIENTE";
+            
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroClientes)).EndInit();
             this.ResumeLayout(false);
