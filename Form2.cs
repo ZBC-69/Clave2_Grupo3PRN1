@@ -17,6 +17,11 @@ namespace Clave2_Grupo
             InitializeComponent();
             dgvRegistroClientes.Columns.Add("Documento Unico de Identidad", "DUI");
             dgvRegistroClientes.Columns.Add("Nombre completo del cliente", "Nombre Completo");
+
+            //Llamando la clase RegistroCliente
+            Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
+            objetoCliente.registrarClientes(dgvRegistroClientes);
+
         }
 
 
