@@ -20,7 +20,7 @@ namespace Clave2_Grupo
 
             //Llamando la clase RegistroCliente
             Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
-            objetoCliente.registrarClientes(dgvRegistroClientes);
+            objetoCliente.mostrarClientes(dgvRegistroClientes);
 
         }
 

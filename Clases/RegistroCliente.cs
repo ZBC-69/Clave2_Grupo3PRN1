@@ -12,7 +12,7 @@ namespace Clave2_Grupo.Clases
     class RegistroCliente
     {
         //creando metodo para registrar los clientes 
-        public void registrarClientes(DataGridView tablaClientes)
+        public void mostrarClientes(DataGridView tablaClientes)
         {
             try
             {
