@@ -20,7 +20,8 @@ namespace Clave2_Grupo
 
             //Llamando la clase RegistroCliente
             Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
-            objetoCliente.mostrarClientes(dgvRegistroClientes);
+            //descomentar para que funcione el metodo
+           // objetoCliente.mostrarClientes(dgvRegistroClientes);
 
         }
 
@@ -50,7 +51,8 @@ namespace Clave2_Grupo
         {
             Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
             objetoCliente.registrarClientes(mskDUI, txtNombre);
-            objetoCliente.mostrarClientes(dgvRegistroClientes);
+            //descomentar para que funcione el metodo
+            //objetoCliente.mostrarClientes(dgvRegistroClientes);
             //Validación para campos vacios o incompletos
             if (txtNombre.Text == string.Empty)
             {
