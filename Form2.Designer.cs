@@ -33,8 +33,8 @@ namespace Clave2_Grupo
             this.btnSalir2 = new System.Windows.Forms.Button();
             this.lblClienteNombre = new System.Windows.Forms.Label();
             this.lblDUI = new System.Windows.Forms.Label();
-            this.txtNomCompleto = new System.Windows.Forms.TextBox();
-            this.msktxtDUI = new System.Windows.Forms.MaskedTextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.mskDUI = new System.Windows.Forms.MaskedTextBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvRegistroClientes = new System.Windows.Forms.DataGridView();
@@ -79,24 +79,24 @@ namespace Clave2_Grupo
             this.lblDUI.TabIndex = 3;
             this.lblDUI.Text = "Documento Unico de Identidad DUI";
             // 
-            // txtNomCompleto
+            // txtNombre
             // 
-            this.txtNomCompleto.Location = new System.Drawing.Point(364, 82);
-            this.txtNomCompleto.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNomCompleto.Name = "txtNomCompleto";
-            this.txtNomCompleto.Size = new System.Drawing.Size(132, 22);
-            this.txtNomCompleto.TabIndex = 4;
-            this.txtNomCompleto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomCompleto_KeyPress);
+            this.txtNombre.Location = new System.Drawing.Point(364, 82);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(132, 22);
+            this.txtNombre.TabIndex = 4;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomCompleto_KeyPress);
             // 
-            // msktxtDUI
+            // mskDUI
             // 
-            this.msktxtDUI.Location = new System.Drawing.Point(364, 127);
-            this.msktxtDUI.Margin = new System.Windows.Forms.Padding(4);
-            this.msktxtDUI.Mask = "00000000-0";
-            this.msktxtDUI.Name = "msktxtDUI";
-            this.msktxtDUI.Size = new System.Drawing.Size(132, 22);
-            this.msktxtDUI.TabIndex = 5;
-            this.msktxtDUI.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.msktxtDUI_MaskInputRejected);
+            this.mskDUI.Location = new System.Drawing.Point(364, 127);
+            this.mskDUI.Margin = new System.Windows.Forms.Padding(4);
+            this.mskDUI.Mask = "00000000-0";
+            this.mskDUI.Name = "mskDUI";
+            this.mskDUI.Size = new System.Drawing.Size(132, 22);
+            this.mskDUI.TabIndex = 5;
+            this.mskDUI.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.msktxtDUI_MaskInputRejected);
             // 
             // errorProvider1
             // 
@@ -154,15 +154,14 @@ namespace Clave2_Grupo
             this.Controls.Add(this.btnIrACompras);
             this.Controls.Add(this.dgvRegistroClientes);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.msktxtDUI);
-            this.Controls.Add(this.txtNomCompleto);
+            this.Controls.Add(this.mskDUI);
+            this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblDUI);
             this.Controls.Add(this.lblClienteNombre);
             this.Controls.Add(this.btnSalir2);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmrNuevoCliente";
             this.Text = "FORMULARIO DE NUEVO CLIENTE";
-            
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRegistroClientes)).EndInit();
             this.ResumeLayout(false);
@@ -175,8 +174,8 @@ namespace Clave2_Grupo
         private System.Windows.Forms.Button btnSalir2;
         private System.Windows.Forms.Label lblClienteNombre;
         private System.Windows.Forms.Label lblDUI;
-        private System.Windows.Forms.TextBox txtNomCompleto;
-        private System.Windows.Forms.MaskedTextBox msktxtDUI;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.MaskedTextBox mskDUI;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvRegistroClientes;

@@ -12,7 +12,7 @@ namespace Clave2_Grupo.Clases
     class RegistroCliente
     {
         //creando metodo para registrar los clientes 
-        public void mostrarClientes(DataGridView tablaClientes)
+       /* public void mostrarClientes(DataGridView tablaClientes)
         {
             try
             {
@@ -30,7 +30,31 @@ namespace Clave2_Grupo.Clases
             {
                 MessageBox.Show("No se registraron los datos de la base de datos, error: " + ex.ToString());
             }
+        }*/
 
-        }
+            public void registrarClientes(MaskedTextBox DUI ,TextBox nombre)
+            {
+                try
+                {
+                    Conexion objetoConexion = new Conexion();
+
+                String query = "insert into cliente(DUI, Nombre)" +
+                "values ('" + DUI.Text + "','" + nombre.Text + "');";
+
+                MySqlCommand myComand = new MySqlCommand(query, objetoConexion.establecerConexion());
+                MySqlDataReader reader = myComand.ExecuteReader();
+                MessageBox.Show("Se guardo correctamente los registros");
+                while (reader.Read())
+                {
+
+                }
+                objetoConexion.cerrarConexion();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("No se registraron los datos de la base de datos, error: " + ex.ToString());
+                }
+
+            }
     }
 }

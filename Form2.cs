@@ -42,41 +42,43 @@ namespace Clave2_Grupo
        */
         private void msktxtDUI_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            errorProvider1.SetError(msktxtDUI, "Solo puede ingresar números");
+            errorProvider1.SetError(mskDUI, "Solo puede ingresar números");
             validDUI = false;
         }
         //Evento cuando se añade un nuevo cliente
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
+            objetoCliente.registrarClientes(mskDUI, txtNombre);
+            objetoCliente.mostrarClientes(dgvRegistroClientes);
             //Validación para campos vacios o incompletos
-            if (txtNomCompleto.Text == string.Empty)
+            if (txtNombre.Text == string.Empty)
             {
-                errorProvider1.SetError(txtNomCompleto, "Campo obligatorio");
+                errorProvider1.SetError(txtNombre, "Campo obligatorio");
                 validNOM = false;
             }
             else
             {
-                errorProvider1.SetError(txtNomCompleto, "");
+                errorProvider1.SetError(txtNombre, "");
                 validNOM = true;
             }
-            msktxtDUI.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
-            if (msktxtDUI.Text == string.Empty || msktxtDUI.MaskCompleted == false)
+            mskDUI.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals;
+            if (mskDUI.Text == string.Empty || mskDUI.MaskCompleted == false)
             {
-                errorProvider1.SetError(msktxtDUI, "Campo obligatorio, Ingrese DUI completo");
+                errorProvider1.SetError(mskDUI, "Campo obligatorio, Ingrese DUI completo");
                 validDUI = false;
             }
             else
             {
-                errorProvider1.SetError(msktxtDUI, "");
+                errorProvider1.SetError(mskDUI, "");
                 validDUI = true;
             }
             // Acciones a realizar si todas las validaciones han sido superadas exitosamente
             if (validDUI == true && validNOM == true)
             {
 
-                cliente.Nombre = txtNomCompleto.Text;
-                cliente.NumDui = msktxtDUI.Text;
+                cliente.Nombre = txtNombre.Text;
+                cliente.NumDui = mskDUI.Text;
                 if (cliente.NumDui.Length > 1)
                 {
                     // Insertar un guion antes del último dígito del DUI 
@@ -104,7 +106,7 @@ namespace Clave2_Grupo
         {
             if (btnAddClicked)
             {
-                if (!string.IsNullOrWhiteSpace(txtNomCompleto.Text) && !string.IsNullOrEmpty(txtNomCompleto.Text) && !string.IsNullOrWhiteSpace(msktxtDUI.Text) && msktxtDUI.MaskCompleted)
+                if (!string.IsNullOrWhiteSpace(txtNombre.Text) && !string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrWhiteSpace(mskDUI.Text) && mskDUI.MaskCompleted)
                 {
 
                     // Crear una instancia del formulario fmrVenderTarjetas y pasar el objeto Cliente para que el otro formulario trabaje a partir del DUI Y nombre del cliente que aquí hemos registrado
@@ -133,8 +135,8 @@ namespace Clave2_Grupo
         private void LimpiarDatos()
         {
             dgvRegistroClientes.Rows.Clear();
-            txtNomCompleto.Clear();
-            msktxtDUI.Clear();
+            txtNombre.Clear();
+            mskDUI.Clear();
             errorProvider1.Clear();
             validDUI = false;
             validNOM = false;
