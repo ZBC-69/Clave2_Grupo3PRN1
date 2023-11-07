@@ -77,8 +77,9 @@ namespace Clave2_Grupo
 
         private void btnConsultarInfoClientes_Click(object sender, EventArgs e)
         {
-            //abrirDiferentesFormularios(new fmrVerInfoClientes());
-            Metodos.AbrirDiferentesFormularios(new fmrVerInfoClientes(), panelContenedorDeFormularios);
+            Form abrirFormulario = new Form();
+            
+            //Metodos.AbrirDiferentesFormularios(new fmrVerInfoClientes(), panelContenedorDeFormularios);
             //...
             //Your Code
             //...
