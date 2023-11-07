@@ -49,10 +49,7 @@ namespace Clave2_Grupo
         //Evento cuando se añade un nuevo cliente
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
-            objetoCliente.registrarClientes(mskDUI, txtNombre);
-            //descomentar para que funcione el metodo
-            //objetoCliente.mostrarClientes(dgvRegistroClientes);
+           
             //Validación para campos vacios o incompletos
             if (txtNombre.Text == string.Empty)
             {
@@ -93,8 +90,13 @@ namespace Clave2_Grupo
                 MessageBox.Show("El usuario ha sido registrado");
                 MessageBox.Show(cliente.NumDui);
                 btnAddClicked = true;
-                //txtNomCompleto.Clear();
-                //msktxtDUI.Text = "";
+                //txtNombre.Clear();
+                //mskDUI.Text = "";
+
+                Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
+                objetoCliente.registrarClientes(mskDUI, txtNombre);
+                //descomentar para que funcione el metodo
+                //objetoCliente.mostrarClientes(dgvRegistroClientes);
             }
 
         }
