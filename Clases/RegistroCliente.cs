@@ -32,14 +32,19 @@ namespace Clave2_Grupo.Clases
              }
          }*/
 
-        public void registrarClientes(MaskedTextBox DUI, TextBox nombre)
+        /// <summary>
+        /// Permite agregar datos de un nuevo usuario a la base de datos (Dui, Nombre)
+        /// </summary>
+        /// <param name="DUI">el número de dui del cliente</param>
+        /// <param name="nombre">El nombre del cliente a registrar</param>
+        public void registrarClientes(string DUI, string nombre)
         {
             try
             {
                 Conexion objetoConexion = new Conexion();
 
                 String query = "insert into cliente(DUI, Nombre)" +
-                "values ('" + DUI.Text + "','" + nombre.Text + "');";
+                "values ('" + DUI + "','" + nombre + "');";
 
                 MySqlCommand myComand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 MySqlDataReader reader = myComand.ExecuteReader();

@@ -78,10 +78,11 @@ namespace Clave2_Grupo
 
                 cliente.Nombre = txtNombre.Text;
                 cliente.NumDui = mskDUI.Text;
-                if (cliente.NumDui.Length > 1)
+                if (cliente.NumDui.Length > 1 && mskDUI.Text.Length>1)
                 {
                     // Insertar un guion antes del último dígito del DUI 
                     cliente.NumDui = cliente.NumDui.Insert(cliente.NumDui.Length - 1, "-");
+                    
                 }
 
                 //PROVICIONAL; solo para comprobar la validación del registro
@@ -89,12 +90,13 @@ namespace Clave2_Grupo
                 dgvRegistroClientes.Rows.Add(cliente.NumDui, cliente.Nombre);
                 MessageBox.Show("El usuario ha sido registrado");
                 MessageBox.Show(cliente.NumDui);
+                
                 btnAddClicked = true;
                 //txtNombre.Clear();
                 //mskDUI.Text = "";
 
                 Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
-                objetoCliente.registrarClientes(mskDUI, txtNombre);
+                objetoCliente.registrarClientes(cliente.NumDui,cliente.Nombre);
                 //descomentar para que funcione el metodo
                 //objetoCliente.mostrarClientes(dgvRegistroClientes);
             }
