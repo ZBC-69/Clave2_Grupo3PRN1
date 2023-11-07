@@ -103,7 +103,6 @@
   <ItemGroup>
     <Compile Include="Clases\Conexion.cs" />
     <Compile Include="Clases\RegistroCliente.cs" />
-    <Compile Include="Clases\Tarjeta.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="EliminarCliente.cs">
       <SubType>Form</SubType>

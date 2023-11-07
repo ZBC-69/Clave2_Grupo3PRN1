@@ -38,7 +38,7 @@ namespace Clave2_Grupo
         /// <param name="e"></param>
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-
+           
             //verificar si ya se registró un cliente
             //LAS LINEAS SIGUIENTES ESTARÁN COMENTADAS TEMPORALMENTE
             if (cliente != null && !string.IsNullOrEmpty(cliente.Nombre))
