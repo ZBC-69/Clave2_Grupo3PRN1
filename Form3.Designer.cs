@@ -46,7 +46,13 @@ namespace Clave2_Grupo
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.btnFiltrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir3
@@ -76,12 +82,12 @@ namespace Clave2_Grupo
             this.cFVencimiento,
             this.cFApertura,
             this.cVigenciaTarjet});
-            this.dataGridView1.Location = new System.Drawing.Point(511, 70);
+            this.dataGridView1.Location = new System.Drawing.Point(438, 70);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(925, 308);
+            this.dataGridView1.Size = new System.Drawing.Size(974, 308);
             this.dataGridView1.TabIndex = 1;
             // 
             // cDui
@@ -151,7 +157,7 @@ namespace Clave2_Grupo
             // 
             // btnModificarCliente
             // 
-            this.btnModificarCliente.Location = new System.Drawing.Point(40, 437);
+            this.btnModificarCliente.Location = new System.Drawing.Point(45, 253);
             this.btnModificarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(212, 28);
@@ -161,7 +167,7 @@ namespace Clave2_Grupo
             // 
             // btnEliminarCliente
             // 
-            this.btnEliminarCliente.Location = new System.Drawing.Point(281, 437);
+            this.btnEliminarCliente.Location = new System.Drawing.Point(61, 291);
             this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(180, 28);
@@ -208,32 +214,79 @@ namespace Clave2_Grupo
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnEliminarCliente);
+            this.groupBox1.Controls.Add(this.btnModificarCliente);
             this.groupBox1.Location = new System.Drawing.Point(53, 59);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(423, 319);
+            this.groupBox1.Size = new System.Drawing.Size(345, 358);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Clientes GameSivar";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "DUI";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 17);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nombre Completo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(30, 217);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.TabIndex = 4;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(157, 85);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox1.TabIndex = 5;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(157, 127);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 6;
             // 
             // fmrVerInfoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1463, 514);
+            this.ClientSize = new System.Drawing.Size(1436, 514);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnEliminarCliente);
-            this.Controls.Add(this.btnModificarCliente);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSalir3);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmrVerInfoClientes";
             this.Text = "VER INFORMACION DE CLIENTES";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,5 +311,10 @@ namespace Clave2_Grupo
         private System.Windows.Forms.DataGridViewTextBoxColumn cFApertura;
         private System.Windows.Forms.DataGridViewTextBoxColumn cVigenciaTarjet;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

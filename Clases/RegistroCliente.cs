@@ -11,8 +11,8 @@ namespace Clave2_Grupo.Clases
 {
     class RegistroCliente
     {
-        //creando metodo para mostrar los clientes 
-       /* public void mostrarClientes(DataGridView tablaClientes)
+        //creando metodo para mostrar el historial de clientes 
+        public void mostrarClientes(DataGridView tablaClientes)
         {
             try
             {
@@ -28,9 +28,9 @@ namespace Clave2_Grupo.Clases
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se registraron los datos de la base de datos, error: " + ex.ToString());
+                MessageBox.Show("No se mostraron los datos de la base de datos, error: " + ex.ToString());
             }
-        }*/
+        }
 
             public void registrarClientes(MaskedTextBox DUI ,TextBox nombre)
             {
