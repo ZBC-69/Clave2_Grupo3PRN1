@@ -43,7 +43,7 @@ namespace Clave2_Grupo.Clases
 
                 MySqlCommand myComand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 MySqlDataReader reader = myComand.ExecuteReader();
-                MessageBox.Show("Se guardo correctamente los registros");
+                MessageBox.Show("Se guardo correctamente los registros en la base de datos");
                 while (reader.Read())
                 {
 
