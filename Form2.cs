@@ -92,13 +92,13 @@ namespace Clave2_Grupo
                 MessageBox.Show(cliente.NumDui);
                 
                 btnAddClicked = true;
-                //txtNombre.Clear();
-                //mskDUI.Text = "";
-
+                
+                //es momento de almacenar los datos en la base de datos
                 Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
                 objetoCliente.registrarClientes(cliente.NumDui,cliente.Nombre);
-                //descomentar para que funcione el metodo
-                //objetoCliente.mostrarClientes(dgvRegistroClientes);
+
+                txtNombre.Clear();
+                mskDUI.Text = "";
             }
 
         }
