@@ -21,7 +21,7 @@ namespace Clave2_Grupo
             //Llamando la clase RegistroCliente
             Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
             //descomentar para que funcione el metodo
-           // objetoCliente.mostrarClientes(dgvRegistroClientes);
+            // objetoCliente.mostrarClientes(dgvRegistroClientes);
 
         }
 
@@ -49,7 +49,7 @@ namespace Clave2_Grupo
         //Evento cuando se añade un nuevo cliente
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           
+
             //Validación para campos vacios o incompletos
             if (txtNombre.Text == string.Empty)
             {
@@ -149,9 +149,9 @@ namespace Clave2_Grupo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
-  
+
     }
-    }
+}
