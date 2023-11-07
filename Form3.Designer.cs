@@ -30,7 +30,7 @@ namespace Clave2_Grupo
         private void InitializeComponent()
         {
             this.btnSalir3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvHistorialRegistros = new System.Windows.Forms.DataGridView();
             this.cDui = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodTarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +51,7 @@ namespace Clave2_Grupo
             this.label6 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialRegistros)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,14 +66,14 @@ namespace Clave2_Grupo
             this.btnSalir3.UseVisualStyleBackColor = true;
             this.btnSalir3.Click += new System.EventHandler(this.btnSalir3_Click);
             // 
-            // dataGridView1
+            // dgvHistorialRegistros
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvHistorialRegistros.AllowUserToAddRows = false;
+            this.dgvHistorialRegistros.AllowUserToDeleteRows = false;
+            this.dgvHistorialRegistros.AllowUserToResizeColumns = false;
+            this.dgvHistorialRegistros.AllowUserToResizeRows = false;
+            this.dgvHistorialRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHistorialRegistros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cDui,
             this.cNombre,
             this.CodTarjeta,
@@ -82,13 +82,13 @@ namespace Clave2_Grupo
             this.cFVencimiento,
             this.cFApertura,
             this.cVigenciaTarjet});
-            this.dataGridView1.Location = new System.Drawing.Point(438, 70);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(974, 308);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvHistorialRegistros.Location = new System.Drawing.Point(438, 70);
+            this.dgvHistorialRegistros.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvHistorialRegistros.Name = "dgvHistorialRegistros";
+            this.dgvHistorialRegistros.ReadOnly = true;
+            this.dgvHistorialRegistros.RowHeadersWidth = 51;
+            this.dgvHistorialRegistros.Size = new System.Drawing.Size(974, 308);
+            this.dgvHistorialRegistros.TabIndex = 1;
             // 
             // cDui
             // 
@@ -279,12 +279,12 @@ namespace Clave2_Grupo
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvHistorialRegistros);
             this.Controls.Add(this.btnSalir3);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmrVerInfoClientes";
             this.Text = "VER INFORMACION DE CLIENTES";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialRegistros)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -295,7 +295,7 @@ namespace Clave2_Grupo
         #endregion
 
         private System.Windows.Forms.Button btnSalir3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHistorialRegistros;
         private System.Windows.Forms.Button btnModificarCliente;
         private System.Windows.Forms.Button btnEliminarCliente;
         private System.Windows.Forms.Label label1;

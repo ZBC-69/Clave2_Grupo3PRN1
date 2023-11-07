@@ -8,6 +8,8 @@ namespace Clave2_Grupo
         public fmrVerInfoClientes()
         {
             InitializeComponent();
+            //Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
+            //objetoCliente.mostrarClientes(dgvHistorialRegistros);
         }
 
         private void btnSalir3_Click(object sender, EventArgs e)
