@@ -57,7 +57,7 @@ namespace Clave2_Grupo
             // 
             // btnSalir3
             // 
-            this.btnSalir3.Location = new System.Drawing.Point(588, 455);
+            this.btnSalir3.Location = new System.Drawing.Point(660, 387);
             this.btnSalir3.Name = "btnSalir3";
             this.btnSalir3.Size = new System.Drawing.Size(75, 23);
             this.btnSalir3.TabIndex = 0;
@@ -81,11 +81,11 @@ namespace Clave2_Grupo
             this.cFVencimiento,
             this.cFApertura,
             this.cVigenciaTarjet});
-            this.dgvHistorialRegistros.Location = new System.Drawing.Point(250, 50);
+            this.dgvHistorialRegistros.Location = new System.Drawing.Point(217, 50);
             this.dgvHistorialRegistros.Name = "dgvHistorialRegistros";
             this.dgvHistorialRegistros.ReadOnly = true;
             this.dgvHistorialRegistros.RowHeadersWidth = 51;
-            this.dgvHistorialRegistros.Size = new System.Drawing.Size(815, 250);
+            this.dgvHistorialRegistros.Size = new System.Drawing.Size(602, 250);
             this.dgvHistorialRegistros.TabIndex = 1;
             // 
             // cDui
@@ -183,21 +183,21 @@ namespace Clave2_Grupo
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(464, 393);
+            this.dateTimePicker1.Location = new System.Drawing.Point(536, 325);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 5;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(464, 417);
+            this.dateTimePicker2.Location = new System.Drawing.Point(536, 349);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker2.TabIndex = 6;
             // 
             // btnFiltrar
             // 
-            this.btnFiltrar.Location = new System.Drawing.Point(464, 455);
+            this.btnFiltrar.Location = new System.Drawing.Point(536, 387);
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(113, 23);
             this.btnFiltrar.TabIndex = 7;
@@ -214,26 +214,26 @@ namespace Clave2_Grupo
             this.groupBox1.Controls.Add(this.btnEliminarCliente);
             this.groupBox1.Controls.Add(this.btnModificarCliente);
             this.groupBox1.Location = new System.Drawing.Point(2, 50);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(232, 291);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(210, 291);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Clientes GameSivar";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(105, 99);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(94, 99);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(112, 20);
             this.textBox1.TabIndex = 6;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(105, 65);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.maskedTextBox1.Location = new System.Drawing.Point(94, 65);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(112, 20);
             this.maskedTextBox1.TabIndex = 5;
@@ -250,7 +250,7 @@ namespace Clave2_Grupo
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 103);
+            this.label3.Location = new System.Drawing.Point(-2, 103);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
@@ -260,7 +260,7 @@ namespace Clave2_Grupo
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 65);
+            this.label2.Location = new System.Drawing.Point(-2, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(26, 13);
@@ -272,7 +272,7 @@ namespace Clave2_Grupo
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1077, 507);
+            this.ClientSize = new System.Drawing.Size(834, 418);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.dateTimePicker2);

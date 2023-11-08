@@ -77,11 +77,12 @@ namespace Clave2_Grupo
 
         private void btnConsultarInfoClientes_Click(object sender, EventArgs e)
         {
-            // Crear una instancia del formulario fmrVerInfoClientes para abrir el formulario con toda la información de los clientes de la empresa.
-            fmrVerInfoClientes formularioClientes = new fmrVerInfoClientes();
-
-            // Mostrar el formulario
-            formularioClientes.Show();
+            Form abrirFormulario = new Form();
+            
+            //Metodos.AbrirDiferentesFormularios(new fmrVerInfoClientes(), panelContenedorDeFormularios);
+            //...
+            //Your Code
+            //...
             ocultarSubmenu();
         }
 
