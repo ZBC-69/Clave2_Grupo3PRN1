@@ -107,7 +107,7 @@ namespace Clave2_Grupo
                             tarjetaParaCliente.EstablecerValoresPorTipoTarjeta();
 
                             
-                            MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: {tarjetaParaCliente.TipoTarjeta}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}\nSaldo actual de tarjeta: {tarjetaParaCliente.SaldoActual} $USD\nFecha de apertura: {tarjetaParaCliente.FechaApertura}\nFecha de Vencimiento: {tarjetaParaCliente.FechaVencimiento}\nPuntos Acumulados: {tarjetaParaCliente.PuntosAcum}\nVigente: SI", "Factura");
+                            MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: {tarjetaParaCliente.TipoTarjeta}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}\nSaldo actual de la  tarjeta: {tarjetaParaCliente.SaldoActual} $USD\nFecha de apertura: {tarjetaParaCliente.FechaApertura}\nFecha de Vencimiento: {tarjetaParaCliente.FechaVencimiento}\nPuntos Acumulados: {tarjetaParaCliente.PuntosAcum}\nVigente: SI", "Factura");
                             //se confirma que los datos se procesaron correctamente y por ello establecemos en true a la variable controlador clic
                             btnContinuarClicked = true;
                             btnIrComprarJuegos.Enabled = true;
@@ -154,6 +154,21 @@ namespace Clave2_Grupo
         {
             //deshabilitar el boton que abre el formulario de compras de juegos (pero se activa una vez se hayan resgistrado datos en btnContinuar)
             btnIrComprarJuegos.Enabled = false;
+        }
+
+
+        /// <summary>
+        /// Validar el ingreso de solo el número uno
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtNumTarjetasComprar_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (txtNumTarjetasComprar.Text != "1")
+            {
+                MessageBox.Show("Por el momento solo se permite comprar una tarjeta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtNumTarjetasComprar.Focus();
+            }
         }
     }
 }

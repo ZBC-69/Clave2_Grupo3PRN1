@@ -175,6 +175,7 @@ namespace Clave2_Grupo
             this.txtNumTarjetasComprar.Name = "txtNumTarjetasComprar";
             this.txtNumTarjetasComprar.Size = new System.Drawing.Size(121, 20);
             this.txtNumTarjetasComprar.TabIndex = 8;
+            this.txtNumTarjetasComprar.Validating += new System.ComponentModel.CancelEventHandler(this.txtNumTarjetasComprar_Validating);
             // 
             // errorProvider1
             // 
