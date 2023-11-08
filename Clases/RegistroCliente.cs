@@ -32,14 +32,14 @@ namespace Clave2_Grupo.Clases
              }
          }*/
 
-        public void registrarClientes(MaskedTextBox DUI, TextBox nombre)
+        public void registrarClientes(string DUI, string nombre)
         {
             try
             {
                 Conexion objetoConexion = new Conexion();
 
                 String query = "insert into cliente(DUI, Nombre)" +
-                "values ('" + DUI.Text + "','" + nombre.Text + "');";
+                "values ('" + DUI + "','" + nombre + "');";
 
                 MySqlCommand myComand = new MySqlCommand(query, objetoConexion.establecerConexion());
                 MySqlDataReader reader = myComand.ExecuteReader();

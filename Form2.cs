@@ -94,7 +94,7 @@ namespace Clave2_Grupo
                 //mskDUI.Text = "";
 
                 Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
-                objetoCliente.registrarClientes(mskDUI, txtNombre);
+                objetoCliente.registrarClientes(cliente.NumDui, cliente.Nombre);
                 //descomentar para que funcione el metodo
                 //objetoCliente.mostrarClientes(dgvRegistroClientes);
             }
