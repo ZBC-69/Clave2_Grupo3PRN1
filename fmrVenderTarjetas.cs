@@ -92,10 +92,10 @@ namespace Clave2_Grupo
 
                     if (tarjetaSeleccionadaV != "")
                     {
-                        ValidCliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
-                        ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente\nEjemplo: 00110022-9", "Identificación de usuario");
+                        //ValidCliente = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el nombre completo del cliente", "Identificación de usuario");
+                        //ValidDUI = Microsoft.VisualBasic.Interaction.InputBox("Ingrese el DUI completo del cliente\nEjemplo: 00110022-9", "Identificación de usuario");
 
-                        if (ValidCliente == cliente.Nombre && ValidDUI == cliente.NumDui)
+                        if (cliente.Nombre!=null && cliente.NumDui!=null)
                         {
                             //pasarle al objeto cliente el valor de la propiedad Tipo de Tarjeta
                             cliente.TipoTarjeta = tarjetaSeleccionadaV;
@@ -105,9 +105,9 @@ namespace Clave2_Grupo
 
                             //establecer el limite del saldo de la tarjeta, saldo actual, fecha de apertura, vencimiento,etc
                             tarjetaParaCliente.EstablecerValoresPorTipoTarjeta();
-
+                            tarjetaParaCliente.CodigoTarjeta = Tarjeta.GenerarCodigoUnicoTarjet();
                             
-                            MessageBox.Show($"Cliente:{ValidCliente}\nDui:{ValidDUI}\nTarjeta seleccionada: {tarjetaParaCliente.TipoTarjeta}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}\nSaldo actual de la  tarjeta: {tarjetaParaCliente.SaldoActual} $USD\nFecha de apertura: {tarjetaParaCliente.FechaApertura}\nFecha de Vencimiento: {tarjetaParaCliente.FechaVencimiento}\nPuntos Acumulados: {tarjetaParaCliente.PuntosAcum}\nVigente: SI", "Factura");
+                            MessageBox.Show($"Cliente:{cliente.Nombre}\nDui:{cliente.NumDui}\nTarjeta seleccionada: {tarjetaParaCliente.TipoTarjeta}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}\nSaldo actual de la  tarjeta: {tarjetaParaCliente.SaldoActual} $USD\nFecha de apertura: {tarjetaParaCliente.FechaApertura}\nFecha de Vencimiento: {tarjetaParaCliente.FechaVencimiento}\nPuntos Acumulados: {tarjetaParaCliente.PuntosAcum}\nVigente: SI\nCódigo de la tarjeta: {tarjetaParaCliente.CodigoTarjeta}", "Factura");
                             //se confirma que los datos se procesaron correctamente y por ello establecemos en true a la variable controlador clic
                             btnContinuarClicked = true;
                             btnIrComprarJuegos.Enabled = true;
@@ -115,7 +115,7 @@ namespace Clave2_Grupo
                         }
                         else
                         {
-                            MessageBox.Show("No se encuentran registros del cliente\nTambién debe asegurarse de colocar el DUI con 9 caracteres y un guión\nEjemplo: 00220099-2");
+                            MessageBox.Show("No se encuentran registros del cliente\nTambién debe asegurarse que el cliete ya esté regiistrad0");
                         }
                     }
                 }

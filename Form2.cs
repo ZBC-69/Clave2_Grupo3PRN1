@@ -90,9 +90,7 @@ namespace Clave2_Grupo
                 MessageBox.Show("El usuario ha sido registrado");
                 MessageBox.Show(cliente.NumDui);
                 btnAddClicked = true;
-                //txtNombre.Clear();
-                //mskDUI.Text = "";
-
+                
                 Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
                 objetoCliente.registrarClientes(cliente.NumDui, cliente.Nombre);
                 //descomentar para que funcione el metodo
@@ -110,7 +108,7 @@ namespace Clave2_Grupo
         {
             if (btnAddClicked)
             {
-                if (!string.IsNullOrWhiteSpace(txtNombre.Text) && !string.IsNullOrEmpty(txtNombre.Text) && !string.IsNullOrWhiteSpace(mskDUI.Text) && mskDUI.MaskCompleted)
+                if (!string.IsNullOrWhiteSpace(cliente.NumDui) && !string.IsNullOrEmpty(cliente.Nombre) && !string.IsNullOrWhiteSpace(mskDUI.Text) && mskDUI.MaskCompleted)
                 {
 
                     // Crear una instancia del formulario fmrVenderTarjetas y pasar el objeto Cliente para que el otro formulario trabaje a partir del DUI Y nombre del cliente que aquí hemos registrado
@@ -131,10 +129,7 @@ namespace Clave2_Grupo
 
         }
 
-        private void btnLimpiarLosDatos_Click(object sender, EventArgs e)
-        {
-            LimpiarDatos();
-        }
+       
 
         private void LimpiarDatos()
         {
