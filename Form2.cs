@@ -125,7 +125,7 @@ namespace Clave2_Grupo
             }
             else
             {
-                MessageBox.Show("Debe hacer clic en el botón 'Agregar' antes de abrir el formulario de ventas de tarjetas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                MessageBox.Show("Debe hacer clic en el botón 'Registrar' antes de abrir el formulario de ventas de tarjetas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
             }
 
 
