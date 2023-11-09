@@ -18,8 +18,8 @@ namespace Clave2_Grupo.Clases
              {
                  Conexion objetoConexion = new Conexion();
 
-                 String query = "SELECT * FROM tarjeta";
-                 tablaClientes.DataSource = null;
+                String query = "SELECT * FROM tarjeta";
+                tablaClientes.DataSource = null;
                  MySqlDataAdapter adapter = new MySqlDataAdapter(query, objetoConexion.establecerConexion());
                  DataTable dt = new DataTable();
                  adapter.Fill(dt);
