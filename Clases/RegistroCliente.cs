@@ -12,13 +12,13 @@ namespace Clave2_Grupo.Clases
     class RegistroCliente
     {
         //creando metodo para mostrar los clientes 
-        /* public void mostrarClientes(DataGridView tablaClientes)
+         public void mostrarHistorialClientes(DataGridView tablaClientes)
          {
              try
              {
                  Conexion objetoConexion = new Conexion();
 
-                 String query = "SELECT * FROM cliente";
+                 String query = "SELECT * FROM tarjeta";
                  tablaClientes.DataSource = null;
                  MySqlDataAdapter adapter = new MySqlDataAdapter(query, objetoConexion.establecerConexion());
                  DataTable dt = new DataTable();
@@ -30,7 +30,7 @@ namespace Clave2_Grupo.Clases
              {
                  MessageBox.Show("No se registraron los datos de la base de datos, error: " + ex.ToString());
              }
-         }*/
+         }
 
         public void registrarClientes(string DUI, string nombre)
         {
