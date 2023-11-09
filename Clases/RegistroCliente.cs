@@ -18,8 +18,11 @@ namespace Clave2_Grupo.Clases
              {
                  Conexion objetoConexion = new Conexion();
 
-                String query = "SELECT * FROM tarjeta";
-                tablaClientes.DataSource = null;
+                 String query = "SELECT cliente.Nombre, tarjeta.* " + //llamando todos los datos de la base
+                 "FROM tarjeta " +
+                 "INNER JOIN cliente ON tarjeta.DUI = cliente.DUI " +
+                 "ORDER BY cliente.Nombre";
+                 tablaClientes.DataSource = null;
                  MySqlDataAdapter adapter = new MySqlDataAdapter(query, objetoConexion.establecerConexion());
                  DataTable dt = new DataTable();
                  adapter.Fill(dt);
