@@ -31,14 +31,6 @@ namespace Clave2_Grupo
         {
             this.btnSalir3 = new System.Windows.Forms.Button();
             this.dgvHistorialRegistros = new System.Windows.Forms.DataGridView();
-            this.cDui = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CodTarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cTipoTarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cCreditDiponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cFVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cFApertura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cVigenciaTarjet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnModificarCliente = new System.Windows.Forms.Button();
             this.btnEliminarCliente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,15 +43,23 @@ namespace Clave2_Grupo
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.cDui = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CodTarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cTipoTarjeta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cCreditDiponible = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cFVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cFApertura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cVigenciaTarjet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialRegistros)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir3
             // 
-            this.btnSalir3.Location = new System.Drawing.Point(984, 383);
+            this.btnSalir3.Location = new System.Drawing.Point(1083, 471);
+            this.btnSalir3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir3.Name = "btnSalir3";
-            this.btnSalir3.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir3.Size = new System.Drawing.Size(100, 28);
             this.btnSalir3.TabIndex = 0;
             this.btnSalir3.Text = "CERRAR";
             this.btnSalir3.UseVisualStyleBackColor = true;
@@ -74,19 +74,136 @@ namespace Clave2_Grupo
             this.dgvHistorialRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialRegistros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.cDui,
-            this.cNombre,
             this.CodTarjeta,
             this.cTipoTarjeta,
             this.cCreditDiponible,
             this.cFVencimiento,
             this.cFApertura,
             this.cVigenciaTarjet});
-            this.dgvHistorialRegistros.Location = new System.Drawing.Point(292, 50);
+            this.dgvHistorialRegistros.Location = new System.Drawing.Point(389, 62);
+            this.dgvHistorialRegistros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvHistorialRegistros.Name = "dgvHistorialRegistros";
             this.dgvHistorialRegistros.ReadOnly = true;
             this.dgvHistorialRegistros.RowHeadersWidth = 51;
-            this.dgvHistorialRegistros.Size = new System.Drawing.Size(822, 250);
+            this.dgvHistorialRegistros.Size = new System.Drawing.Size(843, 308);
             this.dgvHistorialRegistros.TabIndex = 1;
+            // 
+            // btnModificarCliente
+            // 
+            this.btnModificarCliente.Location = new System.Drawing.Point(45, 254);
+            this.btnModificarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarCliente.Name = "btnModificarCliente";
+            this.btnModificarCliente.Size = new System.Drawing.Size(212, 28);
+            this.btnModificarCliente.TabIndex = 2;
+            this.btnModificarCliente.Text = "MODIFICAR CLIENTE";
+            this.btnModificarCliente.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarCliente
+            // 
+            this.btnEliminarCliente.Location = new System.Drawing.Point(61, 290);
+            this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCliente.Name = "btnEliminarCliente";
+            this.btnEliminarCliente.Size = new System.Drawing.Size(180, 28);
+            this.btnEliminarCliente.TabIndex = 3;
+            this.btnEliminarCliente.Text = "ELIIMINAR CLIENTE";
+            this.btnEliminarCliente.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(691, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(510, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "HISTORIAL Y LISTA DE CLIENTES DE LA EMPRESA DE JUEGOS GAMESIVAR";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(899, 395);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(899, 425);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(265, 22);
+            this.dateTimePicker2.TabIndex = 6;
+            // 
+            // btnFiltrar
+            // 
+            this.btnFiltrar.Location = new System.Drawing.Point(860, 471);
+            this.btnFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(151, 28);
+            this.btnFiltrar.TabIndex = 7;
+            this.btnFiltrar.Text = "Filtrar por fechas";
+            this.btnFiltrar.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.maskedTextBox1);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.btnEliminarCliente);
+            this.groupBox1.Controls.Add(this.btnModificarCliente);
+            this.groupBox1.Location = new System.Drawing.Point(15, 62);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(345, 358);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos Clientes GameSivar";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(157, 127);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 6;
+            // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(157, 85);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 22);
+            this.maskedTextBox1.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(29, 217);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(29, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 17);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Nombre Completo";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(29, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "DUI";
             // 
             // cDui
             // 
@@ -95,14 +212,6 @@ namespace Clave2_Grupo
             this.cDui.Name = "cDui";
             this.cDui.ReadOnly = true;
             this.cDui.Width = 125;
-            // 
-            // cNombre
-            // 
-            this.cNombre.HeaderText = "Nombre";
-            this.cNombre.MinimumWidth = 6;
-            this.cNombre.Name = "cNombre";
-            this.cNombre.ReadOnly = true;
-            this.cNombre.Width = 125;
             // 
             // CodTarjeta
             // 
@@ -153,126 +262,12 @@ namespace Clave2_Grupo
             this.cVigenciaTarjet.ReadOnly = true;
             this.cVigenciaTarjet.Width = 125;
             // 
-            // btnModificarCliente
-            // 
-            this.btnModificarCliente.Location = new System.Drawing.Point(34, 206);
-            this.btnModificarCliente.Name = "btnModificarCliente";
-            this.btnModificarCliente.Size = new System.Drawing.Size(159, 23);
-            this.btnModificarCliente.TabIndex = 2;
-            this.btnModificarCliente.Text = "MODIFICAR CLIENTE";
-            this.btnModificarCliente.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarCliente
-            // 
-            this.btnEliminarCliente.Location = new System.Drawing.Point(46, 236);
-            this.btnEliminarCliente.Name = "btnEliminarCliente";
-            this.btnEliminarCliente.Size = new System.Drawing.Size(135, 23);
-            this.btnEliminarCliente.TabIndex = 3;
-            this.btnEliminarCliente.Text = "ELIIMINAR CLIENTE";
-            this.btnEliminarCliente.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(518, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(399, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "HISTORIAL Y LISTA DE CLIENTES DE LA EMPRESA DE JUEGOS GAMESIVAR";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(860, 321);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(860, 345);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 6;
-            // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Location = new System.Drawing.Point(860, 383);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(113, 23);
-            this.btnFiltrar.TabIndex = 7;
-            this.btnFiltrar.Text = "Filtrar por fechas";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.maskedTextBox1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btnEliminarCliente);
-            this.groupBox1.Controls.Add(this.btnModificarCliente);
-            this.groupBox1.Location = new System.Drawing.Point(11, 50);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(259, 291);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Clientes GameSivar";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(118, 103);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(118, 69);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(76, 20);
-            this.maskedTextBox1.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 176);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
-            this.label6.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 107);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Nombre Completo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "DUI";
-            // 
             // fmrVerInfoClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1126, 525);
+            this.ClientSize = new System.Drawing.Size(1247, 646);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.dateTimePicker2);
@@ -280,6 +275,7 @@ namespace Clave2_Grupo
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvHistorialRegistros);
             this.Controls.Add(this.btnSalir3);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "fmrVerInfoClientes";
             this.Text = "VER INFORMACION DE CLIENTES";
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialRegistros)).EndInit();
@@ -300,19 +296,18 @@ namespace Clave2_Grupo
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button btnFiltrar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cDui;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CodTarjeta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cTipoTarjeta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cCreditDiponible;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cFVencimiento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cFApertura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cVigenciaTarjet;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cDui;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CodTarjeta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cTipoTarjeta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cCreditDiponible;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cFVencimiento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cFApertura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cVigenciaTarjet;
     }
 }
