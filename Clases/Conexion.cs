@@ -13,7 +13,7 @@ namespace Clave2_Grupo.Clases
         MySqlConnection conexion = new MySqlConnection();
 
         static string servidor = "localhost";
-        static string bd = "Clave2_grupo3_";
+        static string bd = "Clave2_Grupo3_";
         static string usuario = "root";
         static string password = "root";
         static string puerto = "3306";
