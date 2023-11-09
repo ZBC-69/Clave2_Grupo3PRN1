@@ -43,6 +43,8 @@ namespace Clave2_Grupo
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialRegistros)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,11 +66,14 @@ namespace Clave2_Grupo
             this.dgvHistorialRegistros.AllowUserToResizeColumns = false;
             this.dgvHistorialRegistros.AllowUserToResizeRows = false;
             this.dgvHistorialRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHistorialRegistros.Location = new System.Drawing.Point(291, 36);
+            this.dgvHistorialRegistros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Eliminar,
+            this.Editar});
+            this.dgvHistorialRegistros.Location = new System.Drawing.Point(233, 36);
             this.dgvHistorialRegistros.Name = "dgvHistorialRegistros";
             this.dgvHistorialRegistros.ReadOnly = true;
             this.dgvHistorialRegistros.RowHeadersWidth = 51;
-            this.dgvHistorialRegistros.Size = new System.Drawing.Size(930, 250);
+            this.dgvHistorialRegistros.Size = new System.Drawing.Size(1005, 250);
             this.dgvHistorialRegistros.TabIndex = 1;
             // 
             // btnModificarCliente
@@ -132,10 +137,10 @@ namespace Clave2_Grupo
             this.groupBox1.Controls.Add(this.btnEliminarCliente);
             this.groupBox1.Controls.Add(this.btnModificarCliente);
             this.groupBox1.Location = new System.Drawing.Point(11, 50);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(259, 291);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(205, 291);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Clientes GameSivar";
@@ -143,7 +148,7 @@ namespace Clave2_Grupo
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(118, 103);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 20);
             this.textBox1.TabIndex = 6;
@@ -151,7 +156,7 @@ namespace Clave2_Grupo
             // maskedTextBox1
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(118, 69);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(76, 20);
             this.maskedTextBox1.TabIndex = 5;
@@ -185,12 +190,32 @@ namespace Clave2_Grupo
             this.label2.TabIndex = 0;
             this.label2.Text = "DUI";
             // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Image = global::Clave2_Grupo.Properties.Resources.DeleteIco;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.ReadOnly = true;
+            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Eliminar.Width = 60;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = global::Clave2_Grupo.Properties.Resources.EditIco;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Editar.Width = 60;
+            // 
             // fmrVerInfoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(1233, 525);
+            this.ClientSize = new System.Drawing.Size(1250, 525);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.dateTimePicker2);
@@ -225,5 +250,7 @@ namespace Clave2_Grupo
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
     }
 }

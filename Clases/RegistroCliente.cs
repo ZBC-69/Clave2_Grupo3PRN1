@@ -27,7 +27,14 @@ namespace Clave2_Grupo.Clases
                  DataTable dt = new DataTable();
                  adapter.Fill(dt);
                  tablaClientes.DataSource = dt;
-                 objetoConexion.cerrarConexion();
+
+                // Asegúrate de que la DataGridView tenga al menos una columna
+                if (tablaClientes.Columns.Count > 0)
+                {
+                    // Ajusta el ancho de la última columna agregada
+                    tablaClientes.Columns[tablaClientes.Columns.Count - 1].Width = 50;
+                }
+                objetoConexion.cerrarConexion();
              }
              catch (Exception ex)
              {

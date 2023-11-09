@@ -21,7 +21,6 @@ namespace Clave2_Grupo
         {
             Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
 
-
         }
     }
 }
