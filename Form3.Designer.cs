@@ -43,6 +43,8 @@ namespace Clave2_Grupo
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialRegistros)).BeginInit();
@@ -75,6 +77,7 @@ namespace Clave2_Grupo
             this.dgvHistorialRegistros.RowHeadersWidth = 51;
             this.dgvHistorialRegistros.Size = new System.Drawing.Size(1005, 250);
             this.dgvHistorialRegistros.TabIndex = 1;
+            this.dgvHistorialRegistros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorialRegistros_CellClick);
             // 
             // btnModificarCliente
             // 
@@ -190,6 +193,24 @@ namespace Clave2_Grupo
             this.label2.TabIndex = 0;
             this.label2.Text = "DUI";
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn1.Image = global::Clave2_Grupo.Properties.Resources.DeleteIco;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 60;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Editar";
+            this.dataGridViewImageColumn2.Image = global::Clave2_Grupo.Properties.Resources.EditIco;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn2.Width = 60;
+            // 
             // Eliminar
             // 
             this.Eliminar.HeaderText = "Eliminar";
@@ -252,5 +273,7 @@ namespace Clave2_Grupo
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }

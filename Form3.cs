@@ -22,5 +22,10 @@ namespace Clave2_Grupo
             Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
 
         }
+
+        private void dgvHistorialRegistros_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
