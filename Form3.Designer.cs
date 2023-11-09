@@ -198,6 +198,7 @@ namespace Clave2_Grupo
             this.dataGridViewImageColumn1.HeaderText = "Eliminar";
             this.dataGridViewImageColumn1.Image = global::Clave2_Grupo.Properties.Resources.DeleteIco;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
             this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn1.Width = 60;
@@ -207,6 +208,7 @@ namespace Clave2_Grupo
             this.dataGridViewImageColumn2.HeaderText = "Editar";
             this.dataGridViewImageColumn2.Image = global::Clave2_Grupo.Properties.Resources.EditIco;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
             this.dataGridViewImageColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn2.Width = 60;

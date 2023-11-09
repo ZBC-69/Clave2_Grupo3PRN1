@@ -17,6 +17,11 @@ namespace Clave2_Grupo
             InitializeComponent();
         }
 
+        public frmEDITAR(string DUI)
+        {
+            InitializeComponent();
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
 

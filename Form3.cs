@@ -23,9 +23,17 @@ namespace Clave2_Grupo
 
         }
 
+        string DUI;
         private void dgvHistorialRegistros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (dgvHistorialRegistros.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                DUI = (dgvHistorialRegistros.CurrentRow.
+                    Cells["DUI"].Value.ToString());
+                frmEDITAR fmrEditDates = new frmEDITAR(DUI);
+                fmrEditDates.ShowDialog();
+                //CargarGrid();
+            }
         }
     }
 }
