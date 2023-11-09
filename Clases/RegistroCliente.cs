@@ -56,8 +56,30 @@ namespace Clave2_Grupo.Clases
             }
         }
 
-            
 
-            
+        public void guardarOtrosDatos(string DUI, string codTarjeta, string tipoTarjet, double credito, string fVence, string fApertura,string vigente)
+        {
+            try
+            {
+                Conexion objetoConexion = new Conexion();
+
+                String query = "insert into tarjeta (DUI, CodTarjeta, Tipo, Credito_Disponible, fecha_vencimiento, fecha_Apertura, Vigencia)" +
+                "values ('" + DUI + "','" + codTarjeta + "','" + tipoTarjet + "','" + credito + "','" + fVence + "','" + fApertura + "','" + vigente + "');";
+
+                MySqlCommand myComand = new MySqlCommand(query, objetoConexion.establecerConexion());
+                MySqlDataReader reader = myComand.ExecuteReader();
+                MessageBox.Show("Se guardaron los demás datos del cliente");
+                while (reader.Read())
+                {
+
+                }
+                objetoConexion.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se logró guardar la información, error: " + ex.ToString());
+            }
+        }
+
     }
 }

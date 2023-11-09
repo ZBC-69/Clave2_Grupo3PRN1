@@ -106,8 +106,20 @@ namespace Clave2_Grupo
                             //establecer el limite del saldo de la tarjeta, saldo actual, fecha de apertura, vencimiento,etc
                             tarjetaParaCliente.EstablecerValoresPorTipoTarjeta();
                             tarjetaParaCliente.CodigoTarjeta = Tarjeta.GenerarCodigoUnicoTarjet();
+                            string estadoVigencia;
+                            if (tarjetaParaCliente.EstaVigente==true)
+                            {
+                                estadoVigencia = "vigente";
+                            }
+                            else
+                            {
+                                estadoVigencia = "expirada";
+                            }
+
                             
                             MessageBox.Show($"Cliente:{cliente.Nombre}\nDui:{cliente.NumDui}\nTarjeta seleccionada: {tarjetaParaCliente.TipoTarjeta}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}\nSaldo actual de la  tarjeta: {tarjetaParaCliente.SaldoActual} $USD\nFecha de apertura: {tarjetaParaCliente.FechaApertura}\nFecha de Vencimiento: {tarjetaParaCliente.FechaVencimiento}\nPuntos Acumulados: {tarjetaParaCliente.PuntosAcum}\nVigente: SI\nCódigo de la tarjeta: {tarjetaParaCliente.CodigoTarjeta}", "Factura");
+                            Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
+                            objetoCliente.guardarOtrosDatos(cliente.NumDui,tarjetaParaCliente.CodigoTarjeta,tarjetaParaCliente.TipoTarjeta,tarjetaParaCliente.SaldoActual,tarjetaParaCliente.FechaVencimiento,tarjetaParaCliente.FechaApertura,estadoVigencia);
                             //se confirma que los datos se procesaron correctamente y por ello establecemos en true a la variable controlador clic
                             btnContinuarClicked = true;
                             btnIrComprarJuegos.Enabled = true;
