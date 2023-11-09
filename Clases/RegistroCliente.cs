@@ -63,7 +63,7 @@ namespace Clave2_Grupo.Clases
             {
                 Conexion objetoConexion = new Conexion();
 
-                String query = "insert into tarjeta (DUI, CodTarjeta, Tipo, Credito_Disponible, fecha_vencimiento, fecha_Apertura, Vigencia)" +
+                String query = "insert into tarjeta (DUI, CodTarjeta, Tipo, Credito_Disponible, fecha_vencimiento, fecha_Apertura, Estado)" +
                 "values ('" + DUI + "','" + codTarjeta + "','" + tipoTarjet + "','" + credito + "','" + fVence + "','" + fApertura + "','" + vigente + "');";
 
                 MySqlCommand myComand = new MySqlCommand(query, objetoConexion.establecerConexion());
