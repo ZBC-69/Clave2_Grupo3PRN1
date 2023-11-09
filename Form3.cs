@@ -16,5 +16,12 @@ namespace Clave2_Grupo
         {
             Close();
         }
+
+        private void fmrVerInfoClientes_Load(object sender, EventArgs e)
+        {
+            Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
+
+
+        }
     }
 }
