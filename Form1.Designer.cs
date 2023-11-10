@@ -81,7 +81,7 @@ namespace Clave2_Grupo
             // 
             // panelSubMenuVentas
             // 
-            this.panelSubMenuVentas.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panelSubMenuVentas.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panelSubMenuVentas.Controls.Add(this.btnVenderJuegos);
             this.panelSubMenuVentas.Controls.Add(this.btnVenderTarjetas);
             this.panelSubMenuVentas.Dock = System.Windows.Forms.DockStyle.Top;
@@ -123,7 +123,7 @@ namespace Clave2_Grupo
             // 
             // btnMenuVentasAbrir
             // 
-            this.btnMenuVentasAbrir.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnMenuVentasAbrir.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnMenuVentasAbrir.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMenuVentasAbrir.FlatAppearance.BorderSize = 0;
             this.btnMenuVentasAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -241,7 +241,7 @@ namespace Clave2_Grupo
             // 
             // panelContenedorDeFormularios
             // 
-            this.panelContenedorDeFormularios.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.panelContenedorDeFormularios.BackColor = System.Drawing.SystemColors.Info;
             this.panelContenedorDeFormularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedorDeFormularios.Location = new System.Drawing.Point(333, 0);
             this.panelContenedorDeFormularios.Margin = new System.Windows.Forms.Padding(4);
