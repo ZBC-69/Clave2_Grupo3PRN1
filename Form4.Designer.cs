@@ -275,7 +275,7 @@ namespace Clave2_Grupo
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDUI;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCodTarjeta;
