@@ -8,7 +8,7 @@ using MySql.Data.MySqlClient;
 
 namespace Clave2_Grupo.Clases
 {
-    class Conexion
+    public class Conexion : IDisposable
     {
         MySqlConnection conexion = new MySqlConnection();
 
@@ -40,6 +40,26 @@ namespace Clave2_Grupo.Clases
         public void cerrarConexion()
         {
             conexion.Close();
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                // Liberar recursos administrados
+                if (conexion != null)
+                {
+                    conexion.Close();
+                    conexion.Dispose();
+                }
+            }
+            // Liberar recursos no administrados
         }
     }
 }

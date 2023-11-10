@@ -12,21 +12,21 @@ namespace Clave2_Grupo.Clases
     class RegistroCliente
     {
         //creando metodo para mostrar los clientes 
-         public static void mostrarHistorialClientes(DataGridView tablaClientes)
-         {
-             try
-             {
-                 Conexion objetoConexion = new Conexion();
+        public static void mostrarHistorialClientes(DataGridView tablaClientes)
+        {
+            try
+            {
+                Conexion objetoConexion = new Conexion();
 
-                 String query = "SELECT cliente.Nombre, tarjeta.* " + //llamando todos los datos de la base
-                 "FROM tarjeta " +
-                 "INNER JOIN cliente ON tarjeta.DUI = cliente.DUI " +
-                 "ORDER BY cliente.Nombre";
-                 tablaClientes.DataSource = null;
-                 MySqlDataAdapter adapter = new MySqlDataAdapter(query, objetoConexion.establecerConexion());
-                 DataTable dt = new DataTable();
-                 adapter.Fill(dt);
-                 tablaClientes.DataSource = dt;
+                String query = "SELECT cliente.Nombre, tarjeta.* " + //llamando todos los datos de la base
+                "FROM tarjeta " +
+                "INNER JOIN cliente ON tarjeta.DUI = cliente.DUI " +
+                "ORDER BY cliente.Nombre";
+                tablaClientes.DataSource = null;
+                MySqlDataAdapter adapter = new MySqlDataAdapter(query, objetoConexion.establecerConexion());
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                tablaClientes.DataSource = dt;
 
                 // Asegúrate de que la DataGridView tenga al menos una columna
                 if (tablaClientes.Columns.Count > 0)
@@ -35,12 +35,12 @@ namespace Clave2_Grupo.Clases
                     tablaClientes.Columns[tablaClientes.Columns.Count - 1].Width = 50;
                 }
                 objetoConexion.cerrarConexion();
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("No se registraron los datos de la base de datos, error: " + ex.ToString());
-             }
-         }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se registraron los datos de la base de datos, error: " + ex.ToString());
+            }
+        }
 
         public void registrarClientes(string DUI, string nombre)
         {
@@ -67,7 +67,7 @@ namespace Clave2_Grupo.Clases
         }
 
 
-        public void guardarOtrosDatos(string DUI, string codTarjeta, string tipoTarjet, double credito, string fVence, string fApertura,string vigente)
+        public void guardarOtrosDatos(string DUI, string codTarjeta, string tipoTarjet, double credito, string fVence, string fApertura, string vigente)
         {
             try
             {
@@ -94,29 +94,36 @@ namespace Clave2_Grupo.Clases
 
         ///====================POSIBLE MÉTODO PARA ACTUALIZAR LOS DATOS DE LA BASE DE DATOS
         ///
-        public void ModificarAlumnos(TextBox id, TextBox nombres, TextBox apellidos)
+        public void ActualizarDatosd(TextBox Nombre, MaskedTextBox Dui)
         {
+            //Clases.Conexion objetoConexion = new Clases.Conexion();
+
             try
             {
-                Clases.Conexion objetoConexion = new Clases.Conexion();
-                string query = "update  alumnos set nombres='"
-                    + nombres.Text + "',APELLIDOS='" + apellidos.Text + "'where id=+'" + id.Text + "';";
-
-                //PAUSA EN  MINUTO 46
-
-                MySqlCommand myComand = new MySqlCommand(query, objetoConexion.establecerConexion());
-                MySqlDataReader reader = myComand.ExecuteReader();
-                MessageBox.Show("Se modificó correctamente");
-                while (reader.Read())
+                using (Clases.Conexion objetoConexion = new Clases.Conexion())
                 {
+                    string query = "UPDATE cliente SET Nombre=@Nombre WHERE DUI=@DUI";
+                    MySqlCommand cmdCliente = new MySqlCommand(query, objetoConexion.establecerConexion());
+                    cmdCliente.Parameters.AddWithValue("@Nombre", Nombre.Text);
+                    cmdCliente.Parameters.AddWithValue("@DUI", Dui.Text);
 
+                    // Ejecutas la actualización
+                    int rowsAffected = cmdCliente.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Se modificó correctamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el registro para actualizar");
+                    }
                 }
-                objetoConexion.cerrarConexion();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("No se actualizaron los datos de la base de datos, error: " + ex.ToString());
             }
-        }
+        }   
     }
 }
