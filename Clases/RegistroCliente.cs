@@ -91,5 +91,32 @@ namespace Clave2_Grupo.Clases
             }
         }
 
+
+        ///====================POSIBLE MÉTODO PARA ACTUALIZAR LOS DATOS DE LA BASE DE DATOS
+        ///
+        public void ModificarAlumnos(TextBox id, TextBox nombres, TextBox apellidos)
+        {
+            try
+            {
+                Clases.Conexion objetoConexion = new Clases.Conexion();
+                string query = "update  alumnos set nombres='"
+                    + nombres.Text + "',APELLIDOS='" + apellidos.Text + "'where id=+'" + id.Text + "';";
+
+                //PAUSA EN  MINUTO 46
+
+                MySqlCommand myComand = new MySqlCommand(query, objetoConexion.establecerConexion());
+                MySqlDataReader reader = myComand.ExecuteReader();
+                MessageBox.Show("Se modificó correctamente");
+                while (reader.Read())
+                {
+
+                }
+                objetoConexion.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se actualizaron los datos de la base de datos, error: " + ex.ToString());
+            }
+        }
     }
 }
