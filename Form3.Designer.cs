@@ -50,6 +50,7 @@ namespace Clave2_Grupo
             // 
             // btnSalir3
             // 
+            this.btnSalir3.ForeColor = System.Drawing.Color.Maroon;
             this.btnSalir3.Location = new System.Drawing.Point(1309, 575);
             this.btnSalir3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSalir3.Name = "btnSalir3";
@@ -91,6 +92,7 @@ namespace Clave2_Grupo
             // 
             // btnModificarCliente
             // 
+            this.btnModificarCliente.ForeColor = System.Drawing.Color.Maroon;
             this.btnModificarCliente.Location = new System.Drawing.Point(45, 254);
             this.btnModificarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificarCliente.Name = "btnModificarCliente";
@@ -102,6 +104,7 @@ namespace Clave2_Grupo
             // 
             // btnEliminarCliente
             // 
+            this.btnEliminarCliente.ForeColor = System.Drawing.Color.Maroon;
             this.btnEliminarCliente.Location = new System.Drawing.Point(61, 290);
             this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
@@ -134,6 +137,8 @@ namespace Clave2_Grupo
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnEliminarCliente);
             this.groupBox1.Controls.Add(this.btnModificarCliente);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Window;
             this.groupBox1.Location = new System.Drawing.Point(15, 62);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
