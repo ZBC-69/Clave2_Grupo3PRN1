@@ -31,14 +31,9 @@ namespace Clave2_Grupo
         {
             this.btnSalir3 = new System.Windows.Forms.Button();
             this.dgvHistorialRegistros = new System.Windows.Forms.DataGridView();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnModificarCliente = new System.Windows.Forms.Button();
             this.btnEliminarCliente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btnFiltrar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.mskDui = new System.Windows.Forms.MaskedTextBox();
@@ -47,15 +42,16 @@ namespace Clave2_Grupo
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialRegistros)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSalir3
             // 
-            this.btnSalir3.Location = new System.Drawing.Point(997, 490);
+            this.btnSalir3.Location = new System.Drawing.Point(982, 467);
             this.btnSalir3.Name = "btnSalir3";
-            this.btnSalir3.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir3.Size = new System.Drawing.Size(99, 23);
             this.btnSalir3.TabIndex = 0;
             this.btnSalir3.Text = "CERRAR";
             this.btnSalir3.UseVisualStyleBackColor = true;
@@ -69,7 +65,6 @@ namespace Clave2_Grupo
             this.dgvHistorialRegistros.AllowUserToResizeRows = false;
             this.dgvHistorialRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialRegistros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Eliminar,
             this.Editar});
             this.dgvHistorialRegistros.Location = new System.Drawing.Point(233, 36);
             this.dgvHistorialRegistros.Name = "dgvHistorialRegistros";
@@ -79,26 +74,6 @@ namespace Clave2_Grupo
             this.dgvHistorialRegistros.TabIndex = 1;
             this.dgvHistorialRegistros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorialRegistros_CellClick);
             this.dgvHistorialRegistros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorialRegistros_CellDoubleClick);
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = global::Clave2_Grupo.Properties.Resources.DeleteIco;
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Eliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Eliminar.Width = 60;
-            // 
-            // Editar
-            // 
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Image = global::Clave2_Grupo.Properties.Resources.EditIco;
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Editar.Width = 60;
             // 
             // btnModificarCliente
             // 
@@ -130,29 +105,6 @@ namespace Clave2_Grupo
             this.label1.TabIndex = 4;
             this.label1.Text = "HISTORIAL Y LISTA DE CLIENTES DE LA EMPRESA DE JUEGOS GAMESIVAR";
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(859, 428);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(859, 452);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 6;
-            // 
-            // btnFiltrar
-            // 
-            this.btnFiltrar.Location = new System.Drawing.Point(830, 490);
-            this.btnFiltrar.Name = "btnFiltrar";
-            this.btnFiltrar.Size = new System.Drawing.Size(113, 23);
-            this.btnFiltrar.TabIndex = 7;
-            this.btnFiltrar.Text = "Filtrar por fechas";
-            this.btnFiltrar.UseVisualStyleBackColor = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtNombre);
@@ -181,6 +133,7 @@ namespace Clave2_Grupo
             // 
             // mskDui
             // 
+            this.mskDui.Enabled = false;
             this.mskDui.Location = new System.Drawing.Point(118, 69);
             this.mskDui.Margin = new System.Windows.Forms.Padding(2);
             this.mskDui.Name = "mskDui";
@@ -236,6 +189,16 @@ namespace Clave2_Grupo
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn2.Width = 60;
             // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Image = global::Clave2_Grupo.Properties.Resources.EditIco;
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Editar.Width = 60;
+            // 
             // fmrVerInfoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,9 +206,6 @@ namespace Clave2_Grupo
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1250, 525);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnFiltrar);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvHistorialRegistros);
             this.Controls.Add(this.btnSalir3);
@@ -267,18 +227,14 @@ namespace Clave2_Grupo
         private System.Windows.Forms.Button btnModificarCliente;
         private System.Windows.Forms.Button btnEliminarCliente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button btnFiltrar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.MaskedTextBox mskDui;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
-        private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewImageColumn Editar;
     }
 }

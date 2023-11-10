@@ -132,8 +132,8 @@ namespace Clave2_Grupo.Clases
         {
             try
             {
-                nombre.Text = tablAlumnitos.CurrentRow.Cells[2].Value.ToString();
-                Dui.Text = tablAlumnitos.CurrentRow.Cells[3].Value.ToString();
+                nombre.Text = tablAlumnitos.CurrentRow.Cells[1].Value.ToString();
+                Dui.Text = tablAlumnitos.CurrentRow.Cells[2].Value.ToString();
                 
                 
             }
