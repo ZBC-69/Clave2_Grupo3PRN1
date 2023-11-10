@@ -124,6 +124,23 @@ namespace Clave2_Grupo.Clases
             {
                 MessageBox.Show("No se actualizaron los datos de la base de datos, error: " + ex.ToString());
             }
-        }   
+        }
+
+
+
+        public void SeleccionarAlumnos(DataGridView tablAlumnitos, TextBox nombre, MaskedTextBox Dui)
+        {
+            try
+            {
+                nombre.Text = tablAlumnitos.CurrentRow.Cells[2].Value.ToString();
+                Dui.Text = tablAlumnitos.CurrentRow.Cells[3].Value.ToString();
+                
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se lograr seleccionar, error: " + ex.ToString());
+            }
+        }
     }
 }

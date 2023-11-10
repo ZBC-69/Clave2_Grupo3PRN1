@@ -24,31 +24,29 @@ namespace Clave2_Grupo
         }
 
         string DUI;
+        Clases.RegistroCliente regis = new Clases.RegistroCliente();
         private void dgvHistorialRegistros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvHistorialRegistros.Columns[e.ColumnIndex].Name == "Editar")
-            {
-                //DUI = (dgvHistorialRegistros.CurrentRow.
-                //    Cells["DUI"].Value.ToString());
-                //frmEDITAR fmrEditDates = new frmEDITAR(DUI);
-                //fmrEditDates.ShowDialog();
-                //CargarGrid();
+           
+            regis.SeleccionarAlumnos(dgvHistorialRegistros, txtNombre, mskDui);
+        }
 
-                Cliente cliente = new Cliente();
+        private void dgvHistorialRegistros_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-                if (e.RowIndex >= 0 && e.ColumnIndex == dgvHistorialRegistros.Columns["Editar"].Index)
-                {
-                    cliente.Nombre = dgvHistorialRegistros.Rows[e.RowIndex].Cells[2].Value.ToString();
+        }
 
-                    frmEDITAR formEdita = new frmEDITAR(cliente);
-                    formEdita.txtNombre.Text = cliente.Nombre;
-                    formEdita.Show();
-                    MessageBox.Show(formEdita.txtNombre.Text);
+        private void btnModificarCliente_Click(object sender, EventArgs e)
+        {
+            regis.ActualizarDatosd(txtNombre,mskDui);
+            txtNombre.Text = "";
+            mskDui.Text = string.Empty;
+            Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
+        }
 
-                    
-                    
-                }
-            }
+        private void btnEliminarCliente_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
