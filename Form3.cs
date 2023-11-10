@@ -38,6 +38,12 @@ namespace Clave2_Grupo
 
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
+
+            if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                MessageBox.Show("Debe seleccionar un regisitro desde la tabla dando click", "Datos no deben estar vacíos",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                return;
+            }
             regis.ActualizarDatosd(txtNombre,mskDui);
             txtNombre.Text = "";
             mskDui.Text = string.Empty;
