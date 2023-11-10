@@ -126,7 +126,7 @@ namespace Clave2_Grupo
             // 
             this.dgvRegistroClientes.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvRegistroClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRegistroClientes.Location = new System.Drawing.Point(271, 178);
+            this.dgvRegistroClientes.Location = new System.Drawing.Point(149, 178);
             this.dgvRegistroClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvRegistroClientes.Name = "dgvRegistroClientes";
             this.dgvRegistroClientes.RowHeadersWidth = 51;
@@ -136,7 +136,7 @@ namespace Clave2_Grupo
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvRegistroClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRegistroClientes.Size = new System.Drawing.Size(335, 185);
+            this.dgvRegistroClientes.Size = new System.Drawing.Size(457, 185);
             this.dgvRegistroClientes.TabIndex = 7;
             // 
             // btnIrACompras
