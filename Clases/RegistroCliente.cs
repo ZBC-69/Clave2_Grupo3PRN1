@@ -18,13 +18,23 @@ namespace Clave2_Grupo.Clases
              {
                  Conexion objetoConexion = new Conexion();
 
-                String query = "SELECT * FROM tarjeta";
-                tablaClientes.DataSource = null;
+                 String query = "SELECT cliente.Nombre, tarjeta.* " + //llamando todos los datos de la base
+                 "FROM tarjeta " +
+                 "INNER JOIN cliente ON tarjeta.DUI = cliente.DUI " +
+                 "ORDER BY cliente.Nombre";
+                 tablaClientes.DataSource = null;
                  MySqlDataAdapter adapter = new MySqlDataAdapter(query, objetoConexion.establecerConexion());
                  DataTable dt = new DataTable();
                  adapter.Fill(dt);
                  tablaClientes.DataSource = dt;
-                 objetoConexion.cerrarConexion();
+
+                // Asegúrate de que la DataGridView tenga al menos una columna
+                if (tablaClientes.Columns.Count > 0)
+                {
+                    // Ajusta el ancho de la última columna agregada
+                    tablaClientes.Columns[tablaClientes.Columns.Count - 1].Width = 50;
+                }
+                objetoConexion.cerrarConexion();
              }
              catch (Exception ex)
              {
@@ -81,5 +91,32 @@ namespace Clave2_Grupo.Clases
             }
         }
 
+
+        ///====================POSIBLE MÉTODO PARA ACTUALIZAR LOS DATOS DE LA BASE DE DATOS
+        ///
+        public void ModificarAlumnos(TextBox id, TextBox nombres, TextBox apellidos)
+        {
+            try
+            {
+                Clases.Conexion objetoConexion = new Clases.Conexion();
+                string query = "update  alumnos set nombres='"
+                    + nombres.Text + "',APELLIDOS='" + apellidos.Text + "'where id=+'" + id.Text + "';";
+
+                //PAUSA EN  MINUTO 46
+
+                MySqlCommand myComand = new MySqlCommand(query, objetoConexion.establecerConexion());
+                MySqlDataReader reader = myComand.ExecuteReader();
+                MessageBox.Show("Se modificó correctamente");
+                while (reader.Read())
+                {
+
+                }
+                objetoConexion.cerrarConexion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se actualizaron los datos de la base de datos, error: " + ex.ToString());
+            }
+        }
     }
 }
