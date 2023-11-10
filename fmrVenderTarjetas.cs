@@ -182,5 +182,12 @@ namespace Clave2_Grupo
                 txtNumTarjetasComprar.Focus();
             }
         }
+
+        private void btnRegistros_Click(object sender, EventArgs e)
+        {
+            fmrVerInfoClientes frmAbrir = new fmrVerInfoClientes();
+            frmAbrir.Show();
+
+        }
     }
 }

@@ -36,13 +36,13 @@ namespace Clave2_Grupo
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.mskDui = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.txtDui = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialRegistros)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,14 +66,13 @@ namespace Clave2_Grupo
             this.dgvHistorialRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialRegistros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Editar});
-            this.dgvHistorialRegistros.Location = new System.Drawing.Point(233, 36);
+            this.dgvHistorialRegistros.Location = new System.Drawing.Point(288, 36);
             this.dgvHistorialRegistros.Name = "dgvHistorialRegistros";
             this.dgvHistorialRegistros.ReadOnly = true;
             this.dgvHistorialRegistros.RowHeadersWidth = 51;
-            this.dgvHistorialRegistros.Size = new System.Drawing.Size(1005, 250);
+            this.dgvHistorialRegistros.Size = new System.Drawing.Size(950, 250);
             this.dgvHistorialRegistros.TabIndex = 1;
             this.dgvHistorialRegistros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorialRegistros_CellClick);
-            this.dgvHistorialRegistros.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorialRegistros_CellDoubleClick);
             // 
             // btnModificarCliente
             // 
@@ -107,8 +106,8 @@ namespace Clave2_Grupo
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtDui);
             this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.mskDui);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -118,27 +117,18 @@ namespace Clave2_Grupo
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(205, 291);
+            this.groupBox1.Size = new System.Drawing.Size(259, 291);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Clientes GameSivar";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(118, 103);
+            this.txtNombre.Location = new System.Drawing.Point(100, 103);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(76, 20);
+            this.txtNombre.Size = new System.Drawing.Size(155, 20);
             this.txtNombre.TabIndex = 6;
-            // 
-            // mskDui
-            // 
-            this.mskDui.Enabled = false;
-            this.mskDui.Location = new System.Drawing.Point(118, 69);
-            this.mskDui.Margin = new System.Windows.Forms.Padding(2);
-            this.mskDui.Name = "mskDui";
-            this.mskDui.Size = new System.Drawing.Size(76, 20);
-            this.mskDui.TabIndex = 5;
             // 
             // label6
             // 
@@ -152,7 +142,7 @@ namespace Clave2_Grupo
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 107);
+            this.label3.Location = new System.Drawing.Point(4, 107);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
@@ -199,6 +189,14 @@ namespace Clave2_Grupo
             this.Editar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Editar.Width = 60;
             // 
+            // txtDui
+            // 
+            this.txtDui.Enabled = false;
+            this.txtDui.Location = new System.Drawing.Point(100, 69);
+            this.txtDui.Name = "txtDui";
+            this.txtDui.Size = new System.Drawing.Size(100, 20);
+            this.txtDui.TabIndex = 7;
+            // 
             // fmrVerInfoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,12 +227,12 @@ namespace Clave2_Grupo
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.MaskedTextBox mskDui;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
+        private System.Windows.Forms.TextBox txtDui;
     }
 }

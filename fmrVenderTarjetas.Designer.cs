@@ -46,6 +46,7 @@ namespace Clave2_Grupo
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label9 = new System.Windows.Forms.Label();
             this.btnIrComprarJuegos = new System.Windows.Forms.Button();
+            this.btnRegistros = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -62,7 +63,7 @@ namespace Clave2_Grupo
             // 
             // btnContinuar
             // 
-            this.btnContinuar.Location = new System.Drawing.Point(284, 287);
+            this.btnContinuar.Location = new System.Drawing.Point(376, 214);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(75, 23);
             this.btnContinuar.TabIndex = 3;
@@ -200,11 +201,22 @@ namespace Clave2_Grupo
             this.btnIrComprarJuegos.UseVisualStyleBackColor = true;
             this.btnIrComprarJuegos.Click += new System.EventHandler(this.btnIrComprarJuegos_Click);
             // 
+            // btnRegistros
+            // 
+            this.btnRegistros.Location = new System.Drawing.Point(25, 383);
+            this.btnRegistros.Name = "btnRegistros";
+            this.btnRegistros.Size = new System.Drawing.Size(135, 23);
+            this.btnRegistros.TabIndex = 11;
+            this.btnRegistros.Text = "Ver Registros DB";
+            this.btnRegistros.UseVisualStyleBackColor = true;
+            this.btnRegistros.Click += new System.EventHandler(this.btnRegistros_Click);
+            // 
             // fmrVenderTarjetas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(638, 418);
+            this.Controls.Add(this.btnRegistros);
             this.Controls.Add(this.btnIrComprarJuegos);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtNumTarjetasComprar);
@@ -243,5 +255,6 @@ namespace Clave2_Grupo
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnIrComprarJuegos;
+        private System.Windows.Forms.Button btnRegistros;
     }
 }
