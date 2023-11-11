@@ -8,6 +8,9 @@ using MySql.Data.MySqlClient;
 
 namespace Clave2_Grupo.Clases
 {
+    /// <summary>
+    /// Clase que permite la conexión con la base de datos
+    /// </summary>
     public class Conexion : IDisposable
     {
         MySqlConnection conexion = new MySqlConnection();
@@ -22,6 +25,10 @@ namespace Clave2_Grupo.Clases
 
         //creando metodo
 
+        /// <summary>
+        /// Permite establecer una conexión con la base (abre una conexión)
+        /// </summary>
+        /// <returns>La conexión establecida.</returns>
         public MySqlConnection establecerConexion()
         {
             try
@@ -32,11 +39,16 @@ namespace Clave2_Grupo.Clases
             }
             catch (Exception ex)
             {
+                //es posible que la conexión falle
                 MessageBox.Show("No se pudo completar la conexion, error: " + ex.ToString());
             }
             return conexion;
         }
 
+
+        /// <summary>
+        /// Cierra la conexión de la base de datos llamada "Clave2_Grupo3_"
+        /// </summary>
         public void cerrarConexion()
         {
             conexion.Close();

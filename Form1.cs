@@ -12,6 +12,9 @@ namespace Clave2_Grupo
             personalizarDiseñoForm();
         }
 
+        /// <summary>
+        /// Método válido en el método constructor de fmrPrincipal() para personalizar el diseño del formulario
+        /// </summary>
         private void personalizarDiseñoForm()
         {
             //ocultar los paneles de submenus
@@ -49,7 +52,11 @@ namespace Clave2_Grupo
             }
         }
 
-        //mostrar los submenus
+        
+        /// <summary>
+        /// Trabaja sobre los submenus para volverlos visibles o invisibles dependiento de cual esté activo
+        /// </summary>
+        /// <param name="subMenu"></param>
         private void mostrarSubmenu(Panel subMenu)
         {
             if (subMenu.Visible==false)
@@ -63,21 +70,29 @@ namespace Clave2_Grupo
             }
         }
 
-        private void btnMenuClientesAbrir_Click(object sender, EventArgs e)
-        {
+        /// <summary>
+        /// Botón lateral Iqz. encargado de abrir y mostrar el submenu "Clientes"
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnMenuClientesAbrir_Click(object sender, EventArgs e){
             mostrarSubmenu(panelSubMenuClientes);
         }
 
+        /// <summary>
+        /// Botón que abre el formulario de ingreso de clientes para hacer un registro
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             Metodos.AbrirDiferentesFormularios(new fmrNuevoCliente(), panelContenedorDeFormularios);
-            // Resto de tu código
+            //ocultar el submenu que esté visible
             ocultarSubmenu();
         }
 
         private void btnConsultarInfoClientes_Click(object sender, EventArgs e)
         {
-
             // Crear una instancia del formulario fmrVerInfoClientes
             fmrVerInfoClientes formularioClientes = new fmrVerInfoClientes();
 
@@ -86,11 +101,7 @@ namespace Clave2_Grupo
             ocultarSubmenu();
         }
 
-        private void btnModificarDatosCliente_Click(object sender, EventArgs e)
-        {
-            //...
-            //Your Code
-            //...
+        private void btnModificarDatosCliente_Click(object sender, EventArgs e){
             ocultarSubmenu();
         }
 
