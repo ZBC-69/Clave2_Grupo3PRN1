@@ -44,6 +44,7 @@ namespace Clave2_Grupo
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnIrARegistrarClientes = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorialRegistros)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -214,12 +215,23 @@ namespace Clave2_Grupo
             this.dataGridViewImageColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.dataGridViewImageColumn2.Width = 60;
             // 
+            // btnIrARegistrarClientes
+            // 
+            this.btnIrARegistrarClientes.Location = new System.Drawing.Point(256, 476);
+            this.btnIrARegistrarClientes.Name = "btnIrARegistrarClientes";
+            this.btnIrARegistrarClientes.Size = new System.Drawing.Size(178, 23);
+            this.btnIrARegistrarClientes.TabIndex = 9;
+            this.btnIrARegistrarClientes.Text = "Ir a Registrar clientes";
+            this.btnIrARegistrarClientes.UseVisualStyleBackColor = true;
+            this.btnIrARegistrarClientes.Click += new System.EventHandler(this.btnIrARegistrarClientes_Click);
+            // 
             // fmrVerInfoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1175, 525);
+            this.Controls.Add(this.btnIrARegistrarClientes);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvHistorialRegistros);
@@ -252,5 +264,6 @@ namespace Clave2_Grupo
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.TextBox txtDui;
+        private System.Windows.Forms.Button btnIrARegistrarClientes;
     }
 }

@@ -82,5 +82,13 @@ namespace Clave2_Grupo
             txtDui.Text = "";
             txtNombre.Clear();
         }
+
+        private void btnIrARegistrarClientes_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            fmrNuevoCliente formNuevoRegistro = new fmrNuevoCliente();
+            formNuevoRegistro.Show();
+            
+        }
     }
 }
