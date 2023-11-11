@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo.Clases
 {
-    class RegistroCliente
+    class Empleado: Conexion
     {
         //creando metodo para mostrar los clientes 
         public static void mostrarHistorialClientes(DataGridView tablaClientes)
@@ -145,7 +145,7 @@ namespace Clave2_Grupo.Clases
             }
         }
 
-        public void EliminarRegistro(string dui)
+        public void EliminarRegistros(string dui)
         {
             try
             {

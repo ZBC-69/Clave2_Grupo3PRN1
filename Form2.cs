@@ -19,7 +19,7 @@ namespace Clave2_Grupo
             dgvRegistroClientes.Columns.Add("Nombre completo del cliente", "Nombre Completo");
 
             //Llamando la clase RegistroCliente
-            Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
+            Clases.Empleado objRegistro = new Clases.Empleado();
             //descomentar para que funcione el metodo
            // objetoCliente.mostrarClientes(dgvRegistroClientes);
 
@@ -91,7 +91,7 @@ namespace Clave2_Grupo
                 MessageBox.Show(cliente.NumDui);
                 btnAddClicked = true;
                 
-                Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
+                Clases.Empleado objetoCliente = new Clases.Empleado();
                 objetoCliente.registrarClientes(cliente.NumDui, cliente.Nombre);
                 //descomentar para que funcione el metodo
                 //objetoCliente.mostrarClientes(dgvRegistroClientes);

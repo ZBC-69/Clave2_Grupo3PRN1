@@ -14,7 +14,7 @@ namespace Clave2_Grupo
         private string fechaApertura; //la tarjeta se abre y habilita cuando se compra
         private string fechaVencimiento;//se desactiva o vence y caduca 
         private bool estaVigente;   //está o no vigente la tarjeta?
-        private int cantComprasAcumuladas; //cantidad de compras que se hayan hecho con la tarjeta (conteo o recuento)
+        
 
         public Tarjeta()
         {
@@ -68,11 +68,7 @@ namespace Clave2_Grupo
             set { estaVigente = value; }
         }
 
-        public int CantComprasAcumuladas
-        {
-            get { return cantComprasAcumuladas; }
-            set { cantComprasAcumuladas = value; }
-        }
+        
 
         /// <summary>
         /// Método que establece los valores de algunas propiedades de una tarjeta partiendo del valor de la propiedad TipoTarjeta

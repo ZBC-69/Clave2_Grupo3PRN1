@@ -118,7 +118,7 @@ namespace Clave2_Grupo
 
                             
                             MessageBox.Show($"Cliente:{cliente.Nombre}\nDui:{cliente.NumDui}\nTarjeta seleccionada: {tarjetaParaCliente.TipoTarjeta}\nCantidad de tarjetas: {CantTarjetas}\nEl total a pagar es: ${TotalPagarTarjetas}\nSaldo actual de la  tarjeta: {tarjetaParaCliente.SaldoActual} $USD\nFecha de apertura: {tarjetaParaCliente.FechaApertura}\nFecha de Vencimiento: {tarjetaParaCliente.FechaVencimiento}\nPuntos Acumulados: {tarjetaParaCliente.PuntosAcum}\nVigente: SI\nCódigo de la tarjeta: {tarjetaParaCliente.CodigoTarjeta}", "Factura");
-                            Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
+                            Clases.Empleado objetoCliente = new Clases.Empleado();
                             objetoCliente.guardarOtrosDatos(cliente.NumDui,tarjetaParaCliente.CodigoTarjeta,tarjetaParaCliente.TipoTarjeta,tarjetaParaCliente.SaldoActual,tarjetaParaCliente.FechaVencimiento,tarjetaParaCliente.FechaApertura,estadoVigencia);
                             //se confirma que los datos se procesaron correctamente y por ello establecemos en true a la variable controlador clic
                             btnContinuarClicked = true;

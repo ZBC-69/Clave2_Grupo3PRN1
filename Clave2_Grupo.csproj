@@ -102,7 +102,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Conexion.cs" />
-    <Compile Include="Clases\RegistroCliente.cs" />
+    <Compile Include="Clases\Empleado.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="fmrVenderJuegos.cs">
       <SubType>Form</SubType>

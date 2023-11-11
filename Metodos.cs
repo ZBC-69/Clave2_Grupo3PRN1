@@ -4,25 +4,16 @@ namespace Clave2_Grupo
 {
     public class Metodos
     {
-        /// <summary>
-        /// Método que valida que solo se ingresen letras en un TextBox (en el evento KeyPress)
-        /// </summary>
-        /// <remarks>Muestra un error si se digitan teclas numericas o simbolos.
-        /// Las teclas space, back y letras son validas.
-        /// </remarks>
+        // Declarar una variable estática para fmrActivo
+        private static Form fmrActivo = null;
 
-        /// <param name="sender">Objeto que envía el evento.</param>
-        /// <param name="e">Argumentos del evento KeyPress.</param>
-        /// <example>
-        /// Ejemplo de uso del método ValidarTextBoxSoloLetrasKeyPress en un formulario de Windows Forms.
-        /// </example>
-        /// <code>
-        /// private void textBox1_KeyPress(object sender, KeyPressEventArgs e) ///  donde textBox1 representa el nombre del texbox que se desea validar
-        /// {
-        ///     //Invocar el método para que compruebe si solo hay letras
-        ///     ValidarTextBoxSoloLetrasKeyPress(sender, e);
-        /// }
-        /// </code>
+
+        /// <summary>
+        /// Valida  los datos de tipo letra de un objeto TexBox en su evento KeyPress
+        /// </summary>
+        /// <remarks>Usted debe especificar cual texbox se va a verificar. Devuelve un sms de error si se digita un número, simbolo</remarks>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void ValidarTextBoxSoloLetrasKeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != (char)Keys.Back)
@@ -34,8 +25,7 @@ namespace Clave2_Grupo
             }
         }
 
-        // Declarar una variable estática para fmrActivo
-        private static Form fmrActivo = null;
+        
 
         /// <summary>
         /// Método que permite abrir formularios dentro de otros formularios mayores o principales

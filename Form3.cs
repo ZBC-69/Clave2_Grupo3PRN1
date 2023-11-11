@@ -19,12 +19,12 @@ namespace Clave2_Grupo
 
         private void fmrVerInfoClientes_Load(object sender, EventArgs e)
         {
-            Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
+            Clases.Empleado.mostrarHistorialClientes(dgvHistorialRegistros);
 
         }
 
         string DUI;
-        Clases.RegistroCliente regis = new Clases.RegistroCliente();
+        Clases.Empleado regis = new Clases.Empleado();
         private void dgvHistorialRegistros_CellClick(object sender, DataGridViewCellEventArgs e)
         {
            
@@ -44,7 +44,7 @@ namespace Clave2_Grupo
             regis.ActualizarDatosd(txtNombre,txtDui);
             txtNombre.Text = "";
             txtDui.Text = string.Empty;
-            Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
+            Clases.Empleado.mostrarHistorialClientes(dgvHistorialRegistros);
 
             LimpiarTexboxes();
         }
@@ -69,9 +69,9 @@ namespace Clave2_Grupo
                 //registro.EliminarRegistro(txtDui);
                 //Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
 
-                Clases.RegistroCliente registro = new Clases.RegistroCliente();
-                registro.EliminarRegistro(txtDui.Text);
-                Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
+                Clases.Empleado registro = new Clases.Empleado();
+                registro.EliminarRegistros(txtDui.Text);
+                Clases.Empleado.mostrarHistorialClientes(dgvHistorialRegistros);
 
                 LimpiarTexboxes();
             }
