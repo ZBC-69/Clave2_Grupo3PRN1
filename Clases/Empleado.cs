@@ -12,6 +12,11 @@ namespace Clave2_Grupo.Clases
     class Empleado
     {
         //creando metodo para mostrar los clientes 
+
+        /// <summary>
+        /// Muestra en un DataGridView los datos almacenados en la base de datos 
+        /// </summary>
+        /// <param name="tablaClientes">El nombre del DataGridView donde quieras que se muestre toda la informacion de la base</param>
         public static void mostrarHistorialClientes(DataGridView tablaClientes)
         {
             try
@@ -28,14 +33,14 @@ namespace Clave2_Grupo.Clases
                 adapter.Fill(dt);
                 tablaClientes.DataSource = dt;
 
-                // Asegúrate de que la DataGridView tenga al menos una columna
-                // Asegúrate de que la DataGridView tenga al menos una columna
+                
                 if (tablaClientes.Columns.Count > 1)  // Verifica si hay al menos dos columnas
                 {
                     // Ajusta el ancho de la segunda columna (índice 1)
                     tablaClientes.Columns[1].Width = 160;  // Ajusta el ancho según tus necesidades
                     tablaClientes.Columns[8].Width = 50;  // Ajusta el ancho según tus necesidades
                 }
+                //cerrar la conexión con la base.
                 objetoConexion.cerrarConexion();
             }
             catch (Exception ex)
@@ -44,6 +49,13 @@ namespace Clave2_Grupo.Clases
             }
         }
 
+
+        /// <summary>
+        /// Envía la información a la base de datos
+        /// </summary>
+        /// <remarks>Registra y guarda los datos "DUI" y "Nombre" de un cliente</remarks>
+        /// <param name="DUI">El texto dui capturado en el texbox</param>
+        /// <param name="nombre">El texto nombre capturado en el texbox</param>
         public void registrarClientes(string DUI, string nombre)
         {
             try
@@ -68,7 +80,16 @@ namespace Clave2_Grupo.Clases
             }
         }
 
-
+        /// <summary>
+        /// Guarda en la base el resto de información de un cliente (datos de tarjeta y su Dui)
+        /// </summary>
+        /// <param name="DUI">Dui del cliente</param>
+        /// <param name="codTarjeta">El código de la tarjeta de para el cliente</param>
+        /// <param name="tipoTarjet">El tipo de tarjeta del cliente (Plus, Gold, Silver)</param>
+        /// <param name="credito">El saldo de la tarjeta</param>
+        /// <param name="fVence">fecha de vencimiento</param>
+        /// <param name="fApertura">fecha de compra de la tarjeta</param>
+        /// <param name="vigente">estado de la tarjeta</param>
         public void guardarOtrosDatos(string DUI, string codTarjeta, string tipoTarjet, double credito, string fVence, string fApertura, string vigente)
         {
             try
@@ -94,8 +115,12 @@ namespace Clave2_Grupo.Clases
         }
 
 
-        ///====================POSIBLE MÉTODO PARA ACTUALIZAR LOS DATOS DE LA BASE DE DATOS
-        ///
+        /// <summary>
+        /// Actualiza el Dui y Nombre de un cliente específico de una tabla DataGridView
+        /// </summary>
+        /// <remarks>Se actualizan los datos en la tabla y en la base de datos</remarks>
+        /// <param name="Nombre">Nombre del cliente</param>
+        /// <param name="Dui">Número de DUI</param>
         public void ActualizarDatosd(TextBox Nombre, TextBox Dui)
         {
             //Clases.Conexion objetoConexion = new Clases.Conexion();
@@ -129,7 +154,13 @@ namespace Clave2_Grupo.Clases
         }
 
 
-
+        /// <summary>
+        /// Permite trasladar a dos texbox especificados, la información texto de dos celdas de un dataGridView
+        /// </summary>
+        /// <remarks>Solo se traslada el texto del índice de columna 1 y 2 del DataDridView Específicado</remarks>
+        /// <param name="tablAlumnitos"></param>
+        /// <param name="nombre"></param>
+        /// <param name="Dui"></param>
         public void SeleccionarAlumnos(DataGridView tablAlumnitos, TextBox nombre, TextBox Dui)
         {
             try
@@ -145,6 +176,11 @@ namespace Clave2_Grupo.Clases
             }
         }
 
+
+        /// <summary>
+        /// Elimina en la base de datos todos los datos de registro para un cliente especificado por DUI
+        /// </summary>
+        /// <param name="dui">El dui del cliente</param>
         public void EliminarRegistros(string dui)
         {
             try
