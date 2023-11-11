@@ -50,10 +50,9 @@ namespace Clave2_Grupo
             this.btnSalir2.BackColor = System.Drawing.SystemColors.Info;
             this.btnSalir2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir2.ForeColor = System.Drawing.Color.Maroon;
-            this.btnSalir2.Location = new System.Drawing.Point(748, 471);
-            this.btnSalir2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir2.Location = new System.Drawing.Point(561, 383);
             this.btnSalir2.Name = "btnSalir2";
-            this.btnSalir2.Size = new System.Drawing.Size(100, 28);
+            this.btnSalir2.Size = new System.Drawing.Size(75, 23);
             this.btnSalir2.TabIndex = 1;
             this.btnSalir2.Text = "CERRAR";
             this.btnSalir2.UseVisualStyleBackColor = false;
@@ -65,10 +64,9 @@ namespace Clave2_Grupo
             this.lblClienteNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblClienteNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClienteNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblClienteNombre.Location = new System.Drawing.Point(59, 82);
-            this.lblClienteNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblClienteNombre.Location = new System.Drawing.Point(44, 67);
             this.lblClienteNombre.Name = "lblClienteNombre";
-            this.lblClienteNombre.Size = new System.Drawing.Size(136, 17);
+            this.lblClienteNombre.Size = new System.Drawing.Size(106, 13);
             this.lblClienteNombre.TabIndex = 2;
             this.lblClienteNombre.Text = "Nombre Completo";
             // 
@@ -78,29 +76,26 @@ namespace Clave2_Grupo
             this.lblDUI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblDUI.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDUI.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblDUI.Location = new System.Drawing.Point(59, 127);
-            this.lblDUI.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDUI.Location = new System.Drawing.Point(44, 103);
             this.lblDUI.Name = "lblDUI";
-            this.lblDUI.Size = new System.Drawing.Size(273, 17);
+            this.lblDUI.Size = new System.Drawing.Size(217, 13);
             this.lblDUI.TabIndex = 3;
             this.lblDUI.Text = "Documento Unico de Identidad (DUI)";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(364, 82);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Location = new System.Drawing.Point(176, 67);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(132, 22);
+            this.txtNombre.Size = new System.Drawing.Size(197, 20);
             this.txtNombre.TabIndex = 4;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNomCompleto_KeyPress);
             // 
             // mskDUI
             // 
-            this.mskDUI.Location = new System.Drawing.Point(364, 127);
-            this.mskDUI.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mskDUI.Location = new System.Drawing.Point(273, 103);
             this.mskDUI.Mask = "00000000-0";
             this.mskDUI.Name = "mskDUI";
-            this.mskDUI.Size = new System.Drawing.Size(132, 22);
+            this.mskDUI.Size = new System.Drawing.Size(100, 20);
             this.mskDUI.TabIndex = 5;
             this.mskDUI.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.msktxtDUI_MaskInputRejected);
             // 
@@ -113,10 +108,9 @@ namespace Clave2_Grupo
             this.btnAdd.BackColor = System.Drawing.SystemColors.Info;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Maroon;
-            this.btnAdd.Location = new System.Drawing.Point(659, 242);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(494, 197);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 28);
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Registrar";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -126,8 +120,7 @@ namespace Clave2_Grupo
             // 
             this.dgvRegistroClientes.BackgroundColor = System.Drawing.Color.LightSeaGreen;
             this.dgvRegistroClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRegistroClientes.Location = new System.Drawing.Point(271, 178);
-            this.dgvRegistroClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvRegistroClientes.Location = new System.Drawing.Point(203, 145);
             this.dgvRegistroClientes.Name = "dgvRegistroClientes";
             this.dgvRegistroClientes.RowHeadersWidth = 51;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
@@ -136,7 +129,7 @@ namespace Clave2_Grupo
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Navy;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvRegistroClientes.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvRegistroClientes.Size = new System.Drawing.Size(335, 185);
+            this.dgvRegistroClientes.Size = new System.Drawing.Size(251, 150);
             this.dgvRegistroClientes.TabIndex = 7;
             // 
             // btnIrACompras
@@ -144,10 +137,9 @@ namespace Clave2_Grupo
             this.btnIrACompras.BackColor = System.Drawing.SystemColors.Info;
             this.btnIrACompras.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIrACompras.ForeColor = System.Drawing.Color.Maroon;
-            this.btnIrACompras.Location = new System.Drawing.Point(444, 471);
-            this.btnIrACompras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnIrACompras.Location = new System.Drawing.Point(333, 383);
             this.btnIrACompras.Name = "btnIrACompras";
-            this.btnIrACompras.Size = new System.Drawing.Size(273, 28);
+            this.btnIrACompras.Size = new System.Drawing.Size(205, 23);
             this.btnIrACompras.TabIndex = 8;
             this.btnIrACompras.Text = "IR A COMPRAR TARJETAS";
             this.btnIrACompras.UseVisualStyleBackColor = false;
@@ -155,10 +147,10 @@ namespace Clave2_Grupo
             // 
             // fmrNuevoCliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(851, 514);
+            this.ClientSize = new System.Drawing.Size(638, 418);
             this.Controls.Add(this.btnIrACompras);
             this.Controls.Add(this.dgvRegistroClientes);
             this.Controls.Add(this.btnAdd);
@@ -168,7 +160,6 @@ namespace Clave2_Grupo
             this.Controls.Add(this.lblClienteNombre);
             this.Controls.Add(this.btnSalir2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "fmrNuevoCliente";
             this.Text = "FORMULARIO DE NUEVO CLIENTE";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
