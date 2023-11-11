@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Clave2_Grupo.Clases
 {
-    class Empleado: Conexion
+    class Empleado
     {
         //creando metodo para mostrar los clientes 
         public static void mostrarHistorialClientes(DataGridView tablaClientes)
