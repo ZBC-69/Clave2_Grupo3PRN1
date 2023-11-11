@@ -187,7 +187,7 @@ namespace Clave2_Grupo
         {
             fmrVerInfoClientes frmAbrir = new fmrVerInfoClientes();
             frmAbrir.Show();
-
+            this.Close();
         }
     }
 }
