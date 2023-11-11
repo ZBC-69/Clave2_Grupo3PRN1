@@ -158,15 +158,15 @@ namespace Clave2_Grupo.Clases
         /// Permite trasladar a dos texbox especificados, la información texto de dos celdas de un dataGridView
         /// </summary>
         /// <remarks>Solo se traslada el texto del índice de columna 1 y 2 del DataDridView Específicado</remarks>
-        /// <param name="tablAlumnitos"></param>
-        /// <param name="nombre"></param>
-        /// <param name="Dui"></param>
-        public void SeleccionarAlumnos(DataGridView tablAlumnitos, TextBox nombre, TextBox Dui)
+        /// <param name="Mostrador">El nombre de la tabla que esté mostrando los registros de clientes de la base de datos</param>
+        /// <param name="nombre">El nombre del cliente</param>
+        /// <param name="Dui">El dui de un cliente</param>
+        public void SeleccionarAlumnos(DataGridView Mostrador, TextBox nombre, TextBox Dui)
         {
             try
             {
-                nombre.Text = tablAlumnitos.CurrentRow.Cells[1].Value.ToString();
-                Dui.Text = tablAlumnitos.CurrentRow.Cells[2].Value.ToString();
+                nombre.Text = Mostrador.CurrentRow.Cells[1].Value.ToString();
+                Dui.Text = Mostrador.CurrentRow.Cells[2].Value.ToString();
                 
                 
             }
