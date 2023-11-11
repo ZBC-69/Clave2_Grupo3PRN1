@@ -38,13 +38,15 @@ namespace Clave2_Grupo
 
             if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNombre.Text))
             {
-                MessageBox.Show("Debe seleccionar un regisitro desde la tabla dando click", "Datos no deben estar vacíos",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                MessageBox.Show("Debe seleccionar un registro desde la tabla dando click", "Datos no deben estar vacíos",MessageBoxButtons.OK,MessageBoxIcon.Stop);
                 return;
             }
             regis.ActualizarDatosd(txtNombre,txtDui);
             txtNombre.Text = "";
             txtDui.Text = string.Empty;
             Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
+
+            LimpiarTexboxes();
         }
 
         private void btnEliminarCliente_Click(object sender, EventArgs e)
@@ -71,7 +73,14 @@ namespace Clave2_Grupo
                 registro.EliminarRegistro(txtDui.Text);
                 Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
 
+                LimpiarTexboxes();
             }
+        }
+
+        private void LimpiarTexboxes()
+        {
+            txtDui.Text = "";
+            txtNombre.Clear();
         }
     }
 }
