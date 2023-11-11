@@ -94,69 +94,27 @@ namespace Clave2_Grupo
             ocultarSubmenu();
         }
 
-        private void btnEliminarCliente_Click(object sender, EventArgs e)
-        {
-            
-            //...
-            //Your Code
-            //...
+        private void btnEliminarCliente_Click(object sender, EventArgs e) {       
             ocultarSubmenu();
         }
       
-        private void btnMenuTarjetasElectronicasAbrir_Click(object sender, EventArgs e)
-        {
+        private void btnMenuTarjetasElectronicasAbrir_Click(object sender, EventArgs e)  {
             mostrarSubmenu(panelSubMenuTarjetas);
         }
 
-        private void btnMostrarTarjetasVendidas_Click(object sender, EventArgs e)
-        {
-            //...
-            //Your Code
-            //...
+        private void btnMostrarTarjetasVendidas_Click(object sender, EventArgs e){
             ocultarSubmenu();
         }
 
-        private void btnMostrarTarjetasExpiradas_Click(object sender, EventArgs e)
-        {
-            //...
-            //Your Code
-            //...
+        private void btnMostrarTarjetasExpiradas_Click(object sender, EventArgs e){
             ocultarSubmenu();
         }
 
-        private void btnBuscarUnaTarjeta_Click(object sender, EventArgs e)
-        {
-            //...
-            //Your Code
-            //...
+        private void btnBuscarUnaTarjeta_Click(object sender, EventArgs e){
             ocultarSubmenu();
         }
 
-        //=============================ABRIR DIFERENTES FORMULARIOS=============
-
-
-
-        //private Form fmrActivo = null;
-        ///// <summary>
-        ///// Método que permite abrir diversos formularios del formulario principal
-        ///// </summary>
-        ///// <param name="fmrCualquiera"></param>
-        //private void abrirDiferentesFormularios(Form fmrCualquiera)
-        //{
-        //    if (fmrActivo != null)
-        //    {
-        //        fmrActivo.Close();
-        //    }
-        //    fmrActivo = fmrCualquiera;
-        //    fmrCualquiera.TopLevel = false;
-        //    fmrCualquiera.FormBorderStyle = FormBorderStyle.None;
-        //    fmrCualquiera.Dock = DockStyle.Fill;
-        //    panelContenedorDeFormularios.Controls.Add(fmrCualquiera);
-        //    panelContenedorDeFormularios.Tag = fmrCualquiera;
-        //    fmrCualquiera.BringToFront();
-        //    fmrCualquiera.Show();
-        //}
-
+        
 
         private void btnSalir1_Click(object sender, EventArgs e)
         {
@@ -170,8 +128,7 @@ namespace Clave2_Grupo
             }
         }
 
-        private void btnMenuVentasAbrir_Click(object sender, EventArgs e)
-        {
+        private void btnMenuVentasAbrir_Click(object sender, EventArgs e){
             mostrarSubmenu(panelSubMenuVentas);
         }
 
