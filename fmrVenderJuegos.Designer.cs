@@ -50,7 +50,7 @@ namespace Clave2_Grupo
             this.btnSalir2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSalir2.Location = new System.Drawing.Point(690, 463);
-            this.btnSalir2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir2.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir2.Name = "btnSalir2";
             this.btnSalir2.Size = new System.Drawing.Size(126, 37);
             this.btnSalir2.TabIndex = 2;
@@ -77,9 +77,9 @@ namespace Clave2_Grupo
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(423, 495);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
@@ -90,7 +90,7 @@ namespace Clave2_Grupo
             this.btnRegistrarCompraJuego.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrarCompraJuego.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnRegistrarCompraJuego.Location = new System.Drawing.Point(113, 448);
-            this.btnRegistrarCompraJuego.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegistrarCompraJuego.Margin = new System.Windows.Forms.Padding(4);
             this.btnRegistrarCompraJuego.Name = "btnRegistrarCompraJuego";
             this.btnRegistrarCompraJuego.Size = new System.Drawing.Size(212, 33);
             this.btnRegistrarCompraJuego.TabIndex = 9;
@@ -102,7 +102,7 @@ namespace Clave2_Grupo
             // 
             this.radJuegElectronic.AutoSize = true;
             this.radJuegElectronic.Location = new System.Drawing.Point(95, 135);
-            this.radJuegElectronic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radJuegElectronic.Margin = new System.Windows.Forms.Padding(4);
             this.radJuegElectronic.Name = "radJuegElectronic";
             this.radJuegElectronic.Size = new System.Drawing.Size(166, 22);
             this.radJuegElectronic.TabIndex = 5;
@@ -114,7 +114,7 @@ namespace Clave2_Grupo
             // 
             this.radJuegMecanic.AutoSize = true;
             this.radJuegMecanic.Location = new System.Drawing.Point(95, 91);
-            this.radJuegMecanic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radJuegMecanic.Margin = new System.Windows.Forms.Padding(4);
             this.radJuegMecanic.Name = "radJuegMecanic";
             this.radJuegMecanic.Size = new System.Drawing.Size(153, 22);
             this.radJuegMecanic.TabIndex = 4;
@@ -164,9 +164,9 @@ namespace Clave2_Grupo
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Location = new System.Drawing.Point(549, 50);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(285, 146);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
@@ -176,14 +176,14 @@ namespace Clave2_Grupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Chocolate;
+            this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(851, 514);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalir2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fmrVenderJuegos";
             this.Text = "FOMUARIO VENTA DE JUEGOS";
             this.groupBox1.ResumeLayout(false);
