@@ -51,10 +51,9 @@ namespace Clave2_Grupo
             // btnSalir3
             // 
             this.btnSalir3.ForeColor = System.Drawing.Color.Maroon;
-            this.btnSalir3.Location = new System.Drawing.Point(1309, 575);
-            this.btnSalir3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSalir3.Location = new System.Drawing.Point(982, 467);
             this.btnSalir3.Name = "btnSalir3";
-            this.btnSalir3.Size = new System.Drawing.Size(132, 28);
+            this.btnSalir3.Size = new System.Drawing.Size(99, 23);
             this.btnSalir3.TabIndex = 0;
             this.btnSalir3.Text = "CERRAR";
             this.btnSalir3.UseVisualStyleBackColor = true;
@@ -70,12 +69,11 @@ namespace Clave2_Grupo
             this.dgvHistorialRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorialRegistros.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Editar});
-            this.dgvHistorialRegistros.Location = new System.Drawing.Point(384, 44);
-            this.dgvHistorialRegistros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvHistorialRegistros.Location = new System.Drawing.Point(242, 35);
             this.dgvHistorialRegistros.Name = "dgvHistorialRegistros";
             this.dgvHistorialRegistros.ReadOnly = true;
             this.dgvHistorialRegistros.RowHeadersWidth = 51;
-            this.dgvHistorialRegistros.Size = new System.Drawing.Size(1267, 308);
+            this.dgvHistorialRegistros.Size = new System.Drawing.Size(925, 250);
             this.dgvHistorialRegistros.TabIndex = 1;
             this.dgvHistorialRegistros.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHistorialRegistros_CellClick);
             // 
@@ -93,10 +91,9 @@ namespace Clave2_Grupo
             // btnModificarCliente
             // 
             this.btnModificarCliente.ForeColor = System.Drawing.Color.Maroon;
-            this.btnModificarCliente.Location = new System.Drawing.Point(45, 254);
-            this.btnModificarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnModificarCliente.Location = new System.Drawing.Point(34, 206);
             this.btnModificarCliente.Name = "btnModificarCliente";
-            this.btnModificarCliente.Size = new System.Drawing.Size(212, 28);
+            this.btnModificarCliente.Size = new System.Drawing.Size(159, 23);
             this.btnModificarCliente.TabIndex = 2;
             this.btnModificarCliente.Text = "MODIFICAR CLIENTE";
             this.btnModificarCliente.UseVisualStyleBackColor = true;
@@ -105,10 +102,9 @@ namespace Clave2_Grupo
             // btnEliminarCliente
             // 
             this.btnEliminarCliente.ForeColor = System.Drawing.Color.Maroon;
-            this.btnEliminarCliente.Location = new System.Drawing.Point(61, 290);
-            this.btnEliminarCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminarCliente.Location = new System.Drawing.Point(46, 236);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
-            this.btnEliminarCliente.Size = new System.Drawing.Size(180, 28);
+            this.btnEliminarCliente.Size = new System.Drawing.Size(135, 23);
             this.btnEliminarCliente.TabIndex = 3;
             this.btnEliminarCliente.Text = "ELIIMINAR CLIENTE";
             this.btnEliminarCliente.UseVisualStyleBackColor = true;
@@ -120,10 +116,9 @@ namespace Clave2_Grupo
             this.label1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.label1.Font = new System.Drawing.Font("MS Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(691, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(518, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(592, 15);
+            this.label1.Size = new System.Drawing.Size(460, 12);
             this.label1.TabIndex = 4;
             this.label1.Text = "HISTORIAL Y LISTA DE CLIENTES DE LA EMPRESA DE JUEGOS \"GAMESIVAR\"\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -139,11 +134,11 @@ namespace Clave2_Grupo
             this.groupBox1.Controls.Add(this.btnModificarCliente);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Window;
-            this.groupBox1.Location = new System.Drawing.Point(15, 62);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(2, 52);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(345, 358);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(235, 291);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Clientes GameSivar";
@@ -153,45 +148,47 @@ namespace Clave2_Grupo
             this.txtDui.BackColor = System.Drawing.SystemColors.Info;
             this.txtDui.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDui.Enabled = false;
-            this.txtDui.Location = new System.Drawing.Point(133, 85);
-            this.txtDui.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDui.Location = new System.Drawing.Point(100, 69);
             this.txtDui.Name = "txtDui";
-            this.txtDui.Size = new System.Drawing.Size(132, 15);
+            this.txtDui.Size = new System.Drawing.Size(99, 12);
             this.txtDui.TabIndex = 7;
             // 
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.SystemColors.Info;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombre.Location = new System.Drawing.Point(134, 134);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNombre.Location = new System.Drawing.Point(100, 109);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(205, 15);
+            this.txtNombre.Size = new System.Drawing.Size(127, 12);
             this.txtNombre.TabIndex = 6;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(29, 217);
+            this.label6.Location = new System.Drawing.Point(22, 176);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 17);
+            this.label6.Size = new System.Drawing.Size(0, 13);
             this.label6.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 132);
+            this.label3.Location = new System.Drawing.Point(4, 107);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 17);
+            this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 1;
             this.label3.Text = "Nombre Completo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 85);
+            this.label2.Location = new System.Drawing.Point(22, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(31, 17);
+            this.label2.Size = new System.Drawing.Size(26, 13);
             this.label2.TabIndex = 0;
             this.label2.Text = "DUI";
             // 
@@ -219,16 +216,15 @@ namespace Clave2_Grupo
             // 
             // fmrVerInfoClientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1667, 646);
+            this.ClientSize = new System.Drawing.Size(1175, 525);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvHistorialRegistros);
             this.Controls.Add(this.btnSalir3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "fmrVerInfoClientes";
             this.Text = "VER INFORMACION DE CLIENTES";
             this.Load += new System.EventHandler(this.fmrVerInfoClientes_Load);
