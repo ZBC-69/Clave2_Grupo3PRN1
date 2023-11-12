@@ -13,6 +13,7 @@ namespace Clave2_Grupo.Clases
     /// </summary>
     public class Conexion : IDisposable
     {
+        //Creacion de instancia
         MySqlConnection conexion = new MySqlConnection();
 
         static string servidor = "localhost";
