@@ -214,6 +214,7 @@ namespace Clave2_Grupo.Clases
                             }
                             else
                             {
+                                //es probable que un registro no exista en la base de datos.
                                 MessageBox.Show("No se encontró el registro para eliminar");
                             }
                         }

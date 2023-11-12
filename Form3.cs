@@ -8,8 +8,7 @@ namespace Clave2_Grupo
         public fmrVerInfoClientes()
         {
             InitializeComponent();
-            //Clases.RegistroCliente objetoCliente = new Clases.RegistroCliente();
-            //objetoCliente.mostrarClientes(dgvHistorialRegistros);
+            
         }
 
         private void btnSalir3_Click(object sender, EventArgs e)
@@ -17,6 +16,11 @@ namespace Clave2_Grupo
             Close();
         }
 
+        /// <summary>
+        /// Muestra los datos almacenados en la base de datos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void fmrVerInfoClientes_Load(object sender, EventArgs e)
         {
             Clases.Empleado.mostrarHistorialClientes(dgvHistorialRegistros);
@@ -25,17 +29,24 @@ namespace Clave2_Grupo
 
         string DUI;
         Clases.Empleado regis = new Clases.Empleado();
-        private void dgvHistorialRegistros_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
-            regis.SeleccionarAlumnos(dgvHistorialRegistros, txtNombre, txtDui);
+
+        /// <summary>
+        /// Traslada a dos objetos texbox el nombre y dui de un cliente registrado.
+        /// </summary>
+        /// <remarks>Debe dar clic en alguna celda de un datagridview que contenga datos de la base.</remarks>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dgvHistorialRegistros_CellClick(object sender, DataGridViewCellEventArgs e){
+           regis.SeleccionarAlumnos(dgvHistorialRegistros, txtNombre, txtDui);
         }
 
-        
-
+        /// <summary>
+        /// Modifica la información nombre de un cliente en la base de datos. Los texbox dui y nombre no deben estar vacíos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
-
             if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNombre.Text))
             {
                 MessageBox.Show("Debe seleccionar un registro desde la tabla dando click", "Datos no deben estar vacíos",MessageBoxButtons.OK,MessageBoxIcon.Stop);
@@ -49,6 +60,11 @@ namespace Clave2_Grupo
             LimpiarTexboxes();
         }
 
+        /// <summary>
+        /// Boton que elimina todo el registro de un cliente almacenado en la base de datos. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnEliminarCliente_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNombre.Text))
@@ -64,11 +80,6 @@ namespace Clave2_Grupo
             // Verifica la respuesta del usuario
             if (result == DialogResult.Yes)
             {
-                //// Ejecuta las acciones de eliminacion de los datos
-                //Clases.RegistroCliente registro = new Clases.RegistroCliente();
-                //registro.EliminarRegistro(txtDui);
-                //Clases.RegistroCliente.mostrarHistorialClientes(dgvHistorialRegistros);
-
                 Clases.Empleado registro = new Clases.Empleado();
                 registro.EliminarRegistros(txtDui.Text);
                 Clases.Empleado.mostrarHistorialClientes(dgvHistorialRegistros);
@@ -77,12 +88,20 @@ namespace Clave2_Grupo
             }
         }
 
+        /// <summary>
+        /// Permite limpiar el contenido texto de dos texbox txtDui y txtNombre del presente formulario.
+        /// </summary>
         private void LimpiarTexboxes()
         {
             txtDui.Text = "";
             txtNombre.Clear();
         }
 
+        /// <summary>
+        /// Botón que permite abrir un siguiente formulario (formulario de Ir a Registrar NUEVOS CLIENTES)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnIrARegistrarClientes_Click(object sender, EventArgs e)
         {
             this.Close();

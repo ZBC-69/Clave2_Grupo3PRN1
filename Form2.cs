@@ -6,7 +6,7 @@ namespace Clave2_Grupo
     public partial class fmrNuevoCliente : Form
     {
 
-        //objeto para validar informaciones
+        //objeto para validar informacion
         Metodos validDat = new Metodos();
         private bool btnAddClicked = false;
         //Instanciación de la clase Cliente para guardar la información en sus propiedad nombre y DUI
@@ -19,13 +19,14 @@ namespace Clave2_Grupo
             dgvRegistroClientes.Columns.Add("Nombre completo del cliente", "Nombre Completo");
 
             //Llamando la clase RegistroCliente
-            Clases.Empleado objRegistro = new Clases.Empleado();
-            //descomentar para que funcione el metodo
-           // objetoCliente.mostrarClientes(dgvRegistroClientes);
-
+            Clases.Empleado objRegistro = new Clases.Empleado();//permitirá el registro de nombre y dui del cliente
         }
 
-
+        /// <summary>
+        /// Permite el ingreso de solo teclas de tipo Letra. Muestra sms de eror al detectar datos no válidos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtNomCompleto_KeyPress(object sender, KeyPressEventArgs e)
         {
             validDat.ValidarTextBoxSoloLetrasKeyPress(sender, e);
@@ -38,18 +39,28 @@ namespace Clave2_Grupo
         //Las variables "validDUI, validNOM" sirven para dar luz verde al programa si y solo si todas las validaciones son correctas
         bool validDUI = false;
         bool validNOM = false;
-        /*Evento condicionado: Se activa unicamente si el usuario ingresa un formato incorrecto en el DUI
-       -Mediante un error provider le indica que solo ingrese números
-       */
+
+        /// <summary>
+        /// Evento condicionado: Se activa unicamente si el usuario ingresa un formato incorrecto en el DUI
+        /// </summary>
+        /// <remarks>Mediante un error provider se muestra un mensaje indicando que solo deben ingresarse números</remarks>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void msktxtDUI_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             errorProvider1.SetError(mskDUI, "Solo puede ingresar números");
             validDUI = false;
         }
-        //Evento cuando se añade un nuevo cliente
+
+
+        /// <summary>
+        /// Botón que permite guardar en la base de datos la información dui y nombre de un cliente luego de validar el ingreso de datos.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAdd_Click(object sender, EventArgs e)
         {
-           
+
             //Validación para campos vacios o incompletos
             if (txtNombre.Text == string.Empty)
             {
@@ -86,15 +97,14 @@ namespace Clave2_Grupo
 
                 //PROVICIONAL; solo para comprobar la validación del registro
                 dgvRegistroClientes.Rows.Clear();
-                dgvRegistroClientes.Rows.Add(cliente.NumDui, cliente.Nombre);
+                dgvRegistroClientes.Rows.Add(cliente.NumDui, cliente.Nombre);//agrega datos a la tabla
                 MessageBox.Show("El usuario ha sido registrado");
                 MessageBox.Show(cliente.NumDui);
-                btnAddClicked = true;
-                
+
+
                 Clases.Empleado objetoCliente = new Clases.Empleado();
                 objetoCliente.registrarClientes(cliente.NumDui, cliente.Nombre);
-                //descomentar para que funcione el metodo
-                //objetoCliente.mostrarClientes(dgvRegistroClientes);
+                btnAddClicked = true; //permitirá que el  botón btnIrAcompras abra el formulario de Tarjetas (con ello nos aseguramos de que se realizó un registro)
             }
 
         }
@@ -106,11 +116,12 @@ namespace Clave2_Grupo
         /// <param name="e"></param>
         private void btnIrACompras_Click(object sender, EventArgs e)
         {
+            //se abrirá el formulario de venta de tarjetas solo si se llevó a cabo un registro en el formulario de Nuevo Cliente.
             if (btnAddClicked)
             {
-                if (!string.IsNullOrWhiteSpace(cliente.NumDui) && !string.IsNullOrEmpty(cliente.Nombre) && !string.IsNullOrWhiteSpace(mskDUI.Text) && mskDUI.MaskCompleted)
+                //validar datos nulos o vacíos.
+                if (validarDatosVacios())
                 {
-
                     // Crear una instancia del formulario fmrVenderTarjetas y pasar el objeto Cliente para que el otro formulario trabaje a partir del DUI Y nombre del cliente que aquí hemos registrado
                     fmrVenderTarjetas formVentaTarjetas = new fmrVenderTarjetas(cliente);
                     // Abrir el formulario
@@ -129,7 +140,7 @@ namespace Clave2_Grupo
 
         }
 
-       
+
 
         private void LimpiarDatos()
         {
@@ -142,11 +153,20 @@ namespace Clave2_Grupo
             btnAddClicked = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /// <summary>
+        /// valida la información de los datos nombres y dui del cliente y que no estén vacíos.
+        /// </summary>
+        /// <returns>True si los datos son correctos, Falso si son</returns>
+        private bool validarDatosVacios()
         {
-            
+            if (!string.IsNullOrWhiteSpace(cliente.NumDui) && !string.IsNullOrEmpty(cliente.Nombre) && !string.IsNullOrWhiteSpace(mskDUI.Text) && mskDUI.MaskCompleted)
+            {
+                //los datos no son nulos. Los datos están bien.
+                return true;            
+            }
+            return false;
         }
 
-  
     }
-    }
+}
+    
