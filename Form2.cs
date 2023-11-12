@@ -62,7 +62,7 @@ namespace Clave2_Grupo
         {
 
             //Validación para campos vacios o incompletos
-            if (txtNombre.Text == string.Empty)
+            if (txtNombre.Text == string.Empty || string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrWhiteSpace(txtNombre.Text))
             {
                 errorProvider1.SetError(txtNombre, "Campo obligatorio");
                 validNOM = false;

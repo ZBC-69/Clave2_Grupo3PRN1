@@ -105,8 +105,10 @@ namespace Clave2_Grupo
         private void btnIrARegistrarClientes_Click(object sender, EventArgs e)
         {
             this.Close();
-            fmrNuevoCliente formNuevoRegistro = new fmrNuevoCliente();
-            formNuevoRegistro.Show();
+            //fmrNuevoCliente formNuevoRegistro = new fmrNuevoCliente();
+            //formNuevoRegistro.Show();
+            fmrPrincipal fmrNuevoCliente = new fmrPrincipal();
+            fmrNuevoCliente.Show();
             
         }
     }

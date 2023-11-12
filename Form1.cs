@@ -99,6 +99,7 @@ namespace Clave2_Grupo
             // Mostrar el formulario
             formularioClientes.Show();
             ocultarSubmenu();
+            
         }
 
         private void btnModificarDatosCliente_Click(object sender, EventArgs e){
