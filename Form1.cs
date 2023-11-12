@@ -126,7 +126,11 @@ namespace Clave2_Grupo
         }
 
         
-
+        /// <summary>
+        /// Salir de la aplicación si se da click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSalir1_Click(object sender, EventArgs e)
         {
             // Mostrar un mensaje al usuario y preguntar si quiere salirse
@@ -145,21 +149,13 @@ namespace Clave2_Grupo
 
         private void btnVenderTarjetas_Click(object sender, EventArgs e)
         {
-            //abrirDiferentesFormularios(new fmrVenderTarjetas());
             Metodos.AbrirDiferentesFormularios(new fmrVenderTarjetas(), panelContenedorDeFormularios);
-            //...
-            //Your Code
-            //...
             ocultarSubmenu();
         }
 
         private void btnVenderJuegos_Click(object sender, EventArgs e)
         {
-            //abrirDiferentesFormularios(new fmrVenderJuegos());
             Metodos.AbrirDiferentesFormularios(new fmrVenderJuegos(), panelContenedorDeFormularios);
-            //...
-            //Your Code
-            //...
             ocultarSubmenu();
         }
 
