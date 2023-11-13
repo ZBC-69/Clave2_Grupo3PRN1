@@ -161,7 +161,7 @@ namespace Clave2_Grupo.Clases
         /// <param name="Mostrador">El nombre de la tabla que esté mostrando los registros de clientes de la base de datos</param>
         /// <param name="nombre">El nombre del cliente</param>
         /// <param name="Dui">El dui de un cliente</param>
-        public void SeleccionarAlumnos(DataGridView Mostrador, TextBox nombre, TextBox Dui)
+        public void SeleccionarRegistro(DataGridView Mostrador, TextBox nombre, TextBox Dui)
         {
             try
             {

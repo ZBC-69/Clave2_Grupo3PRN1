@@ -37,7 +37,7 @@ namespace Clave2_Grupo
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void dgvHistorialRegistros_CellClick(object sender, DataGridViewCellEventArgs e){
-           regis.SeleccionarAlumnos(dgvHistorialRegistros, txtNombre, txtDui);
+           regis.SeleccionarRegistro(dgvHistorialRegistros, txtNombre, txtDui);
         }
 
         /// <summary>
